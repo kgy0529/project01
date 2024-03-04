@@ -1,0 +1,3609 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://www.culture.go.kr/archive/archiveMain.do -->
+<html lang="ko" class="desktop"><!-- head 시작 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>문화포털-문화자료관 | 문화지식</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="문화포털">
+<meta name="description" content="문화포털">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/global.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/renewal.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/renewal_main.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/main_new.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/contents_new.css">
+<link rel="stylesheet" type="text/css" href="./문화포털-문화자료관 _ 문화지식_files/culture_new.css">
+
+<!-- 공유하기 -->
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/jquery-1.11.3.min.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/swiper.min.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/content_link_share.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/calendar.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/layout.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/titleUi.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/commonUtil.js.다운로드"></script>
+
+<script src="./문화포털-문화자료관 _ 문화지식_files/kakao.min.js.다운로드"></script>
+
+<!-- 점자솔루션 -->
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/edotxpress-html.min.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/edotxpress-common.js.다운로드"></script>
+<script type="text/javascript" src="./문화포털-문화자료관 _ 문화지식_files/edotxpress-config-culture.js.다운로드"></script>
+
+<!--네이버 검색시 사이트 연관채널 지정_Start-->
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+    "@type": "Person",
+    "name": "문화포털",
+    "url": "https://www.culture.go.kr",
+    "sameAs": [
+        "https://blog.naver.com/kcis_",
+        "https://www.facebook.com/cultureportal",
+        "https://tv.naver.com/culturepd",
+        "https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw",
+        "https://www.instagram.com/culture_portal"
+	]
+}
+
+</script>
+<script type="text/javascript">
+
+	$(document).ready(function (){
+		
+		
+		
+		 //검색 클릭 이벤트 등록
+	    $("#search").click(function () {
+			location.href='newArchiveResultList.do?sWord='+$("#inputSearch").val()
+	    });
+	/* 
+		23.02.23 데이터 검색량이 많아 일단 주석 처리 
+		나중에 엔터키 검색 해달라고하면 해당 코드 주석 해제
+		
+	    //검색 엔터 이벤트 등록
+	    $("#inputSearch").keypress(function(event) {
+	        if (event.keyCode === 13) {
+	        	location.href='newArchiveResultList.do?sWord='+$("#inputSearch").val()
+	        }
+	    });
+	 */
+		
+		
+	});
+	
+	function sublistClick(type,val,subSeq) {
+		console.log(" type : : " + type + "\n val : : " + val + "\n subSeq : : " + subSeq);
+		if (type == "topic") {
+			location.href='newArchiveResultList.do?topic_code='+val+'&area_code='+subSeq;
+		} else if (type == "org") {
+			location.href='newArchiveResultList.do?org_id='+val+'&subSeq='+subSeq;	
+		} else {
+			alert("에러");
+			return;
+		}
+	}
+
+
+</script>
+<!--네이버 검색시 사이트 연관채널 지정_End-->
+
+</head>
+<!-- head 끝 -->
+<body style="padding-top: 210px;">
+	<div class="wrap">
+		<!-- header -->
+		
+      
+      <div class="skip-nav">
+         <a href="https://www.culture.go.kr/archive/archiveMain.do#content">본문 바로가기</a>
+         <a href="https://www.culture.go.kr/archive/archiveMain.do#footer">푸터 바로가기</a>
+      </div>
+      
+      <header class="header fixed">
+         <div class="pc_header">
+            <!-- pc header -->
+            <div class="header_top" style="">
+               <div class="hearder_top_box">
+                  <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+                  <div class="hearder_search">
+                     <div class="search">
+                        <form id="searchFormHeader" name="searchForm" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                           <input type="text" placeholder="검색어를 입력하세요." id="searchContents" name="searchTerm" value="" onkeypress="javascript:if(event.keyCode==13){requestSearch();return false;}" maxlength="100" title="문화포털 검색 입력">
+                           <button class="btn_search" title="검색" onclick="requestSearch();return false;">검색</button>
+                           <input type="hidden" id="categoryType" name="categoryType" value="total">
+                           <input type="hidden" id="integratedPage" name="cPage" value="1">
+                           <input type="hidden" name="limit" value="4">
+                           <input type="hidden" name="viewCount" value="4">
+                           <input type="hidden" name="cultureOrderBy" value="regdate">
+                        </form>
+                     </div>
+                     <div class="keyword">
+                        
+                     </div>
+                     <!-- keyword 없을때 노출 -->
+                     <p class="txt_desc" style="display:none"><a href="https://www.culture.go.kr/archive/archiveMain.do#">우리 한글날에 어울리는 <strong>문화 콘텐츠</strong>를 찾아보세요!</a></p>
+                     <!-- //keyword 없을때 노출 -->
+                     
+                     <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="pc_log">로그와트</a>  -->
+                     <!-- 로고아트 클릭시 이동하는 url --> 
+                     <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="pc_log" tabindex="-1">로고아트</a>
+                  </div>
+                  <div class="header_menu">
+                     <ul class="login_menu">
+                     
+                        <li><a href="https://www.culture.go.kr/sso/login.do">로그인</a></li>
+                        <li><a href="https://www.culture.go.kr/member/register.do">회원가입</a></li>
+                     
+                     
+                        <li><a href="https://www.culture.go.kr/info/aboutA.do">이용안내</a></li>
+                     </ul>
+                     <div class="scale">
+                        <span>화면크기</span>
+                        <div>
+                           <button class="plus" title="키우기" id="btn_plus" onclick="fn_screenPlus();">키우기</button>
+                           <span id="bodySize">100%</span>
+                           <button class="minus" id="btn_minus" onclick="fn_screenMinus();">줄이기</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- PC 메인 메뉴 -->
+            <div class="shadow_box">
+             <div class="mBg">
+        
+    </div>
+              <div class="header_tab">
+      <nav class="nav">
+        <ul>
+          <li class="">
+            <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+            <ul class="depth01 active">
+              <li>
+                <a href="https://www.culture.go.kr/home/index.do">
+                  집콕+집밖 문화생활
+
+                  <span class="point">특화서비스</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/oneeye/oneEyeList.do"> 한눈에 보는 문화정보 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/perform/relayList.do"> 문화릴레이티켓 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/calendar/view.do"> 문화캘린더 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                  문화공간,단체
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                  문화TV
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/culture/themeList.do"> 공감마당 </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/info/sns.do"> 문화SNS 지도 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/magazine/webzine.do"> 웹진 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/archive/archiveMain.do"> 문화자료관 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                  전통문양
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do"> 예술지식백과 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/realisticContentList.do"> 실감형 콘텐츠 </a>
+              </li>
+<!-- 2023.12.14 웹접근성 심사 대비
+              <li>
+                <a href="/culturedata/dataAnalyze.do">
+                  문화정보분석
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/dataAnalyze.do"
+                      >문화정보 데이터분석</a
+                    >
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/culturemap.do"
+                      >예술,관광 지도매핑 서비스</a
+                    >
+                  </li>
+                </ul>
+              </li>
+ -->
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do"> 문화드림 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/recruitList.do"> 채용·자원봉사 모집 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do"> 문화지원사업 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/newsList.do"> 정책뉴스 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/event/eventRunningList.do"> 문화이벤트 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/industry/apiGuideA.do"> 문화포털API </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/noticeList.do"> 공지사항 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+          <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do" style="font-size:0;" tabindex="-1">마이페이지</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/info/aboutA.do"> 이용안내 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/mypage/mypage.do"> 마이페이지 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/english.do"> English </a>
+              </li>
+
+              <li>
+                 <a href="https://www.culture.go.kr/cultureplan/cardList.do" class="chk011"> 문화융성카드 </a>
+              </li>
+
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="gnb_btnGroup">
+        <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./문화포털-문화자료관 _ 문화지식_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+        <!-- <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+        <a href="http://culture-chatbot.kcisa.kr/" title="새창 열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./문화포털-문화자료관 _ 문화지식_files/btn_chatbot.png" alt="챗봇"></a>
+        <!--  <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇"></a>  -->
+     </div>
+</nav>
+    </div>
+               <div class="header_tab" style="display:none;">
+                  <nav class="nav">
+                     <ul>
+                     
+                        
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+                           
+                        </li>
+                     
+                        
+                     
+                     </ul>
+                     <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./문화포털-문화자료관 _ 문화지식_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+                     <!--  <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+ 					  
+                     <a href="http://culture-chatbot.kcisa.kr/" title="새창열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./문화포털-문화자료관 _ 문화지식_files/btn_chatbot.png" alt="챗봇"></a>
+ 					 
+                     <!-- 
+                     <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;">
+                     <img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇">
+                     </a> 
+                      --> 
+                     
+                  </nav>
+               </div>
+            </div>
+            <!-- PC 서브 메뉴 -->
+            <div class="drop_menu_box" style="display:none">
+               <div class="drop_menu">
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/home/index.do">
+                           집콕+집밖 문화생활
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                           한눈에 보는 문화정보
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/perform/relayList.do">
+                           문화릴레이티켓
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/calendar/view.do">
+                           문화캘린더
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                           문화공간·단체
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                           문화TV
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culture/themeList.do">
+                           공감마당
+                           
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/info/sns.do">
+                           문화SNS 지도
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/magazine/webzine.do">
+                           웹진
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                           문화자료관
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                           전통문양
+                           
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                           예술지식백과
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                           실감형 콘텐츠
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                           문화정보분석
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                           문화드림
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/recruitList.do">
+                           채용·자원봉사 모집
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                           문화지원사업
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/newsList.do">
+                           정책뉴스
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                           문화이벤트
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                           문화포털API
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/noticeList.do">
+                           공지사항
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  
+                  
+                  <!-- my page -->
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/info/aboutA.do">
+                           이용안내
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/mypage/mypage.do">
+                           마이페이지
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/english.do">
+                           English
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                           문화융성카드
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </div>
+            </div>
+         </div>
+         <!-- mo header -->
+         <div class="mo_header">
+            <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+            <button class="btn_menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            <div class="menu_box" data-brl-use="NO">
+            
+               <!-- 로그인 전 -->
+               
+               <a href="https://www.culture.go.kr/sso/login.do" class="btn_login">로그인</a>
+               <a href="https://www.culture.go.kr/member/register.do" class="btn_member">회원가입</a>
+               
+               <!-- // 로그인 전 -->
+               
+               <!-- 로그인 후 -->
+               
+               <!-- // 로그인 후 -->
+               
+               <a href="https://www.culture.go.kr/archive/archiveMain.do#" class="btn_close" data-brl-use="NO">닫기</a>
+            </div>
+            <div class="header_search img_type">
+               <div class="input_box">
+               <form id="searchFormHeader_mo" name="searchForm_mo" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                  <input type="text" placeholder="검색어를 입력하세요." id="searchContents_m" name="searchTerm" value="" title="문화포털 검색 입력" onkeypress="javascript:if(event.keyCode==13){requestSearch_mo();return false;}">
+                  <button class="btn_search" onclick="requestSearch_mo();return false;">검색</button>
+                  <input type="hidden" id="categoryTypeMo" name="categoryType" value="total">
+                  <input type="hidden" id="integratedPageMo" name="cPage" value="1">
+                  <input type="hidden" name="limit" value="3">
+               </form>
+               </div>
+               <div class="keyword_box">
+                  
+<!--                   <span class="keyword" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}" th:id="${item.KEYWORD}" th:onclick="|javascript:fn_searchKeyWord_mo(this.getAttribute('id'))|">문화행사</span> -->
+                  <!-- <a href="#" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}"
+                           th:href="|javascript:fn_searchKeyWord_mo('${item.KEYWORD}');|" th:attr="title=${item.KEYWORD} + '으로 검색하기'">문화행사</a> -->
+               </div>
+               
+               <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="m_log">로그와트</a>   -->
+               <!-- <a href="https://www.culture.go.kr/event/archiveEvent.do" target="_blank" class="m_log">로고아트</a> -->
+<!--               <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="m_log">로고아트</a>-->
+               
+            </div>
+            <!-- mo menu -->
+            <div class="mo_menu">
+               <div class="left">
+                  <ul class="depth01">
+                  
+                     
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do#">문화체험</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/home/index.do">
+                                 집콕+집밖 문화생활
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                                 한눈에 보는 문화정보
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/perform/relayList.do">
+                                 문화릴레이티켓
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/calendar/view.do">
+                                 문화캘린더
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                                 문화공간·단체
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do#">문화공감</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                                 문화TV
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/themeList.do">
+                                 공감마당
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/sns.do">
+                                 문화SNS 지도
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/magazine/webzine.do">
+                                 웹진
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do#">문화지식</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                                 문화자료관
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                                 전통문양
+                                 
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                                 예술지식백과
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                                 실감형 콘텐츠
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                                 문화정보분석
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do#">문화알리미</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                                 문화드림
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/recruitList.do">
+                                 채용·자원봉사 모집
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                                 문화지원사업
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/newsList.do">
+                                 정책뉴스
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                                 문화이벤트
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                                 문화포털API
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/noticeList.do">
+                                 공지사항
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do#">기타</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/aboutA.do">
+                                 이용안내
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/mypage/mypage.do">
+                                 마이페이지
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/english.do">
+                                 English
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                                 문화융성카드
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/publicize.do">
+                                 문화홍보등록
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <script>
+         /*<![CDATA[*/
+      
+            
+         /*
+         function chk(){
+            if(cc == 1){
+               $(".header .drop_menu").css({ display:"flex" })
+            }else{
+               $(".header .drop_menu").css({ display:"none" })
+            }
+         }
+         
+         $(function(){
+            $('.header nav ul li a').mouseover(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header').mouseout(function(){
+               setTimeout(chk, 400);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+   
+            
+            $('.header nav ul li a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+            $('.header .drop_menu a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header .drop_menu a').blur(function(){
+               setTimeout(chk, 100);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+         });
+   
+         $(".header nav ul li:first-child a").focus(function(){
+            $(".header .drop_menu").css({ display : "flex" })
+         })
+         
+         $(".bnr_slide ul li a").focus(function(){
+            $(".header .drop_menu").css({ display : "none" })
+         })
+         */
+
+         // 네비 메뉴
+         $(".nav>ul>li").on("mouseenter keydown",function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".header nav>ul>li>.depth01").show();
+            $(".mBg").show();
+            
+            /*
+            $(".drop_menu").css({"display": "flex"});
+            $(".drop_menu .depth01").eq(thisIdx).addClass("active").siblings().removeClass("active");
+            */
+         })
+
+          $(".header nav").on('mouseleave',function(){
+       	 	 $(".header nav>ul>li>.depth01").hide();
+       	 	$(".mBg").hide();
+          });
+         
+         
+         $(".banner_link").on("focusin",function(){
+        	 $(".header nav>ul>li>.depth01").hide();
+        	 $(".mBg").hide();
+         });
+         
+         $(".banner_link").on("keydown",function(e){
+        	if(e.keyCode === 9 && event.shiftKey){
+        		e.preventDefault();
+        		$(".header nav>ul>li>.depth01").show();
+        		$(".mBg").hide();
+        		$(".chk011").focus();
+        		console.log("123");
+        	} 
+         });
+         /*
+         $(".drop_menu_box").mouseleave(function(){
+            $(".drop_menu").hide();
+            $(".nav ul li").removeClass("active");
+         })
+         */
+
+         $(".drop_menu .depth01").mouseenter(function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".nav ul li").eq(thisIdx).addClass("active").siblings().removeClass("active");
+         })
+
+         // pc menu fixed
+         if( $(window).width() > 1200 ){
+            var headerH = $(".header").outerHeight();
+            $(window).scroll(function(){
+               var st = $(document).scrollTop(),
+                  headerTop = $(".header_top").outerHeight();
+               if(st > headerTop){
+                  $(".header").addClass("fixed");
+                  $("body").css({"paddingTop" : headerH + "px"})
+               } else {
+                  $(".header").removeClass("fixed");
+                  $("body").css({"paddingTop" : 0})
+               }
+            })
+         }
+
+         // mo menu
+         $(".btn_menu").click(function(){
+            $(".mo_header").addClass("active");
+            $("body").css({"overflow":"hidden"})
+         })
+
+         $(".btn_close").click(function(){
+            $(".mo_header").removeClass("active");
+            $(".mo_menu .depth01 > li").removeClass("active");
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $("body").css({"overflow":"visible"})
+            return false;
+         })
+         $(".mo_menu .depth01 > li > a").click(function(){
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $(this).siblings(".depth02").show();
+            $(this).parent().addClass("active").siblings().removeClass("active")
+            return false;
+         })
+      
+         
+
+      var nowZoom = 100;
+
+      function fn_screenPlus(){
+         nowZoom = nowZoom + 5;
+         if(nowZoom >= 200) nowZoom = 200;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+      }
+
+      function fn_screenMinus(){
+         nowZoom = nowZoom - 5;
+         if(nowZoom <= 70) nowZoom = 70;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+         
+         
+      }
+
+      function fn_zooms(){
+         document.body.style.zoom = nowZoom + '%';
+
+         if(nowZoom == 70){
+            alert("더 이상 축소할수 없습니다.");
+         }
+
+         if(nowZoom == 500){
+            alert("더 이상 확대할수 없습니다.");
+         }
+      }
+
+      function fn_searchKeyWord(keyWord){
+         $("#searchFormHeader #searchContents").val(keyWord);
+         requestSearch();
+      }
+
+      function fn_searchKeyWord_mo(keyWord){
+         $("#searchFormHeader_mo #searchContents_m").val(keyWord);
+         requestSearch_mo();
+      }
+      
+      $(function() {
+			$('.skip-nav a').on('click', function(event) {
+				// prevent default link behavior
+				event.preventDefault();
+				
+				// get the target element id
+				var targetId = $(this).attr('href').substring(1);
+				
+				// focus the target element
+				if(document.querySelector("#contents")){
+					console.log("3");
+					$("#contents").removeAttr("tabindex");
+					$("#contents").focus();
+				}else if(document.querySelector("#content")){
+					console.log("42")
+					$("#content").removeAttr("tabindex");
+					$('#' + targetId).focus();
+				}
+				
+				// scroll to the top of the page
+				window.scrollTo(0, 0);
+			});
+		});
+         /*]]>*/
+         
+         $(document).ready(function () {
+        $(document).on("keydown",".vjs-play-control",function(e){
+          if(e.keyCode === 9){
+            $(".vjs-volume-level").attr("tabindex","0");
+             $(".vjs-volume-bar.vjs-slider-bar").attr("tabindex","-1");
+          }
+        });
+        
+        
+        //20231213 웹 접근성 추가
+        document.querySelector('.agency__trigger').addEventListener("click",function(){
+	        
+	        document.querySelector('#agencyContents').setAttribute("tabindex","0");
+	        setTimeout(function(){
+	          document.querySelector('#agencyContents').focus();
+	        },100)
+	      });
+	
+	      document.querySelector('#agencyContents .pop-close').addEventListener("click",function(){
+	    	  console.log("!@3");
+	        this.closest("#agencyContents").style.display = "none"
+	      })
+	      
+	      $("#agencyContents .pop-close").on("click",function(e){
+	    	  e.preventDefault();
+	    	  
+	    	  document.querySelector('.agency__trigger').focus();
+	    	  
+	      })
+      });
+         
+       
+ 	
+         
+      // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상
+         (function () {
+           $(document).ready(function () {
+             const headerBtns = $(".header .header_menu .scale > div button");
+
+             function adjustBanner() {
+               const bnrSlides = $(".bnr_slide .swiper-slide");
+               const bnrSlideContainer = $(".bnr_slide .swiper-container");
+               const bnrWidth = bnrSlideContainer.width();
+               const bnrSwiperWrapper = $(".bnr_slide .swiper-wrapper");
+
+               bnrSlideContainer.each(function () {
+                 var existingSwiper = this.swiper;
+                 if (existingSwiper) {
+                   var activeIndex = existingSwiper.activeIndex;
+                   let wid = -(bnrWidth * activeIndex);
+                   bnrSlides.css({ "width": "100%" });
+                   bnrSwiperWrapper.css({ transform: `translate3d(${wid}px,0px,0px)` });
+                   existingSwiper.on('slideChange', function () {
+                     console.log("슬라이드가 변경되었습니다. 현재 활성화된 슬라이드 인덱스:", this.activeIndex);
+                     let newWid = -(bnrWidth * this.activeIndex);
+                     bnrSwiperWrapper.css({ transform: `translate3d(${newWid}px,0px,0px)` });
+                   });
+                 }
+               });
+             }
+             headerBtns.on("click", adjustBanner);
+
+             // resize 이벤트 250ms 내에는 한 번만 adjustBanner 함수 실행
+             function debounce(func, wait) {
+               let timeout;
+               return function() {
+                   const context = this;
+                   const args = arguments;
+                   clearTimeout(timeout);
+                   timeout = setTimeout(function() {
+                       func.apply(context, args);
+                   }, wait);
+               };
+             }
+
+             $(window).resize(debounce(adjustBanner, 250)); 
+
+             // 메인배너 paging 짤리는 현상
+           });
+         })();
+         // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상 eee
+         
+         // 20231220 웹접근성 skip 메뉴 추가
+         $(function () {
+	console.log("123")
+		
+		 setTimeout(function(){
+	    $('.skip-nav a:first-of-type').on('click', function(event) {
+	      // prevent default link behavior
+	      event.preventDefault();
+	      
+	      // get the target element id
+	      var targetId = $(this).attr('href').substring(1);
+	      
+	      // focus the target element
+	      if(document.querySelector("#contents")){
+	        console.log("344");
+	        $("#contents").remove("tabindex");
+	        $("#contents").focus();
+	      }else if(document.querySelector("#content")){
+	        console.log("42")
+	        $("#content").remove("tabindex");
+	        $('#' + targetId).focus();
+	      }
+	      
+	      // scroll to the top of the page
+	      window.scrollTo(0, 0);
+	    });
+
+},100)
+});
+
+
+      </script>
+      <script src="./문화포털-문화자료관 _ 문화지식_files/search.js.다운로드"></script>
+
+   
+		<!-- // header -->
+		<div id="content" class="contents archive_contents" data-brl-use="PH">
+        <div class="sub_title" data-brl-use="PT">
+            <h2 data-brl-use="PH/H1">문화자료관</h2>
+            <p class="sub_txt">다채로운 문화 기록자료를 한데 모아 선보입니다</p>
+            <!-- <div class=search_box>
+                <input type="text" placeholder="검색어를 입력해 주세요." th:value="${archive.sWord}" id="inputSearch" title="검색어 입력">
+                <button class="btn_search" id="search">검색</button>
+            </div> -->
+        </div>
+        <div class="search_cont02">
+	        <div class="search_input" data-brl-use="NO">
+	        	<div class="search_input_box">
+		            <input type="text" placeholder="검색어를 입력해 주세요." value="" id="inputSearch" title="검색어 입력">
+		            <button class="btn_search" id="search" data-brl-use="NO">검색</button>
+		        </div>
+	        </div>
+	    </div>
+        <div class="archive_slide_cont">
+            <ul class="tab_archive">
+                <li class="active"><a href="javascript:;" title="선택됨">주제별</a></li>
+                <li><a href="javascript:;">기관별</a></li>
+            </ul>
+            <div class="tab_cont">
+                <div class="cont_box event_slide0">
+                	<h2 class="hidden" data-brl-use="PH/H1">주제별</h2>
+                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                        <ul class="swiper-wrapper addPrev">
+                            
+                                <li class="swiper-slide swiper-slide-active" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">문화예술</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202416&quot;);">공연/전시</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202418&quot;);">교육/체험</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202422&quot;);">국악/음악</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202424&quot;);">미술/디자인</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202425&quot;);">도서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202430,&quot;202428&quot;);">정책/뉴스/지식</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202430" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide swiper-slide-next" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">문화유산</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202431,&quot;202416&quot;);">공연/전시</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202431,&quot;202421&quot;);">문화재/유물</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202431,&quot;202423&quot;);">콘텐츠/영화</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202431,&quot;202425&quot;);">도서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202431,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202431" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">문화산업</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202432,&quot;202416&quot;);">공연/전시</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202432,&quot;202418&quot;);">교육/체험</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202432,&quot;202423&quot;);">콘텐츠/영화</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202432,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202432" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">문화생활</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202433,&quot;202423&quot;);">콘텐츠/영화</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202433,&quot;202425&quot;);">도서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202433,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202433,&quot;202428&quot;);">정책/뉴스/지식</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202433,&quot;202429&quot;);">자격/증명/저작권</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202433" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">관광/여행</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202434,&quot;202419&quot;);">관광/여행</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202434" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">체육</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202435,&quot;202420&quot;);">체육</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202435,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202435" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide" style="width: 290px; margin-right: 40px;">
+                                    <h3 data-brl-use="PH/H2">도서</h3>
+                                    <p>아카이브 콘텐츠 주제별 코드</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202436,&quot;202418&quot;);">교육/체험</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202436,&quot;202421&quot;);">문화재/유물</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202436,&quot;202422&quot;);">국악/음악</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202436,&quot;202425&quot;);">도서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;topic&#39;,202436,&quot;202426&quot;);">연구/자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?topic_code=202436" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                        </ul>
+						<div class="slide_btn">
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" data-brl-use="NO"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label=" 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=" 2"></span></div>
+                            <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+                            <button class="start" style="display:none;"><span class="hidden">시작</span></button>
+                            <button class="pause"><span class="hidden">정지</span></button>
+                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
+						</div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                </div>
+                <div class="cont_box event_slide1" style="display:none;">
+                 <h2 class="hidden" data-brl-use="PH/H1">기관별</h2>
+         	          <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                        <ul class="swiper-wrapper" style="transition-duration: 0ms;">
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011214111517541.jpg" alt="강원도청">
+                                </span>
+                                    <p>지역문화재 및 희귀연구자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,127,&quot;2001&quot;);">강원도의 문화재/유물/유적</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,127,&quot;2002&quot;);">강원도의 동물</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=127" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213325235100.png" alt="경기도미술관">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,266,&quot;5001&quot;);">경기도미술관_발간자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,266,&quot;5002&quot;);">경기도미술관_영상자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=266" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230431022151372.jpg" alt="국립고궁박물관">
+                                </span>
+                                    <p>찬란했던 500년 역사와 문화를 자랑하는 조선 왕실의 문화재를 소장하고 있는 국립고궁박물관은 왕실문화유산의 보존과 활용을 위한 조사연구 및 전시·교육 활동을 통해 국민과 함께하고 있습니다. 국립고궁박물관에서 조선을 대표하는 화려하면서도 기품 있는 왕실문화유산을 감상하시면서 우리의 문화적 위상을 느껴보시기 바랍니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,114,&quot;604&quot;);">교육자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,114,&quot;608&quot;);">조선왕조기록문화유산</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,114,&quot;609&quot;);">소장품</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=114" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439175843860.jpg" alt="국립국악원">
+                                </span>
+                                    <p>공연제목, 주최명, 게시물 작성일, 공연장르, 공연장소, 공연일시, 관람연령등의 공연정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,64,&quot;2003&quot;);">국악음원</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,64,&quot;2004&quot;);">국악정보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=64" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023043913231351.jpg" alt="국립무형유산원">
+                                </span>
+                                    <p>문화유산 기록화 자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;558&quot;);">공예품정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;560&quot;);">기록화 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;561&quot;);">기록화 사진</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;562&quot;);">기록화 영상</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;563&quot;);">전승자 구술채록</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;564&quot;);">기록영화(16mm)</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;565&quot;);">기록화 디지털보고서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;566&quot;);">학술조사연구 디지털 보고서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;567&quot;);">공연/전시/교육 디지털 보고서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;572&quot;);">음원자료 디지털 해설서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,253,&quot;573&quot;);">소장 음원자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=253" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202305313264979033.jpg" alt="국립문화재연구원">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;610&quot;);">소식지(문화재 窓)</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;611&quot;);">학술지(文化財) 논문</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;614&quot;);">조선시대 개인일기</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;615&quot;);">국외소재한국문화재</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;617&quot;);">영상자료관</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;622&quot;);">지석묘 문화재현황</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;623&quot;);">목간연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;624&quot;);">중원지역의 고대문화 학술조사연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;625&quot;);">호남지역고대문화 학술조사연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;626&quot;);">가야문화권 학술조사연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;627&quot;);">백제문화권 학술조사연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;628&quot;);">신라문화권 학술조사연구자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;630&quot;);">한국의 범종</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;631&quot;);">석조문화재보존관리 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;632&quot;);">향교건축</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;635&quot;);">문화유산연구 원문정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;636&quot;);">고고학사전</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;637&quot;);">문화유적총람</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;638&quot;);">고문헌</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;639&quot;);">보존,복원 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;640&quot;);">학술연구발표논집</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;642&quot;);">조선고적도보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;643&quot;);">조선고적조사보고 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;644&quot;);">일제강점기</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;645&quot;);">북한지역 고구려 벽화고분</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;646&quot;);">개성의 문화유적 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;647&quot;);">북한의문화재 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;648&quot;);">보존과학연구 학술정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,137,&quot;678&quot;);">기증자료 목록</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=137" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190292399553.jpg" alt="국립민속박물관">
+                                </span>
+                                    <p>예로부터 전해지는 농경사회의 풍속이며 해마다 농사력에 맞추어 관례로서 행하여지는 한국의 전승적 행사, 의례, 놀이에 관한 사전 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,73,&quot;532&quot;);">한국세시풍속사전(표제어음원)</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,73,&quot;538&quot;);">한국민속대백과사전 사진</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=73" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213353132084.png" alt="국립박물관문화재단">
+                                </span>
+                                    <p>국립중앙박물관 및 극장 용의 공연/전시 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,99,&quot;5003&quot;);">국립박물관문화재단_발간서적</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=99" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190362008383.jpg" alt="국립생태원">
+                                </span>
+                                    <p>희귀 동식물관련 연구기록자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,256,&quot;2005&quot;);">전국자연환경조사</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=256" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822143736670.jpg" alt="국립세종도서관">
+                                </span>
+                                    <p>추천도서자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,207,&quot;684&quot;);">추천도서</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=207" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213364193619.png" alt="국립아시아문화전당">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,225,&quot;5004&quot;);">국립아시아문화전당_ACC교육영상</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,225,&quot;5005&quot;);">국립아시아문화전당_아카이브_컬렉션</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=225" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439213081087.jpg" alt="국립어린이청소년도서관">
+                                </span>
+                                    <p>국립어린이청소년도서관의 전시 정보, 추천도서 및 소장자료, 청소년을 위한 독서칼럼의 칼럼 및 이벤트 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,59,&quot;681&quot;);">어린이청소년 추천도서</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=59" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213395907489.png" alt="국립정동극장">
+                                </span>
+                                    <p>정동극장의 공연일자, 시간, 가격등의 공연정보와 이미지, 동영상 등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,92,&quot;703&quot;);">영상자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=92" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190581835693.jpg" alt="국립중앙도서관">
+                                </span>
+                                    <p>국립 중앙 도서관의 주요자료원문정보, 국가자료종합목록, 국가자료목차정보, 기사색인 및 초록정보등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,86,&quot;540&quot;);">사서추천도서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,86,&quot;543&quot;);">OAK 학술정보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=86" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231189323440540.png" alt="국립중앙박물관">
+                                </span>
+                                    <p>국립중앙박물관이 소장한 유물의 이미지, 유물명, 발견장소, 크기, 제작시기등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,44,&quot;542&quot;);">소장품상세조회</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=44" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213404053224.png" alt="국립한글박물관">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,203,&quot;5022&quot;);">국립한글박물관_간행물</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=203" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231121341024852.png" alt="국립해양문화재연구소">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,263,&quot;700&quot;);">수중 발굴 및 조사 연구 영상 정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,263,&quot;701&quot;);">학술조사연구 출판물 정보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=263" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213433122794.png" alt="국립현대미술관">
+                                </span>
+                                    <p>국립현대미술관의 소장품에 작품번호, 작가, 작품명제, 제작년도, 작품부문, 현위치, 재료 및 기법, 작품규격, 작품설명, 수집정보에 대한 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,68,&quot;5006&quot;);">국립현대미술관_발간자료_단행본</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,68,&quot;5007&quot;);">국립현대미술관_발간자료_소식지</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,68,&quot;5008&quot;);">국립현대미술관_정기간행물</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,68,&quot;5023&quot;);">국립현대미술관_소장작품도록</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,68,&quot;5024&quot;);">국립현대미술관_저작권만료소장품</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=68" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310244689937.jpg" alt="국민방송">
+                                </span>
+                                    <p>한국정책방송원의 사회문화, 문화/교양 뉴스를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,62,&quot;663&quot;);">e영상역사관-대한뉴스</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,62,&quot;664&quot;);">e영상역사관-국가기록사진</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,62,&quot;665&quot;);">e영상역사관-국가기록영상</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=62" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822225444560.png" alt="국민체육진흥공단">
+                                </span>
+                                    <p>국민체육진흥공단의 공지사항, 행사정보 및 소마미술관의 자료 등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;649&quot;);">소마미술관 전시정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;650&quot;);">소마미술관 소장품</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;651&quot;);">소마미술관 조각작품</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;652&quot;);">올림픽자료실 사진</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;653&quot;);">올림픽자료실 동영상</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;654&quot;);">한국스포츠과학원 연구보고서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;655&quot;);">한국스포츠과학원 연속간행물기사</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;656&quot;);">스포츠 현안과 진단</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;658&quot;);">스포츠 동향 아카이브</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,58,&quot;659&quot;);">글로벌 스포츠산업 리포트</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=58" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310283441445.jpg" alt="국악방송">
+                                </span>
+                                    <p>국악방송의 기사 및 보도자료, 국악 소식 등의 자료를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,39,&quot;575&quot;);">국악 MR 정보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=39" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190475768564.jpg" alt="대한민국역사박물관">
+                                </span>
+                                    <p>대한민국 근현대사에 관련된 아카이브를 수집, 조사, 정리, 체계화하여 관련 연구자 및 일반 국민이 근현대사를 연구하고 이해하는데 기여하고자 함.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;544&quot;);">현대사아카이브-역사문화경관</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;545&quot;);">현대사아카이브-행사 및 이슈</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;546&quot;);">현대사아카이브-외부수집자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;547&quot;);">현대사아카이브-전시</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;550&quot;);">현대사아카이브-구술영상</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,112,&quot;551&quot;);">현대사아카이브-발간자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=112" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213452775892.png" alt="대한민국예술원">
+                                </span>
+                                    <p>대한민국예술원의 소식, 사진자료, 사이버갤러리 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,97,&quot;5009&quot;);">대한민국예술원_예술논문집</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,97,&quot;5010&quot;);">대한민국예술원_예술원보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=97" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439584899540.jpg" alt="문화재청">
+                                </span>
+                                    <p>문화재, 유물 자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,94,&quot;600&quot;);">전국지정문화재</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,94,&quot;603&quot;);">4대궁 및 종묘</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=94" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310322008996.jpg" alt="서대문형무소역사관">
+                                </span>
+                                    <p>건축 등 기록사진</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,234,&quot;2006&quot;);">서대문형무소 사진자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=234" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213455768850.png" alt="서울디자인재단">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,264,&quot;5011&quot;);">서울디자인재단_사업보고서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,264,&quot;5012&quot;);">서울디자인재단_연구보고서</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=264" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213472246385.png" alt="서울문화재단">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,129,&quot;5013&quot;);">서울문화재단_간행발간물</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,129,&quot;5014&quot;);">서울문화재단_동영상</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=129" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213482897019.png" alt="서울역사박물관">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,173,&quot;5015&quot;);">서울역사박물관_소장자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,173,&quot;5016&quot;);">서울역사박물관_조사연구</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,173,&quot;5017&quot;);">서울역사박물관_학술행사</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=173" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011213522589308.jpg" alt="서울우리소리박물관">
+                                </span>
+                                    <p>노동요 등 우리소리 자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,235,&quot;2007&quot;);">농요/노동요</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=235" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213485128834.png" alt="실학박물관">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,265,&quot;5018&quot;);">실학박물관_기록자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,265,&quot;5019&quot;);">실학박물관_소장품</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=265" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190314338258.jpg" alt="영상물등급위원회">
+                                </span>
+                                    <p>영상물등급위원회의 영상물 등급 분류자료에 대한 정보 (제목, 부제, 제작사/수입처, 게시물작성일, 분류(국내,해외)등)를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,77,&quot;674&quot;);">영화 등급분류</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=77" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823145633411.jpg" alt="영화진흥위원회">
+                                </span>
+                                    <p>영화진흥위원회의 영화메타정보 등의 서비스를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,79,&quot;577&quot;);">영화사</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,79,&quot;579&quot;);">영화인 </li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=79" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301182332773836.jpg" alt="예술경영지원센터">
+                                </span>
+                                    <p>예술경영지원센터의 보도자료 및 weekly@예술경영의 리포트, 칼럼, 인터뷰, 리뷰 등의 자료를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,43,&quot;586&quot;);">수상작</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=43" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213491859825.png" alt="예술의전당">
+                                </span>
+                                    <p>예술의 전당에서 진행되는 공연 전시 프로그램에 대한 주최, 기간, 비용, 출연진 및 이미지등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,6,&quot;5020&quot;);">예술의전당_매거진</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,6,&quot;5021&quot;);">예술의전당_웹진</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=6" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230321821901886.jpg" alt="유네스코세계유산">
+                                </span>
+                                    <p>문화유산 관련 기록자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,238,&quot;2008&quot;);">국내 유네스코세계유산</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=238" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213495401314.png" alt="전라남도청">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,146,&quot;704&quot;);">설화애니메이션</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=146" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822131688256.jpg" alt="전쟁기념관">
+                                </span>
+                                    <p>기념관 소장 기록자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,142,&quot;2009&quot;);">전쟁사진자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=142" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023043925779601.jpg" alt="한국공예디자인문화진흥원">
+                                </span>
+                                    <p>한국공예디자인문화진흥원의 발간자료, 공지사항, 공예디자인뉴스, 소장자료 등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,110,&quot;3001&quot;);">정기간행물 공예플러스</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,110,&quot;3002&quot;);">공예/디자인백서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,110,&quot;3005&quot;);">전시도록</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,110,&quot;3006&quot;);">연구보고서</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=110" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823132992556.jpg" alt="한국관광공사">
+                                </span>
+                                    <p>관광 정보에 대한 장소, 분류(관광지, 음식점, 숙박, 축제/공연/행사, 쇼핑), 요약내용, 여행 뉴스 및 사진 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,81,&quot;587&quot;);">관광사진</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,81,&quot;588&quot;);">고캠핑정보</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,81,&quot;676&quot;);">두루누비 코스목록</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=81" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231121351641975.png" alt="한국디자인진흥원">
+                                </span>
+                                    <p></p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,131,&quot;702&quot;);">디자인DB보고서 디자인연구</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=131" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230119031020370.jpg" alt="한국문학번역원">
+                                </span>
+                                    <p>한국문학번역원의 번역출간도서 DB의 자료 및 문학자료, 기사등에 대한 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,71,&quot;589&quot;);">한국문학도서 해외소개리뷰-소설</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,71,&quot;590&quot;);">한국문학도서 해외소개리뷰-에세이</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=71" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301182303867822.jpg" alt="한국문화관광연구원">
+                                </span>
+                                    <p>문화관광연구원의 연구보고서 및 세미나자료, 한국관광동향 등에 대한 서비스를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,82,&quot;2010&quot;);">한국의 문화/관광지</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=82" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439292688245.jpg" alt="한국문화예술교육진흥원">
+                                </span>
+                                    <p>진흥원 발간 자료의 제명, 제작년도, 제작자, 종류, 이미지, 영상 등 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;591&quot;);">아르떼PICK-컬렉션</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;592&quot;);">아르떼PICK-위클리뉴스</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;593&quot;);">아르떼PICK-도서PICK</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;594&quot;);">아르떼PICK-영상PICK</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;595&quot;);">아르떼PICK-문화예술교육사람들</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;596&quot;);">아르떼PICK-인포그래픽스</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;597&quot;);">교육컨텐츠자료</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,69,&quot;598&quot;);">연구자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=69" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822445353823.jpg" alt="한국문화예술위원회">
+                                </span>
+                                    <p>사이버문학광장의 작품, 행사, 공모, 추천도서, 북리뷰 등의 정보를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,93,&quot;3003&quot;);">베니스비엔날레 한국관백서</li>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,93,&quot;3004&quot;);">문예연감</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=93" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823195466745.jpg" alt="한국영상자료원">
+                                </span>
+                                    <p>영상자료 메타정보, 영화 포스터/스틸 이미지, 시나리오 원문, 동영상, 영화관련기사 원문 등작품정보, 영화인정보, 영화 영상물 등 한국 영화에 대한 자료를 서비스합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,78,&quot;574&quot;);">영화정보DB</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=78" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190322217919.jpg" alt="한국저작권위원회">
+                                </span>
+                                    <p>한국저작권위원회 행사일정, 저작권동향, 보도자료, 공지사항, 포토뉴스, 법령.판례 등 메타정보를 서비스합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,75,&quot;667&quot;);">저작권등록정보</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=75" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439433864739.jpg" alt="한국조폐공사 화폐박물관">
+                                </span>
+                                    <p>화폐유물 소장품 기록</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,244,&quot;2011&quot;);">세계의 화폐/주화/훈장/메달</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=244" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439523665738.jpg" alt="한국출판문화산업진흥원">
+                                </span>
+                                    <p>간행물 심의연감, 추천도서, 관련법규 등의 자료를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,80,&quot;683&quot;);">추천도서</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=80" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439493779858.jpg" alt="한국콘텐츠진흥원">
+                                </span>
+                                    <p>한국콘텐츠 진흥원의 연구보고서, 산업에 대한 동향 세미나자료 및 기업정보에 대한 서비스를 제공합니다.</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,74,&quot;668&quot;);">정기간행물</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=74" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                                <li class="swiper-slide">
+                                <span class="img">
+                                    <img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822115579243.jpg" alt="한국학중앙연구원">
+                                </span>
+                                    <p>한국학 연구자료</p>
+                                    <ul>
+                                        
+                                            <li style="cursor:pointer" onclick="sublistClick(&#39;org&#39;,119,&quot;2012&quot;);">한국학 사진자료</li>
+                                        
+                                    </ul>
+                                    <a href="https://www.culture.go.kr/archive/newArchiveResultList.do?org_id=119" class="btn_link" data-brl-use="NO">바로가기</a>
+                                </li>
+                            
+                        </ul>
+						<div class="slide_btn">
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" data-brl-use="NO"></div>
+                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"></div>
+                            <button class="start" style="display:none;"><span class="hidden">시작</span></button>
+                            <button class="pause"><span class="hidden">정지</span></button>
+                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
+						</div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="archive_slide_cont02">
+            <h3 data-brl-use="PH/H2">콘텐츠 제공기관</h3>
+            <div class="archive_slide_box">
+                <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                        
+                            <li class="swiper-slide swiper-slide-active" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.provin.gangwon.kr/gw/portal" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011214111517541.jpg" alt="강원도청"></a>
+                            </li>
+                        
+                            <li class="swiper-slide swiper-slide-next" style="width: 180px; margin-right: 40px;">
+                                <a href="https://gmoma.ggcf.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213325235100.png" alt="경기도미술관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.gogung.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230431022151372.jpg" alt="국립고궁박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.gugak.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439175843860.jpg" alt="국립국악원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.nihc.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023043913231351.jpg" alt="국립무형유산원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.nrich.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202305313264979033.jpg" alt="국립문화재연구원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.nfm.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190292399553.jpg" alt="국립민속박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.nmf.or.kr/user/main/main.do" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213353132084.png" alt="국립박물관문화재단"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.nie.re.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190362008383.jpg" alt="국립생태원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://sejong.nl.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822143736670.jpg" alt="국립세종도서관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.acc.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213364193619.png" alt="국립아시아문화전당"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.nlcy.go.kr/NLCY/main/index.do" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439213081087.jpg" alt="국립어린이청소년도서관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://jeongdong.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213395907489.png" alt="국립정동극장"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.nl.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190581835693.jpg" alt="국립중앙도서관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.museum.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231189323440540.png" alt="국립중앙박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.hangeul.go.kr/main.do" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213404053224.png" alt="국립한글박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.seamuse.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231121341024852.png" alt="국립해양문화재연구소"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.mmca.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213433122794.png" alt="국립현대미술관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.ktv.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310244689937.jpg" alt="국민방송"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kspo.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822225444560.png" alt="국민체육진흥공단"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.igbf.kr/gugak_web/main/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310283441445.jpg" alt="국악방송"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.much.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190475768564.jpg" alt="대한민국역사박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.naa.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213452775892.png" alt="대한민국예술원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.cha.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439584899540.jpg" alt="문화재청"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://sphh.sscmc.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202304310322008996.jpg" alt="서대문형무소역사관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://seouldesign.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213455768850.png" alt="서울디자인재단"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.sfac.or.kr/index.do" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213472246385.png" alt="서울문화재단"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.museum.seoul.kr/www/NR_index.do?sso=ok" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213482897019.png" alt="서울역사박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://gomuseum.seoul.go.kr/sekm/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011213522589308.jpg" alt="서울우리소리박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://silhak.ggcf.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213485128834.png" alt="실학박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kmrb.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190314338258.jpg" alt="영상물등급위원회"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kofic.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823145633411.jpg" alt="영화진흥위원회"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.gokams.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301182332773836.jpg" alt="예술경영지원센터"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.sac.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213491859825.png" alt="예술의전당"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://heritage.unesco.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230321821901886.jpg" alt="유네스코세계유산"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.jeonnam.go.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202311213495401314.png" alt="전라남도청"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.warmemo.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822131688256.jpg" alt="전쟁기념관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.kcdf.or.kr/main" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023043925779601.jpg" alt="한국공예디자인문화진흥원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://kto.visitkorea.or.kr/kor.kto" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823132992556.jpg" alt="한국관광공사"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.kidp.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20231121351641975.png" alt="한국디자인진흥원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://ltikorea.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230119031020370.jpg" alt="한국문학번역원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kcti.re.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301182303867822.jpg" alt="한국문화관광연구원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.arte.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439292688245.jpg" alt="한국문화예술교육진흥원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.arko.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822445353823.jpg" alt="한국문화예술위원회"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.koreafilm.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011823195466745.jpg" alt="한국영상자료원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.copyright.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_202301190322217919.jpg" alt="한국저작권위원회"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://museum.komsco.com/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439433864739.jpg" alt="한국조폐공사 화폐박물관"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kpipa.or.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439523665738.jpg" alt="한국출판문화산업진흥원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="http://www.kocca.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_20230439493779858.jpg" alt="한국콘텐츠진흥원"></a>
+                            </li>
+                        
+                            <li class="swiper-slide" style="width: 180px; margin-right: 40px;">
+                                <a href="https://www.aks.ac.kr/" target="_blank"><img src="./문화포털-문화자료관 _ 문화지식_files/instt_2023011822115579243.jpg" alt="한국학중앙연구원"></a>
+                            </li>
+                        
+                    </ul>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
+            </div>
+        </div>
+	<script>
+	/*<![CDATA[*/
+	$(function () {
+	
+		
+        $(".archive_slide_cont .tab_archive li").click(function(){
+        	
+            var thisIdx = $(this).index()
+            
+            $(this).addClass("active").siblings().removeClass("active")
+            $(".archive_slide_cont .tab_archive li a").attr("title","");
+            $(this).find("a").attr("title","선택됨");
+            $('.archive_slide_cont .tab_cont .cont_box').hide().eq(thisIdx).show();
+           
+            
+        })
+		
+        // archive slide
+        $('.archive_slide_cont .cont_box').each(function (index) {
+            var $this = $(this);
+            $this.addClass('event_slide' + index);
+
+            var swiper = new Swiper($this.find(".swiper-container"), {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                slidesPerGroup: 4,
+                observer: true,
+                loop:false,
+                observeParents: true,
+
+                navigation: {
+                    nextEl: $this.find('.swiper-button-next'),
+                    prevEl: $this.find('.swiper-button-prev'),
+                },
+                pagination: {
+                    el: $this.find('.swiper-pagination'),
+                    clickable: true,
+                },
+                /*
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                */
+                breakpoints: {
+                	1080 : {
+                		spaceBetween: 20
+                	},
+                	
+                    768: {
+                        slidesPerView: 2,  //브라우저가 768미만일때
+                        spaceBetween: 20,
+                        slidesPerGroup: 2,
+                    },
+                    428: {
+                        slidesPerView: 1,  //브라우저가 428미만일때
+                        spaceBetween: 20,
+                        slidesPerGroup: 1,
+                    },
+                }
+            })
+            $this.find('.pause').on('click', function () {
+                $(this).hide().siblings(".start").show();
+                swiper.autoplay.stop();
+            })
+            $this.find('.start').on('click', function () {
+                $(this).hide().siblings(".pause").show();
+                swiper.autoplay.start();
+            })
+            
+  
+        })
+
+
+        var swiper = new Swiper(".archive_slide_cont02 .swiper-container", {
+            slidesPerView: 5,
+            spaceBetween: 40,
+            observer: true,
+            observeParents: true,
+            loop:false,
+
+            navigation: {
+                nextEl: '.archive_slide_cont02 .swiper-button-next',
+                prevEl: '.archive_slide_cont02 .swiper-button-prev',
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,  //브라우저가 768미만일때
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1,  //브라우저가 768미만일때
+                    spaceBetween: 20,
+                },
+            },
+        })
+	});        
+	/*]]>*/		
+	</script>            
+    </div>
+		<!-- after_contents -->
+		
+		<!-- //after_contents -->
+		<!-- footer -->
+		
+	<div id="agencyContents" class="agency__container" style="display:none">
+		<div class="section">
+			<div class="section__header">
+				<p class="section__header--title">관련기관 안내</p>
+			</div>
+			<div class="section__swiper-group">
+				<div class="section__swiper section__swiper--agency-logo swiper-container">
+					<ul class="swiper-wrapper">
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.museum.go.kr/site/main/home" target="_blank" title="국립중앙박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211152581383.jpg" alt="국립중앙박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.korean-national-ballet.kr/ko" target="_blank" title="국립발레단(KOREAN NATIONAL BALLET)새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211145113463.jpg" alt="국립발레단(KOREAN NATIONAL BALLET)">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nationalopera.org/" target="_blank" title="국립오페라단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211143896134.jpg" alt="국립오페라단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kncdc.kr/ko/main" target="_blank" title="국립현대무용단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211141943691.jpg" alt="국립현대무용단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nsac.or.kr/Home/Main.aspx" target="_blank" title="남산예술센터 x삼일로창고극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211134514528.jpg" alt="남산예술센터 x삼일로창고극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.snart.or.kr/" target="_blank" title="성남아트센터새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211123757510.jpg" alt="성남아트센터">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ansanart.com/index.do" target="_blank" title="안산문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211122070650.jpg" alt="안산문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.jeongdong.or.kr/portal/main/main.do" target="_blank" title="정동극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221112600876.jpg" alt="정동극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://theater.arko.or.kr/Pages/Main.aspx" target="_blank" title="한국문화예술위원회 새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211114700500.jpg" alt="한국문화예술위원회 ">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.ntck.or.kr/" target="_blank" title="국립극단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211151173359.jpg" alt="국립극단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.spac.or.kr/" target="_blank" title="서울예술단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211132877005.jpg" alt="서울예술단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.karts.ac.kr/index_karts.jsp" target="_blank" title="한국예술종합학교새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221110328670.jpg" alt="한국예술종합학교">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ltikorea.or.kr/" target="_blank" title="한국문학번역원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221194530136.jpg" alt="한국문학번역원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.copyright.or.kr/main.do" target="_blank" title="한국저작권위원회새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221192806466.jpg" alt="한국저작권위원회">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kocca.kr/cop/main.do" target="_blank" title="한국콘텐츠진흥원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_2019122119803960.jpg" alt="한국콘텐츠진흥원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nfm.go.kr/home/index.do" target="_blank" title="국립민속박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221183699687.jpg" alt="국립민속박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.gugak.go.kr/site/main/index001" target="_blank" title="국립국악원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221181558053.jpg" alt="국립국악원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.sac.or.kr/SacHome/sachome/main" target="_blank" title="예술의전당새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221175339251.jpg" alt="예술의전당">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ntok.go.kr/kr/Main/Index" target="_blank" title="국립극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221173592982.jpg" alt="국립극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://nationalchorus.or.kr/" target="_blank" title="재단법인 국립합창단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20191221165985028.jpg" alt="재단법인 국립합창단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://archive.arko.or.kr/" target="_blank" title="아르코예술기록원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211112673772.jpg" alt="아르코예술기록원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.sejongpac.or.kr/portal/main/main.do" target="_blank" title="세종문화회관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_2022031815421271992.jpg" alt="세종문화회관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.gcf.or.kr/main/?load_popup=1" target="_blank" title="김포문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_20220110973816325.JPG" alt="김포문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.mmca.go.kr/main.do" target="_blank" title="국립현대미술관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./문화포털-문화자료관 _ 문화지식_files/banner_201912211102337173.jpg" alt="국립현대미술관">
+								</figure>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<button type="button" class="section__swiper--prev">이전</button>
+				<button type="button" class="section__swiper--next">다음</button>
+			</div>
+			    <a href="https://www.culture.go.kr/archive/archiveMain.do#none" class="pop-close">X</a>
+		</div>
+	</div>
+		<footer class="footer" id="footer">
+			<div class="footer__util">
+				<div class="footer__inner">
+					<ul class="footer__policy">
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/aboutA.do" target="_blank" title="새 창">문화포털이란?</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/archive/archiveMain.do#" class="agency__trigger" aria-expanded="false" aria-owns="agencyContents">관련기관 안내</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/culture/publicize.do" target="_blank" title="새 창">문화홍보등록</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/copyrightGuide.do" target="_blank" title="새 창">저작권정책</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/privacyPolicy.do" target="_blank" title="새 창" class="txt_bold" style="color: #e42c01">개인정보처리방침</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/searchPolicy.do" target="_blank" title="새 창">검색결과수집정책</a></li>
+						<!--  <li class="footer__policy--item"><a href="/ticketadmin" target="_blank" title="새 창">참여단체</a></li>  -->
+					</ul>
+					<div class="footer__family">
+						<label for="familySite" class="a11y__sr--only" data-brl-use="NO">관련 사이트 선택</label>
+						<select id="familySite" class="footer__family--select">
+							<option value="">관련 사이트</option>
+							
+							<option value="https://webzine.kcisa.kr/vol026/index.php">웹진 이데아 Vol.26</option>
+							
+							<option value="https://www.culture.go.kr/ic/">실감형전시플랫폼</option>
+							
+							<option value="https://www.kogl.or.kr/">공공누리</option>
+							
+							<option value="https://qi.kcisa.kr/">모바일큐아이</option>
+							
+							<option value="https://www.culture.go.kr/data/main/main.do">문화공공데이터광장</option>
+							
+							<option value="https://www.culture.go.kr/deduction/">문화비소득공제</option>
+							
+							<option value="https://www.bigdata-culture.kr/bigdata/user/main.do">문화빅데이터플랫폼</option>
+							
+						</select>
+						<button type="button" title="선택된 관련 사이트 새창으로 열기" id="goFamilySite" style="display: none;">이동</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer__info">
+				<div class="footer__inner">
+					<div class="footer__left">
+						<ul class="footer__link">
+							<li class="footer__link--item"><a href="https://www.kcisa.kr/" target="_blank" title="KCISA 한국문화정보원 새 창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/footer_link01.png" alt="KCISA 한국문화정보원 새 창 열림"></a></li>
+							<li class="footer__link--item"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="문화체육관광부 새 창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/footer_link02.png" alt="문화체육관광부 새 창 열림"></a></li>
+						</ul>
+						<address class="footer__address">
+							<p class="footer__address--desc">
+								대표전화 <a href="tel:1688-2220">1688-2220</a> / 이메일 <a href="mailto:culture@kcisa.kr">culture@kcisa.kr</a><br>
+								우) 03925 서울시 마포구 월드컵북로 400, 6층·8층<br>
+								COPYRIGHT© 한국문화정보원
+							</p>
+						</address>
+<!-- 					<p class="footer__copylight">COPYRIGHT&copy; 한국문화정보원</p>  -->
+					</div>
+					<div class="footer__right">
+						<div class="footer-sns">
+							<div class="sns">
+								<ul class="sns__list">
+									<li class="sns__item">
+										<a href="https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw" target="_blank" class="sns__link" title="한국문화정보원(유튜브)새창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/ico_footer_youtube.png" alt="한국문화정보원(유튜브)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.instagram.com/culture_portal/" target="_blank" class="sns__link" title="한국문화정보원(인스타그램)새창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/ico_footer_instagram.png" alt="한국문화정보원(인스타그램)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.facebook.com/cultureportal" target="_blank" class="sns__link" title="한국문화정보원(페이스북)새창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/ico_footer_facebook.png" alt="한국문화정보원(페이스북)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://blog.naver.com/kcis_" target="_blank" class="sns__link" title="한국문화정보원(네이버블로그)새창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/ico_footer_blog_02.png" alt="한국문화정보원(네이버블로그)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://tv.naver.com/culturepd" target="_blank" class="sns__link" title="한국문화정보원(네이버TV)새창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/ico_footer_navertv.png" alt="한국문화정보원(네이버TV)"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="footer__auth">
+							<li class="footer__auth--item"><a href="https://www.culture.go.kr/info/accessibility.do" target="_blank" title="웹접근성 새 창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/img_footer_auth_wa_2023.png" alt="웹접근성 새 창 열림"></a></li>
+							<li class="footer__auth--item"><a href="https://www.kogl.or.kr/index.do" target="_blank" title="공공누리 새 창 열림"><img src="./문화포털-문화자료관 _ 문화지식_files/img_footer_auth_open.png" alt="공공누리 새 창 열림"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<div class="tab_bar">
+		<ul>
+		
+			<li>
+				<a href="https://www.culture.go.kr/sso/login.do" class="icon_login">로그인</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/member/register.do" class="icon_join">회원가입</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://www.culture.go.kr/index.do" class="icon_home">홈</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/culture/publicize.do" class="icon_regedit">문화홍보등록</a>
+			</li>
+ 			<li>
+				<a href="http://culture-chatbot.kcisa.kr/" target="_blank" class="icon_chatbot">챗봇</a>
+			</li>
+		</ul>
+	</div>		
+	<script>
+	/*<![CDATA[*/
+		
+		// pc menu fixed
+		if( $(window).width() > 1200){
+			var headerH = $(".header").outerHeight();
+			$(window).scroll(function(){
+				var st = $(document).scrollTop(),
+					headerTop = $(".header_top").outerHeight();
+				if(st > headerTop){
+					$(".header").addClass("fixed");
+					$("body").css({"paddingTop" : headerH + "px"})
+				} else {
+					$(".header").removeClass("fixed");
+					$("body").css({"paddingTop" : 0})
+				}
+			})
+		} else {
+			// tab bar
+			var tabbarHeight = $(".tab_bar").outerHeight();
+			if($(".tab_bar").is(":visible")){
+				$("body").css({"paddingBottom" : tabbarHeight + "px"})
+			}
+			var scrollTop = 0;
+			
+			$(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if (st > scrollTop) {
+					$(".tab_bar").addClass("up");
+				} else {
+					$(".tab_bar").removeClass("up");
+				}
+				scrollTop = st;
+			});
+		}		
+		
+	/* Footer 관련사이트 */
+	$(document).ready(function(){
+// 		$("#familySite").change(function(){
+// 			var url = $("#familySite option:selected").val();
+// 			window.open(url, target="_new");
+// 		});  
+		$("#goFamilySite").hide();
+		
+	 	$("#familySite").change(function(){
+			
+			var familySite = $("#familySite").val();
+			if(familySite != null || familySite != ""){
+				$("#goFamilySite").show();
+			}else{
+				$("#goFamilySite").hide();
+			}
+		});  
+		
+
+	});
+	
+	 
+	/*]]>*/		
+	</script>		
+	
+		<!-- //footer -->
+	</div>
+
+</body></html>

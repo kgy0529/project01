@@ -1,0 +1,3678 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.culture.go.kr/tradition/traditional3DContentsList.do -->
+<html lang="ko" class="desktop"><!-- head 시작 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>문화포털 전통문양 | 3D프린팅 콘텐츠-문화포털</title>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="문화포털">
+	<meta name="description" content="문화포털">
+	<meta name="description" content="문화포털">
+	<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/global.css">
+	<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/main_new.css">
+<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/contents_new.css">	
+	<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/pattern.css">	
+	<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/specialized.css">
+	<link rel="stylesheet" type="text/css" href="./03문화지식_전통문양_3D프린팅콘텐츠_files/swiper.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/traditionalCommon.css"> -->
+	
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/content_link_share.js.다운로드"></script>
+    <!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+	
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/patternWiseTraker.js.다운로드"></script>
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/swiper.min.js.다운로드"></script>
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/jquery-1.11.3.min.js.다운로드"></script>	
+	<!-- <script type="text/javascript" src="/assets/js/common_ui.js?v=20200218170000"></script> --> 
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/titleUi.js.다운로드"></script>
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/layout.js.다운로드"></script>
+    <script src="./03문화지식_전통문양_3D프린팅콘텐츠_files/three.min.js.다운로드"></script>
+    <script src="./03문화지식_전통문양_3D프린팅콘텐츠_files/OrbitControls.js.다운로드"></script>
+    <script src="./03문화지식_전통문양_3D프린팅콘텐츠_files/STLLoader.js.다운로드"></script>
+    <script src="./03문화지식_전통문양_3D프린팅콘텐츠_files/Stats.js.다운로드"></script>
+	
+	<!-- 점자솔루션 -->
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/edotxpress-html.min.js.다운로드"></script>
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/edotxpress-common.js.다운로드"></script>
+	<script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/edotxpress-config-culture.js.다운로드"></script>
+	
+    <!--네이버 검색시 사이트 연관채널 지정_Start-->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "문화포털",
+            "url": "https://www.culture.go.kr",
+            "sameAs": [
+                "https://blog.naver.com/kcis_",
+                "https://www.facebook.com/cultureportal",
+                "https://tv.naver.com/culturepd",
+                "https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw",
+                "https://www.instagram.com/culture_portal"
+            ]
+        }
+    </script>
+    <script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/util.comment.js.다운로드"></script>
+    <script type="text/javascript" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/jquery.jqtransform.js.다운로드"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#selectSoltBtn").on("click",function(){
+            	var endNm = $("select[name=pages] option:selected").val();
+            	
+            	$("#pattern").submit();
+            });
+    	});
+    
+        function ajaxCardView1(seq) {
+
+            $.ajax({
+                url			:	'/popup/view3dPattern_2021.do'
+                ,type		:	'get'
+                ,data		:	{'seq' : seq}
+                ,dataType	:	'html'
+                ,success	:	function( res ) {
+                    $('#design_pattern_2d').html( $(res) );
+
+                }
+                ,error		:	function(data, status, err) {
+                    alert('시스템 오류가 발생했습니다.');
+                }
+                ,complete	:	function () {
+
+                }
+            });
+        }
+        //<![CDATA[
+        // $(function(){
+        //     // layer popup
+        //     $(".btn_type02").click(function(e){
+        //         e.preventDefault();
+        //         var $this, $id;
+        //         $this = $(this),
+        //             $id = $(this).attr("href");
+        //         $($id).show().attr("tabindex","0").focus();
+        //         $(".btn_type02").click(function(){
+        //             $("#traditionGuide2").hide();
+        //             $this.focus();
+        //         });
+        //     });
+        // });
+        function allCheck(){
+        	
+        	var cntAll = $("#cntAll").val();
+        	if(cntAll == 0){
+        		alert("선택할 게시물이 없습니다.");
+        		return false;
+        	}
+        	
+            $("input[name=chkOrgImg]").prop("checked",true);
+            $(".checkAll").hide().siblings().show();
+            $(".checkNone").focus();
+        }
+        function disAllCheck(){
+            $("input[name=chkOrgImg]").prop("checked",false);
+            $(".checkNone").hide().siblings().show();
+        }
+
+        //<![CDATA[
+
+        function viewHugePicture(url, width, height){
+            window.open(url,"_blank","top=100,left=100,width="+width+",height="+height+",resizable=1,scrollbars=yes");
+        }
+        //]]>
+        
+        function imgDown(){
+        	if($("input:checkbox[name='chkOrgImg']").is(":checked")){
+                var i, sum=0, tag=[], str="";
+                var chk = $('.grid__mask input[name=chkOrgImg]');
+                var tot = chk.length;
+                for (i = 0; i < tot; i++) {
+                    if (chk[i].checked == true) {
+                        tag[sum] = chk[i].value;
+                        sum++;
+                    }
+                }
+            
+                if(tag.length > 0){
+                    str += tag.join(",");
+                } 
+                
+                var param = "type=org&pattern_type=PG05&chkOrgImg="+str;
+
+                    jQuery.ajax({
+                        type : "POST",
+                        url: '/tradition/autoPatternImgDownFileNew.do',
+                        data: param,
+                        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                        cache: false,
+                        dataType: "json",
+                        success : function(success) {
+                        	console.log(success.message);
+                        	imgFile_check(success.message, str);
+                        }
+                        ,error : function(result) {
+                            alert("fail");
+                        }
+                    });
+                
+            }else{
+                alert("선택한 게시물이 없습니다.");
+            }
+        }
+        
+        function imgFile_check(downloadkey,str){
+            window.open('/ptn/imgDown.do?downloadkey=' + downloadkey, '_blank');
+        }
+        
+        function downLoad(){
+            /**
+             if($("input:checkbox[name='chkOrgImg']").is(":checked")){
+                location.href='patternDownFile.do?type=org';
+            }
+             **/
+
+            if($("input:checkbox[name='chkOrgImg']").is(":checked")){
+                var i, sum=0, tag=[], str="";
+                var chk = $('.grid__mask input[name=chkOrgImg]');
+                var tot = chk.length;
+                for (i = 0; i < tot; i++) {
+                    if (chk[i].checked == true) {
+                        tag[sum] = chk[i].value;
+                        sum++;
+                    }
+                }
+                if(tag.length > 0){
+                    str += tag.join(",");
+                }
+                
+                // 전통문양 사용신청
+                var applyInfo = null;
+                if(applyInfo == null){
+                    location.href='/tradition/autoGuideB02.do?type=org&pattern_type=PG05&chkOrgImg='+str;
+                }else{
+                    var param = "type=org&pattern_type=PG05&chkOrgImg="+str;
+
+                    jQuery.ajax({
+                        type : "POST",
+                        url: '/tradition/autoPatternDownFileNew.do',
+                        data: param,
+                        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                        cache: false,
+                        dataType: "json",
+                        success : function(success) {
+                            file_check2(success.message, str);
+                        }
+                        ,error : function(result) {
+                            alert("fail");
+                        }
+                    });
+                } 
+            }else{
+                alert("선택한 게시물이 없습니다.");
+            }
+        }
+
+        function file_check2(downloadkey,str){
+            window.open('/ptn/download.do?downloadkey=' + downloadkey, '_blank');
+
+            var param = "type=org&pattern_type=PG05&chkOrgImg="+str;
+            var	furl = '/tradition/autoPatternDownFileCheck3d.do';
+
+            $.ajax({
+                type: "POST",
+                url: furl,
+                data: param,
+                dataType : "json",
+                success: function(data) {
+                    // returnMessage(data.total_count,data.exist_count,data.file_name);
+
+                    // 20.12.22 와이즈트래커 추가
+                    startDownloadWiseTracking(str,'G12');
+                }
+            });
+        }
+
+        function message(count,totalCount,fileName) {
+            var countTotal = totalCount -1;
+            $.ajax({
+                url			:	'/popup/returnMessage_2021.do'
+                ,type		:	'get'
+                ,data		:	{'count' : count,'totalCount' : countTotal,'fileName' : fileName }
+                ,dataType	:	'html'
+                ,success	:	function( res ) {
+                    $('#returnMessage').html( $(res) );
+                }
+                ,error		:	function(data, status, err) {
+                    alert('시스템 오류가 발생했습니다.');
+                }
+                ,complete	:	function () {
+
+                }
+            });
+        }
+
+        function returnMessage(total_count,exist_count,file_name){
+            var count = exist_count;
+            var totalCount= total_count;
+            var fileName = file_name;
+            $("#messageA").attr('onclick',message(count,totalCount,fileName)).click();
+        }
+    </script>
+    <!--네이버 검색시 사이트 연관채널 지정_End-->
+<!-- File : traditional3DContentsList.html [ 3D프린팅 콘텐츠 List ] -->
+</head>
+    <!-- head 끝 -->
+    
+<body style="padding-top: 0px;">
+	<div class="wrap">
+	 	<!-- header -->
+		
+      
+      <div class="skip-nav">
+         <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#content">본문 바로가기</a>
+         <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#footer">푸터 바로가기</a>
+      </div>
+      
+      <header class="header">
+         <div class="pc_header">
+            <!-- pc header -->
+            <div class="header_top" style="">
+               <div class="hearder_top_box">
+                  <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+                  <div class="hearder_search">
+                     <div class="search">
+                        <form id="searchFormHeader" name="searchForm" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                           <input type="text" placeholder="검색어를 입력하세요." id="searchContents" name="searchTerm" value="" onkeypress="javascript:if(event.keyCode==13){requestSearch();return false;}" maxlength="100" title="문화포털 검색 입력">
+                           <button class="btn_search" title="검색" onclick="requestSearch();return false;">검색</button>
+                           <input type="hidden" id="categoryType" name="categoryType" value="total">
+                           <input type="hidden" id="integratedPage" name="cPage" value="1">
+                           <input type="hidden" name="limit" value="4">
+                           <input type="hidden" name="viewCount" value="4">
+                           <input type="hidden" name="cultureOrderBy" value="regdate">
+                        </form>
+                     </div>
+                     <div class="keyword">
+                        
+                     </div>
+                     <!-- keyword 없을때 노출 -->
+                     <p class="txt_desc" style="display:none"><a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">우리 한글날에 어울리는 <strong>문화 콘텐츠</strong>를 찾아보세요!</a></p>
+                     <!-- //keyword 없을때 노출 -->
+                     
+                     <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="pc_log">로그와트</a>  -->
+                     <!-- 로고아트 클릭시 이동하는 url --> 
+                     <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="pc_log" tabindex="-1">로고아트</a>
+                  </div>
+                  <div class="header_menu">
+                     <ul class="login_menu">
+                     
+                        <li><a href="https://www.culture.go.kr/sso/login.do">로그인</a></li>
+                        <li><a href="https://www.culture.go.kr/member/register.do">회원가입</a></li>
+                     
+                     
+                        <li><a href="https://www.culture.go.kr/info/aboutA.do">이용안내</a></li>
+                     </ul>
+                     <div class="scale">
+                        <span>화면크기</span>
+                        <div>
+                           <button class="plus" title="키우기" id="btn_plus" onclick="fn_screenPlus();">키우기</button>
+                           <span id="bodySize">100%</span>
+                           <button class="minus" id="btn_minus" onclick="fn_screenMinus();">줄이기</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- PC 메인 메뉴 -->
+            <div class="shadow_box">
+             <div class="mBg">
+        
+    </div>
+              <div class="header_tab">
+      <nav class="nav">
+        <ul>
+          <li class="">
+            <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+            <ul class="depth01 active">
+              <li>
+                <a href="https://www.culture.go.kr/home/index.do">
+                  집콕+집밖 문화생활
+
+                  <span class="point">특화서비스</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/oneeye/oneEyeList.do"> 한눈에 보는 문화정보 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/perform/relayList.do"> 문화릴레이티켓 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/calendar/view.do"> 문화캘린더 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                  문화공간,단체
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                  문화TV
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/culture/themeList.do"> 공감마당 </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/info/sns.do"> 문화SNS 지도 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/magazine/webzine.do"> 웹진 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/archive/archiveMain.do"> 문화자료관 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                  전통문양
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do"> 예술지식백과 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/realisticContentList.do"> 실감형 콘텐츠 </a>
+              </li>
+<!-- 2023.12.14 웹접근성 심사 대비
+              <li>
+                <a href="/culturedata/dataAnalyze.do">
+                  문화정보분석
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/dataAnalyze.do"
+                      >문화정보 데이터분석</a
+                    >
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/culturemap.do"
+                      >예술,관광 지도매핑 서비스</a
+                    >
+                  </li>
+                </ul>
+              </li>
+ -->
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do"> 문화드림 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/recruitList.do"> 채용·자원봉사 모집 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do"> 문화지원사업 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/newsList.do"> 정책뉴스 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/event/eventRunningList.do"> 문화이벤트 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/industry/apiGuideA.do"> 문화포털API </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/noticeList.do"> 공지사항 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+          <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do" style="font-size:0;" tabindex="-1">마이페이지</a>
+            <ul class="depth01">
+              <li>
+                <a href="https://www.culture.go.kr/info/aboutA.do"> 이용안내 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/mypage/mypage.do"> 마이페이지 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/english.do"> English </a>
+              </li>
+
+              <li>
+                 <a href="https://www.culture.go.kr/cultureplan/cardList.do" class="chk011"> 문화융성카드 </a>
+              </li>
+
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="gnb_btnGroup">
+        <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+        <!-- <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+        <a href="http://culture-chatbot.kcisa.kr/" title="새창 열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/btn_chatbot.png" alt="챗봇"></a>
+        <!--  <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇"></a>  -->
+     </div>
+</nav>
+    </div>
+               <div class="header_tab" style="display:none;">
+                  <nav class="nav">
+                     <ul>
+                     
+                        
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+                           
+                        </li>
+                     
+                        
+                     
+                     </ul>
+                     <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+                     <!--  <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+ 					  
+                     <a href="http://culture-chatbot.kcisa.kr/" title="새창열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/btn_chatbot.png" alt="챗봇"></a>
+ 					 
+                     <!-- 
+                     <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;">
+                     <img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇">
+                     </a> 
+                      --> 
+                     
+                  </nav>
+               </div>
+            </div>
+            <!-- PC 서브 메뉴 -->
+            <div class="drop_menu_box" style="display:none">
+               <div class="drop_menu">
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/home/index.do">
+                           집콕+집밖 문화생활
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                           한눈에 보는 문화정보
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/perform/relayList.do">
+                           문화릴레이티켓
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/calendar/view.do">
+                           문화캘린더
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                           문화공간·단체
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                           문화TV
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culture/themeList.do">
+                           공감마당
+                           
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/info/sns.do">
+                           문화SNS 지도
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/magazine/webzine.do">
+                           웹진
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                           문화자료관
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                           전통문양
+                           
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                           예술지식백과
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                           실감형 콘텐츠
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                           문화정보분석
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                           문화드림
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/recruitList.do">
+                           채용·자원봉사 모집
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                           문화지원사업
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/newsList.do">
+                           정책뉴스
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                           문화이벤트
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                           문화포털API
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/noticeList.do">
+                           공지사항
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  
+                  
+                  <!-- my page -->
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/info/aboutA.do">
+                           이용안내
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/mypage/mypage.do">
+                           마이페이지
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/english.do">
+                           English
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                           문화융성카드
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </div>
+            </div>
+         </div>
+         <!-- mo header -->
+         <div class="mo_header">
+            <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+            <button class="btn_menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            <div class="menu_box" data-brl-use="NO">
+            
+               <!-- 로그인 전 -->
+               
+               <a href="https://www.culture.go.kr/sso/login.do" class="btn_login">로그인</a>
+               <a href="https://www.culture.go.kr/member/register.do" class="btn_member">회원가입</a>
+               
+               <!-- // 로그인 전 -->
+               
+               <!-- 로그인 후 -->
+               
+               <!-- // 로그인 후 -->
+               
+               <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#" class="btn_close" data-brl-use="NO">닫기</a>
+            </div>
+            <div class="header_search img_type">
+               <div class="input_box">
+               <form id="searchFormHeader_mo" name="searchForm_mo" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                  <input type="text" placeholder="검색어를 입력하세요." id="searchContents_m" name="searchTerm" value="" title="문화포털 검색 입력" onkeypress="javascript:if(event.keyCode==13){requestSearch_mo();return false;}">
+                  <button class="btn_search" onclick="requestSearch_mo();return false;">검색</button>
+                  <input type="hidden" id="categoryTypeMo" name="categoryType" value="total">
+                  <input type="hidden" id="integratedPageMo" name="cPage" value="1">
+                  <input type="hidden" name="limit" value="3">
+               </form>
+               </div>
+               <div class="keyword_box">
+                  
+<!--                   <span class="keyword" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}" th:id="${item.KEYWORD}" th:onclick="|javascript:fn_searchKeyWord_mo(this.getAttribute('id'))|">문화행사</span> -->
+                  <!-- <a href="#" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}"
+                           th:href="|javascript:fn_searchKeyWord_mo('${item.KEYWORD}');|" th:attr="title=${item.KEYWORD} + '으로 검색하기'">문화행사</a> -->
+               </div>
+               
+               <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="m_log">로그와트</a>   -->
+               <!-- <a href="https://www.culture.go.kr/event/archiveEvent.do" target="_blank" class="m_log">로고아트</a> -->
+<!--               <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="m_log">로고아트</a>-->
+               
+            </div>
+            <!-- mo menu -->
+            <div class="mo_menu">
+               <div class="left">
+                  <ul class="depth01">
+                  
+                     
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">문화체험</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/home/index.do">
+                                 집콕+집밖 문화생활
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                                 한눈에 보는 문화정보
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/perform/relayList.do">
+                                 문화릴레이티켓
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/calendar/view.do">
+                                 문화캘린더
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                                 문화공간·단체
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">문화공감</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                                 문화TV
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/themeList.do">
+                                 공감마당
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/sns.do">
+                                 문화SNS 지도
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/magazine/webzine.do">
+                                 웹진
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">문화지식</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                                 문화자료관
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                                 전통문양
+                                 
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                                 예술지식백과
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                                 실감형 콘텐츠
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                                 문화정보분석
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">문화알리미</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                                 문화드림
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/recruitList.do">
+                                 채용·자원봉사 모집
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                                 문화지원사업
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/newsList.do">
+                                 정책뉴스
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                                 문화이벤트
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                                 문화포털API
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/noticeList.do">
+                                 공지사항
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#">기타</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/aboutA.do">
+                                 이용안내
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/mypage/mypage.do">
+                                 마이페이지
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/english.do">
+                                 English
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                                 문화융성카드
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/publicize.do">
+                                 문화홍보등록
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <script>
+         /*<![CDATA[*/
+      
+            
+         /*
+         function chk(){
+            if(cc == 1){
+               $(".header .drop_menu").css({ display:"flex" })
+            }else{
+               $(".header .drop_menu").css({ display:"none" })
+            }
+         }
+         
+         $(function(){
+            $('.header nav ul li a').mouseover(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header').mouseout(function(){
+               setTimeout(chk, 400);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+   
+            
+            $('.header nav ul li a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+            $('.header .drop_menu a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header .drop_menu a').blur(function(){
+               setTimeout(chk, 100);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+         });
+   
+         $(".header nav ul li:first-child a").focus(function(){
+            $(".header .drop_menu").css({ display : "flex" })
+         })
+         
+         $(".bnr_slide ul li a").focus(function(){
+            $(".header .drop_menu").css({ display : "none" })
+         })
+         */
+
+         // 네비 메뉴
+         $(".nav>ul>li").on("mouseenter keydown",function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".header nav>ul>li>.depth01").show();
+            $(".mBg").show();
+            
+            /*
+            $(".drop_menu").css({"display": "flex"});
+            $(".drop_menu .depth01").eq(thisIdx).addClass("active").siblings().removeClass("active");
+            */
+         })
+
+          $(".header nav").on('mouseleave',function(){
+       	 	 $(".header nav>ul>li>.depth01").hide();
+       	 	$(".mBg").hide();
+          });
+         
+         
+         $(".banner_link").on("focusin",function(){
+        	 $(".header nav>ul>li>.depth01").hide();
+        	 $(".mBg").hide();
+         });
+         
+         $(".banner_link").on("keydown",function(e){
+        	if(e.keyCode === 9 && event.shiftKey){
+        		e.preventDefault();
+        		$(".header nav>ul>li>.depth01").show();
+        		$(".mBg").hide();
+        		$(".chk011").focus();
+        		console.log("123");
+        	} 
+         });
+         /*
+         $(".drop_menu_box").mouseleave(function(){
+            $(".drop_menu").hide();
+            $(".nav ul li").removeClass("active");
+         })
+         */
+
+         $(".drop_menu .depth01").mouseenter(function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".nav ul li").eq(thisIdx).addClass("active").siblings().removeClass("active");
+         })
+
+         // pc menu fixed
+         if( $(window).width() > 1200 ){
+            var headerH = $(".header").outerHeight();
+            $(window).scroll(function(){
+               var st = $(document).scrollTop(),
+                  headerTop = $(".header_top").outerHeight();
+               if(st > headerTop){
+                  $(".header").addClass("fixed");
+                  $("body").css({"paddingTop" : headerH + "px"})
+               } else {
+                  $(".header").removeClass("fixed");
+                  $("body").css({"paddingTop" : 0})
+               }
+            })
+         }
+
+         // mo menu
+         $(".btn_menu").click(function(){
+            $(".mo_header").addClass("active");
+            $("body").css({"overflow":"hidden"})
+         })
+
+         $(".btn_close").click(function(){
+            $(".mo_header").removeClass("active");
+            $(".mo_menu .depth01 > li").removeClass("active");
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $("body").css({"overflow":"visible"})
+            return false;
+         })
+         $(".mo_menu .depth01 > li > a").click(function(){
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $(this).siblings(".depth02").show();
+            $(this).parent().addClass("active").siblings().removeClass("active")
+            return false;
+         })
+      
+         
+
+      var nowZoom = 100;
+
+      function fn_screenPlus(){
+         nowZoom = nowZoom + 5;
+         if(nowZoom >= 200) nowZoom = 200;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+      }
+
+      function fn_screenMinus(){
+         nowZoom = nowZoom - 5;
+         if(nowZoom <= 70) nowZoom = 70;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+         
+         
+      }
+
+      function fn_zooms(){
+         document.body.style.zoom = nowZoom + '%';
+
+         if(nowZoom == 70){
+            alert("더 이상 축소할수 없습니다.");
+         }
+
+         if(nowZoom == 500){
+            alert("더 이상 확대할수 없습니다.");
+         }
+      }
+
+      function fn_searchKeyWord(keyWord){
+         $("#searchFormHeader #searchContents").val(keyWord);
+         requestSearch();
+      }
+
+      function fn_searchKeyWord_mo(keyWord){
+         $("#searchFormHeader_mo #searchContents_m").val(keyWord);
+         requestSearch_mo();
+      }
+      
+      $(function() {
+			$('.skip-nav a').on('click', function(event) {
+				// prevent default link behavior
+				event.preventDefault();
+				
+				// get the target element id
+				var targetId = $(this).attr('href').substring(1);
+				
+				// focus the target element
+				if(document.querySelector("#contents")){
+					console.log("3");
+					$("#contents").removeAttr("tabindex");
+					$("#contents").focus();
+				}else if(document.querySelector("#content")){
+					console.log("42")
+					$("#content").removeAttr("tabindex");
+					$('#' + targetId).focus();
+				}
+				
+				// scroll to the top of the page
+				window.scrollTo(0, 0);
+			});
+		});
+         /*]]>*/
+         
+         $(document).ready(function () {
+        $(document).on("keydown",".vjs-play-control",function(e){
+          if(e.keyCode === 9){
+            $(".vjs-volume-level").attr("tabindex","0");
+             $(".vjs-volume-bar.vjs-slider-bar").attr("tabindex","-1");
+          }
+        });
+        
+        
+        //20231213 웹 접근성 추가
+        document.querySelector('.agency__trigger').addEventListener("click",function(){
+	        
+	        document.querySelector('#agencyContents').setAttribute("tabindex","0");
+	        setTimeout(function(){
+	          document.querySelector('#agencyContents').focus();
+	        },100)
+	      });
+	
+	      document.querySelector('#agencyContents .pop-close').addEventListener("click",function(){
+	    	  console.log("!@3");
+	        this.closest("#agencyContents").style.display = "none"
+	      })
+	      
+	      $("#agencyContents .pop-close").on("click",function(e){
+	    	  e.preventDefault();
+	    	  
+	    	  document.querySelector('.agency__trigger').focus();
+	    	  
+	      })
+      });
+         
+       
+ 	
+         
+      // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상
+         (function () {
+           $(document).ready(function () {
+             const headerBtns = $(".header .header_menu .scale > div button");
+
+             function adjustBanner() {
+               const bnrSlides = $(".bnr_slide .swiper-slide");
+               const bnrSlideContainer = $(".bnr_slide .swiper-container");
+               const bnrWidth = bnrSlideContainer.width();
+               const bnrSwiperWrapper = $(".bnr_slide .swiper-wrapper");
+
+               bnrSlideContainer.each(function () {
+                 var existingSwiper = this.swiper;
+                 if (existingSwiper) {
+                   var activeIndex = existingSwiper.activeIndex;
+                   let wid = -(bnrWidth * activeIndex);
+                   bnrSlides.css({ "width": "100%" });
+                   bnrSwiperWrapper.css({ transform: `translate3d(${wid}px,0px,0px)` });
+                   existingSwiper.on('slideChange', function () {
+                     console.log("슬라이드가 변경되었습니다. 현재 활성화된 슬라이드 인덱스:", this.activeIndex);
+                     let newWid = -(bnrWidth * this.activeIndex);
+                     bnrSwiperWrapper.css({ transform: `translate3d(${newWid}px,0px,0px)` });
+                   });
+                 }
+               });
+             }
+             headerBtns.on("click", adjustBanner);
+
+             // resize 이벤트 250ms 내에는 한 번만 adjustBanner 함수 실행
+             function debounce(func, wait) {
+               let timeout;
+               return function() {
+                   const context = this;
+                   const args = arguments;
+                   clearTimeout(timeout);
+                   timeout = setTimeout(function() {
+                       func.apply(context, args);
+                   }, wait);
+               };
+             }
+
+             $(window).resize(debounce(adjustBanner, 250)); 
+
+             // 메인배너 paging 짤리는 현상
+           });
+         })();
+         // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상 eee
+         
+         // 20231220 웹접근성 skip 메뉴 추가
+         $(function () {
+	console.log("123")
+		
+		 setTimeout(function(){
+	    $('.skip-nav a:first-of-type').on('click', function(event) {
+	      // prevent default link behavior
+	      event.preventDefault();
+	      
+	      // get the target element id
+	      var targetId = $(this).attr('href').substring(1);
+	      
+	      // focus the target element
+	      if(document.querySelector("#contents")){
+	        console.log("344");
+	        $("#contents").remove("tabindex");
+	        $("#contents").focus();
+	      }else if(document.querySelector("#content")){
+	        console.log("42")
+	        $("#content").remove("tabindex");
+	        $('#' + targetId).focus();
+	      }
+	      
+	      // scroll to the top of the page
+	      window.scrollTo(0, 0);
+	    });
+
+},100)
+});
+
+
+      </script>
+      <script src="./03문화지식_전통문양_3D프린팅콘텐츠_files/search.js.다운로드"></script>
+
+   
+		<!-- // header -->
+		
+		<!-- main contents -->
+		<main id="content" class="main1" data-brl-use="PH">
+			
+			<div class="contents">
+	
+		<form action="https://www.culture.go.kr/tradition/autoPatternDownFile.do" method="post" id="patternDownForm" name="patternDownForm">
+	        <input type="hidden" name="type" id="type">
+	        <input type="hidden" name="pattern_type" id="pattern_type">
+	        <input type="hidden" name="chkOrgImg" id="chkOrgImg">
+	    </form>
+				
+		<form id="pattern" name="pattern" action="https://www.culture.go.kr/tradition/traditional3DContentsList.do" method="get">		
+		
+		<div class="location" data-brl-use="NO">
+	
+	
+		<a href="https://www.culture.go.kr/index.do">홈</a>
+		
+			
+				
+				&gt; <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+				
+					            	
+			
+		
+			
+				
+				
+				&gt; <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">전통문양</a>
+					            	
+			
+		
+			
+		
+		
+			
+		
+			
+		
+			
+				<strong>3D프린팅콘텐츠</strong>
+			
+		
+		
+			<div class="contents__util" data-brl-use="NO">
+		<div class="contents__share">
+			<button type="button" class="contents__share--trigger" aria-owns="contentShare" aria-expanded="false">SNS 공유</button>
+			<ul id="contentShare" class="sns-list">
+				<li class="sns-list__item"><a href="javascript:shareFacebook();" title="페이스북 공유 새창" class="sns-list__item--facebook">페이스북</a></li>
+				<li class="sns-list__item"><a href="javascript:shareTwitter();" title="트위터 공유 새창" class="sns-list__item--twitter">트위터</a></li>
+				<!-- 요청 사항으로 삭제 처리 2022/12/22-->
+				<!-- <li class="sns-list__item"><a href="javascript:shareGoogle();" title="구글 공유 새창" class="sns-list__item--google">구글</a></li> -->
+				<li class="sns-list__item"><a href="javascript:shareKakaoTalk();" name="kakao-link-btn" id="kakao-link-btn" title="카카오톡 공유 새창" class="sns-list__item--kakaotalk">카카오톡</a></li>
+				<!-- 서비스종료 주석처리 -->
+				<!-- <li class="sns-list__item"><a href="javascript:shareKakaoStoryA();" id="kakaostory-share" name="kakaostory-share" title="카카오스토리 공유 새창" class="sns-list__item--kakaostory">카카오스토리</a></li> -->
+				<li class="sns-list__item"><a href="javascript:shareClipboardData();" title="주소복사" class="sns-list__item--copy">주소 복사</a></li>
+			</ul>
+		</div>
+		<button type="button" onclick="openBrlViewer(document.title)" class="contents__util--brail">점자새창</button>
+    	<button type="button" onclick="exportBrl(&#39;brl&#39;, document.title)" class="contents__util--brailprint">점자다운로드</button>
+		<button type="button" class="contents__util--print" title="인쇄">프린트</button>
+		<script>
+			onload = function(){
+				$(".contents__util--print").on("click", function(){
+					window.print();
+					return false;
+				})
+			}
+		</script>
+
+          <div style="float: left;padding: 7px;">
+            <!-- <span th:text="${viewTitle}" style="font-size: 20px;padding: 21px;font-weight: bold;" id="charactersChange" >제목</span> -->
+            <script type="text/javascript">
+                // 특수문자 처리를 위한 스크립트
+                var charactersChange = $('#charactersChange').text();
+                if(charactersChange != null){
+                    charactersChange =  charactersChange.replace(/&lt;/gi,"<");
+                    charactersChange =  charactersChange.replace(/&gt;/gi,">");
+                    charactersChange =  charactersChange.replace(/&#39;/gi,"'");
+                }
+                $('#charactersChange').text(charactersChange);
+            </script>
+            <script type="text/javascript">
+                // 20.12.23 와이즈트래킹 추가
+                try {_TRK_MVT2 = $('#charactersChange').text();}catch(_e){console.log(_e);}
+
+                // 20.12.23 공식 홈페이지 바로가기 와이즈트래킹 추가 // html : performView , educationView , festivalView
+                function Call_trk_flashEnvView() {
+                    eval('try{_trk_flashEnvView(\'_TRK_MVT2=\'+$(\'#charactersChange\').text(),\'_TRK_G13=1\');console.log($(\'#charactersChange\').text())}catch(_e){console.log(_e)}');
+                    //console.log('call : ' , document.getElementById('charactersChange').textContent);
+                }
+            </script>
+        </div>
+    </div>
+		
+	
+	</div>	
+		
+		<div class="sub_title" data-brl-use="PT">
+            <h3 data-brl-use="PH/H2">3D 프린팅 콘텐츠</h3>
+            <p class="sub_txt">우리나라 고유의 문화재 및 민속생활용품 등 원천자료를 활용하여 다양한 산업의 창조적 소재로 활용될 수 있도록 3D프린팅 출력 가능한 디자인 소스 (STL)를 제공하고 있습니다</p>
+        </div>
+        
+	
+		<div class="contents-category">
+			<ul class="category-nav" id="dep1">
+			   	<li class="category-nav__item category-nav__item--selected on"><a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1">전체<span class="hide">선택됨</span></a></li>
+		        
+				
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=1">패션</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=2">생활/소품</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=3">인테리어</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=4">관광/전시</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=5">문구/완구</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=6">주방</a>
+		            	</li>
+		            
+		        
+		            
+		            
+		            
+		            	<li class="category-nav__item">
+		            		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?tabUcatagory=1&amp;tabDepth1=7">교육/학습</a>
+		            	</li>
+		            
+		          
+			</ul>
+			<ul class="category-menu" id="dep2">
+				    	<li class="category-menu__item category-menu__item--selected on"><a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">전체 
+				    	(<span class="num">1,208</span>)
+				    	</a></li>
+			</ul>
+		</div>
+		
+		<script>
+		
+			//tab title tag용
+			$(function(){
+				var name1;
+	            
+	            $('#dep1 > li').each(function (i) {
+	                if($(this).attr('class') == 'category-nav__item category-nav__item--selected on'){
+	                    name1 = $(this).children().text();
+	                    $(this).find('> *').append("<span class='hide'>선택됨</span>");
+	                }
+	            })
+	            
+			});	
+			
+		</script>
+		
+		<div class="contents__filter" data-brl-use="NO">
+			<!--  <div>
+			 	<span class="left">총 <span class="num" th:text="${#numbers.formatInteger(total, 0, 'COMMA')}"></span>건</span>
+			</div>-->
+			<div class="filter">
+		
+				<div class="filter__left">		
+					<input type="hidden" id="cntAll" name="cntAll" value="1208">
+		            <a href="javascript:void(0)" class="button__item checkAll  button__item--navyline" onclick="allCheck();">전체선택</a>
+		            <a href="javascript:void(0)" class="button__item checkNone button__item--navyline" style="display:none;" onclick="disAllCheck();">선택해제</a>	            
+					<a href="javascript:;" class="button__item button__item--grayline" onclick="imgDown();">일반화질<i class="ico__download"></i></a>
+		            <a href="javascript:;" class="button__item button__item--grayline" onclick="downLoad();">고화질<i class="ico__download"></i></a>
+		           
+					<a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do" class="button__item button__item--guide modal_open">사용방법안내<i class="ico__arrow"></i></a>
+				</div>
+	        	
+				<!-- selectBox -->
+					<div class="filter__right">
+						<label for="selectSolt" class="a11y__sr--only" data-brl-use="NO">리스트 개수 선택</label>
+						<select id="selectSolt" name="pages">
+							<option value="24">24개씩 보기</option>
+							
+							
+								<option value="48">48개씩 보기</option>
+							
+							
+							
+								<option value="96">96개씩 보기</option>
+							
+						</select>
+						<button type="button" id="selectSoltBtn" title="선택된 개수로 리스트 다시 불러옴">이동</button>
+						<div class="contents__search">
+							<!-- 검색 영역 --->
+							<div class="search-form">
+								<fieldset>
+									<legend>검색 영역</legend>
+									<div class="search-form__field">
+										<label for="inputSearch" class="a11y__sr--only" data-brl-use="NO">검색어 입력</label>
+										
+										<input type="hidden" id="tabDepth1" name="tabDepth1" value="">
+					                    <input type="hidden" id="sType" name="sType">
+					                    <input type="hidden" id="xtaxonomy" name="xtaxonomy">
+					                    <input type="hidden" id="xtaxonomy2" name="xtaxonomy2">
+					                    <input type="hidden" id="uType" name="uType">
+					                    <input type="hidden" id="xtitle" name="xtitle">
+					                    <input type="hidden" id="gubun" name="gubun" value="all">
+		                    
+										<input type="text" id="sWord" name="sWord" title="검색어 입력" placeholder="검색어를 입력하세요." value="">
+										<button type="submit" class="button__item button__item--search">검색</button>
+									</div>
+								</fieldset>
+							</div>
+							<!-- 검색 영역 --->
+						</div>
+					</div>
+				<!-- //selectBox -->
+				
+			</div>
+		</div>
+		<!-- 결과 -->
+		<div class="contents__search-result" aria-live="polite">
+			
+			<div class="grid__mask">
+				<ul class="grid grid--col6">
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001218&amp;cPage=1&amp;" class="pattern__img" title="청자대접(3001218)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001218" title="청자대접(3001218)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/3d1d56dbc1e544dab78db456355469d4.png" alt="청자대접(3001218)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">청자대접(3001218)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="청자대접(3001218) 크게보기" onclick="ajaxCardView1(3001218);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001217&amp;cPage=1&amp;" class="pattern__img" title="청동숟가락(3001217)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001217" title="청동숟가락(3001217)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/df4e6027ab1d42d796616986c7ab41d8.png" alt="청동숟가락(3001217)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">청동숟가락(3001217)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="청동숟가락(3001217) 크게보기" onclick="ajaxCardView1(3001217);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001216&amp;cPage=1&amp;" class="pattern__img" title="전촉(3001216)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001216" title="전촉(3001216)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/35181a72188e4da0afa72ed2b24953f7.png" alt="전촉(3001216)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">전촉(3001216)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="전촉(3001216) 크게보기" onclick="ajaxCardView1(3001216);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001215&amp;cPage=1&amp;" class="pattern__img" title="중도(3001215)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001215" title="중도(3001215)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/c62c62b7ae9b415f84721a9ecdd7c1be.png" alt="중도(3001215)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">중도(3001215)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="중도(3001215) 크게보기" onclick="ajaxCardView1(3001215);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001214&amp;cPage=1&amp;" class="pattern__img" title="차승자총통(3001214)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001214" title="차승자총통(3001214)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/c5c5a80e1c2340f5b98954d5298703e7.png" alt="차승자총통(3001214)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">차승자총통(3001214)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="차승자총통(3001214) 크게보기" onclick="ajaxCardView1(3001214);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001213&amp;cPage=1&amp;" class="pattern__img" title="차승자총통(3001213)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001213" title="차승자총통(3001213)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/7180dfdc11d645238ab456cafc6cd106.png" alt="차승자총통(3001213)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">차승자총통(3001213)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="차승자총통(3001213) 크게보기" onclick="ajaxCardView1(3001213);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001212&amp;cPage=1&amp;" class="pattern__img" title="주자총통(3001212)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001212" title="주자총통(3001212)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/dda13b990b3b47438894e317c9023775.png" alt="주자총통(3001212)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">주자총통(3001212)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="주자총통(3001212) 크게보기" onclick="ajaxCardView1(3001212);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001211&amp;cPage=1&amp;" class="pattern__img" title="주자총통(3001211)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001211" title="주자총통(3001211)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/d125f419101d4890b1f96065dff845a7.png" alt="주자총통(3001211)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">주자총통(3001211)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="주자총통(3001211) 크게보기" onclick="ajaxCardView1(3001211);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001210&amp;cPage=1&amp;" class="pattern__img" title="승자총통(3001210)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001210" title="승자총통(3001210)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/6b3ad6a6817d4a5bb03fd610c9ce1b2e.png" alt="승자총통(3001210)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">승자총통(3001210)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="승자총통(3001210) 크게보기" onclick="ajaxCardView1(3001210);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001209&amp;cPage=1&amp;" class="pattern__img" title="소승자총통(3001209)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001209" title="소승자총통(3001209)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/6531e6a8a7e74e5cadec58f2a27d8c19.png" alt="소승자총통(3001209)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">소승자총통(3001209)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="소승자총통(3001209) 크게보기" onclick="ajaxCardView1(3001209);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001208&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001208)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001208" title="별승자총통(3001208)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/b7bfed62d9e447b6bc18c3534d654b97.png" alt="별승자총통(3001208)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001208)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001208) 크게보기" onclick="ajaxCardView1(3001208);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001207&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001207)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001207" title="별승자총통(3001207)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ba3e14e8123148f5a5c8ccef39fea774.png" alt="별승자총통(3001207)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001207)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001207) 크게보기" onclick="ajaxCardView1(3001207);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001206&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001206)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001206" title="별승자총통(3001206)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/2d510ba0aeae4a1cb4a2807ebdcc270c.png" alt="별승자총통(3001206)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001206)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001206) 크게보기" onclick="ajaxCardView1(3001206);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001205&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001205)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001205" title="별승자총통(3001205)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/4a894a6258ea4e46b4350ff9c2a91469.png" alt="별승자총통(3001205)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001205)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001205) 크게보기" onclick="ajaxCardView1(3001205);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001204&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001204)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001204" title="별승자총통(3001204)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/fcaec943c51b46f9977c06501c4a54c1.png" alt="별승자총통(3001204)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001204)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001204) 크게보기" onclick="ajaxCardView1(3001204);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001203&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001203)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001203" title="별승자총통(3001203)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/57c3e15f58554701a06529dd1e74a0e5.png" alt="별승자총통(3001203)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001203)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001203) 크게보기" onclick="ajaxCardView1(3001203);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001202&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001202)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001202" title="별승자총통(3001202)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/fc9b533c93da4e2eb5fe78ce5ac27221.png" alt="별승자총통(3001202)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001202)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001202) 크게보기" onclick="ajaxCardView1(3001202);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001201&amp;cPage=1&amp;" class="pattern__img" title="별승자총통(3001201)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001201" title="별승자총통(3001201)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ed617d7bf92c42318e6eadb662db3a99.png" alt="별승자총통(3001201)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">별승자총통(3001201)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="별승자총통(3001201) 크게보기" onclick="ajaxCardView1(3001201);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001200&amp;cPage=1&amp;" class="pattern__img" title="불랑기자포(3001200)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001200" title="불랑기자포(3001200)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/3a5d30f09970462d9109b596d21af0fb.png" alt="불랑기자포(3001200)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">불랑기자포(3001200)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="불랑기자포(3001200) 크게보기" onclick="ajaxCardView1(3001200);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001199&amp;cPage=1&amp;" class="pattern__img" title="차복(3001199)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001199" title="차복(3001199)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/b87f210f153e4ec7ac99fbb1dbc03b24.png" alt="차복(3001199)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">차복(3001199)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="차복(3001199) 크게보기" onclick="ajaxCardView1(3001199);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001198&amp;cPage=1&amp;" class="pattern__img" title="손원일 제독 청조근정훈장(3001198)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001198" title="손원일 제독 청조근정훈장(3001198)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/9b7983f2d2dd4c198dd5c5147f6e3372.png" alt="손원일 제독 청조근정훈장(3001198)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">손원일 제독 청조근정훈장(3001198)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="손원일 제독 청조근정훈장(3001198) 크게보기" onclick="ajaxCardView1(3001198);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001197&amp;cPage=1&amp;" class="pattern__img" title="손원일 제독 충무무공훈장(3001197)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001197" title="손원일 제독 충무무공훈장(3001197)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/b3e3cd826a6843f4862610e9a740b6f1.png" alt="손원일 제독 충무무공훈장(3001197)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">손원일 제독 충무무공훈장(3001197)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="손원일 제독 충무무공훈장(3001197) 크게보기" onclick="ajaxCardView1(3001197);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001196&amp;cPage=1&amp;" class="pattern__img" title="손원일 제독 일등무공훈장(3001196)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001196" title="손원일 제독 일등무공훈장(3001196)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/bb970a904c384df7bad30f0126f54bb0.png" alt="손원일 제독 일등무공훈장(3001196)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">손원일 제독 일등무공훈장(3001196)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="손원일 제독 일등무공훈장(3001196) 크게보기" onclick="ajaxCardView1(3001196);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+					<li class="grid__item">
+					
+						<div class="pattern">
+						
+							<figure class="pattern__figure">
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsView.do?seq=3001195&amp;cPage=1&amp;" class="pattern__img" title="불랑기자포 격목(3001195)">
+				                    
+				                    <!-- 체크박스 -->
+				                    <input type="checkbox" class="pattern__checkbox" name="chkOrgImg" value="3001195" title="불랑기자포 격목(3001195)">
+				                    
+				                    <!-- 이미지 -->
+				                    <img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/92503753baec46bcb2efafc158b358c6.png" alt="불랑기자포 격목(3001195)">
+				                </a>
+							</figure>
+							
+							<div class="pattern__info">
+								<div class="pattern__caption">
+									<!-- <p class="pattern__caption--title">기타(10645)</p> -->
+									<p class="pattern__caption--title">불랑기자포 격목(3001195)</p>
+								</div>
+								<!-- <button type="button" class="pattern__scale" aria-haspopup="dialog" aria-controls="viewLarge">크게 보기</button>  -->
+								<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#design_pattern_2d" aria-haspopup="dialog" aria-controls="design_pattern_2d" class="pattern__scale" title="불랑기자포 격목(3001195) 크게보기" onclick="ajaxCardView1(3001195);"><span>크게보기</span></a>
+							</div>
+							
+							
+						</div>
+					</li>
+									    
+				    
+				</ul>
+			</div>
+			
+			
+			<!-- pagination -->
+			<div role="navigation" class="pagination-conatiner" aria-label="pagination" data-brl-use="NO">
+	<div class="pagination">
+		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=1" class="pagination__first" title="처음페이지로 이동">
+		    <span class="hidden">처음 페이지로 이동</span>
+		</a>
+		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=1" class="pagination__prev" title="이전페이지로 이동">
+		   <span class="hidden">이전 페이지로 이동</span>
+		</a>
+		
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=1" class="pagination__num" aria-current="true" title="현재페이지">1</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=2" class="pagination__num">2</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=3" class="pagination__num">3</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=4" class="pagination__num">4</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=5" class="pagination__num">5</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=6" class="pagination__num">6</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=7" class="pagination__num">7</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=8" class="pagination__num">8</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=9" class="pagination__num">9</a>
+    	
+	        <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=10" class="pagination__num">10</a>
+    	
+    	
+        
+		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=11" class="pagination__next" title="다음페이지로이동">
+			<span class="hidden">다음 페이지로 이동</span>
+		</a>
+		<a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do?cPage=51" class="pagination__last" title="마지막페이지로 이동">
+			<span class="hidden">마지막 페이지로 이동</span>
+		</a>
+	</div>
+</div>				
+			<!-- // pagination -->
+		</div>
+		<!-- // 결과 -->
+		</form>
+	</div>	
+			
+		</main>
+		<!-- main contents end -->
+		 
+ 		 <!-- organBanner -->
+	    <div id="agencyContents" class="agency__container" style="display:none">
+		<div class="section">
+			<div class="section__header">
+				<p class="section__header--title">관련기관 안내</p>
+			</div>
+			<div class="section__swiper-group">
+				<div class="section__swiper section__swiper--agency-logo swiper-container">
+					<ul class="swiper-wrapper">
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.museum.go.kr/site/main/home" target="_blank" title="국립중앙박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211152581383.jpg" alt="국립중앙박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.korean-national-ballet.kr/ko" target="_blank" title="국립발레단(KOREAN  NATIONAL BALLET)새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211145113463.jpg" alt="국립발레단(KOREAN  NATIONAL BALLET)">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nationalopera.org/" target="_blank" title="국립오페라단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211143896134.jpg" alt="국립오페라단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kncdc.kr/ko/main" target="_blank" title="국립현대무용단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211141943691.jpg" alt="국립현대무용단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.nsac.or.kr/intro/introduce" target="_blank" title="남산예술센터 x삼일로창고극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211134514528.jpg" alt="남산예술센터 x삼일로창고극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.snart.or.kr/" target="_blank" title="성남아트센터새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211123757510.jpg" alt="성남아트센터">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ansanart.com/index.do" target="_blank" title="안산문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211122070650.jpg" alt="안산문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.jeongdong.or.kr/portal/main/main.do" target="_blank" title="정동극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221112600876.jpg" alt="정동극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://theater.arko.or.kr/home/main" target="_blank" title="한국문화예술위원회 새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211114700500.jpg" alt="한국문화예술위원회 ">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.ntck.or.kr/" target="_blank" title="국립극단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211151173359.jpg" alt="국립극단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.spac.or.kr/" target="_blank" title="서울예술단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211132877005.jpg" alt="서울예술단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.karts.ac.kr/index_karts.jsp" target="_blank" title="한국예술종합학교새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221110328670.jpg" alt="한국예술종합학교">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ltikorea.or.kr/" target="_blank" title="한국문학번역원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221194530136.jpg" alt="한국문학번역원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.copyright.or.kr/main.do" target="_blank" title="한국저작권위원회새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221192806466.jpg" alt="한국저작권위원회">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kocca.kr/cop/main.do" target="_blank" title="한국콘텐츠진흥원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_2019122119803960.jpg" alt="한국콘텐츠진흥원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nfm.go.kr/home/index.do" target="_blank" title="국립민속박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221183699687.jpg" alt="국립민속박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.gugak.go.kr/site/main/index001" target="_blank" title="국립국악원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221181558053.jpg" alt="국립국악원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.sac.or.kr/SacHome/sachome/main" target="_blank" title="예술의전당새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221175339251.jpg" alt="예술의전당">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ntok.go.kr/kr/Main/Index" target="_blank" title="국립극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221173592982.jpg" alt="국립극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://nationalchorus.or.kr/" target="_blank" title="재단법인 국립합창단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221165985028.jpg" alt="재단법인 국립합창단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.mmca.go.kr/main.do" target="_blank" title="국립현대미술관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211102337173.jpg" alt="국립현대미술관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://archive.arko.or.kr/" target="_blank" title="아르코예술기록원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211112673772.jpg" alt="아르코예술기록원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.gcf.or.kr/main/?load_popup=1" target="_blank" title="김포문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20220110973816325.JPG" alt="김포문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.sejongpac.or.kr/portal/main/main.do" target="_blank" title="세종문화회관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_2022031815421271992.jpg" alt="세종문화회관">
+								</figure>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<button type="button" class="section__swiper--prev">이전</button>
+				<button type="button" class="section__swiper--next">다음</button>
+			</div>
+		</div>
+	</div>
+	    <!-- //organBanner -->
+		 
+	   <!-- footer -->
+		
+	<div id="agencyContents" class="agency__container" style="display:none">
+		<div class="section">
+			<div class="section__header">
+				<p class="section__header--title">관련기관 안내</p>
+			</div>
+			<div class="section__swiper-group">
+				<div class="section__swiper section__swiper--agency-logo swiper-container">
+					<ul class="swiper-wrapper">
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.museum.go.kr/site/main/home" target="_blank" title="국립중앙박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211152581383.jpg" alt="국립중앙박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.korean-national-ballet.kr/ko" target="_blank" title="국립발레단(KOREAN NATIONAL BALLET)새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211145113463.jpg" alt="국립발레단(KOREAN NATIONAL BALLET)">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nationalopera.org/" target="_blank" title="국립오페라단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211143896134.jpg" alt="국립오페라단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kncdc.kr/ko/main" target="_blank" title="국립현대무용단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211141943691.jpg" alt="국립현대무용단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nsac.or.kr/Home/Main.aspx" target="_blank" title="남산예술센터 x삼일로창고극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211134514528.jpg" alt="남산예술센터 x삼일로창고극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.snart.or.kr/" target="_blank" title="성남아트센터새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211123757510.jpg" alt="성남아트센터">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ansanart.com/index.do" target="_blank" title="안산문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211122070650.jpg" alt="안산문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.jeongdong.or.kr/portal/main/main.do" target="_blank" title="정동극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221112600876.jpg" alt="정동극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://theater.arko.or.kr/Pages/Main.aspx" target="_blank" title="한국문화예술위원회 새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211114700500.jpg" alt="한국문화예술위원회 ">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.ntck.or.kr/" target="_blank" title="국립극단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211151173359.jpg" alt="국립극단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.spac.or.kr/" target="_blank" title="서울예술단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211132877005.jpg" alt="서울예술단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.karts.ac.kr/index_karts.jsp" target="_blank" title="한국예술종합학교새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221110328670.jpg" alt="한국예술종합학교">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ltikorea.or.kr/" target="_blank" title="한국문학번역원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221194530136.jpg" alt="한국문학번역원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.copyright.or.kr/main.do" target="_blank" title="한국저작권위원회새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221192806466.jpg" alt="한국저작권위원회">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kocca.kr/cop/main.do" target="_blank" title="한국콘텐츠진흥원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_2019122119803960.jpg" alt="한국콘텐츠진흥원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nfm.go.kr/home/index.do" target="_blank" title="국립민속박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221183699687.jpg" alt="국립민속박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.gugak.go.kr/site/main/index001" target="_blank" title="국립국악원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221181558053.jpg" alt="국립국악원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.sac.or.kr/SacHome/sachome/main" target="_blank" title="예술의전당새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221175339251.jpg" alt="예술의전당">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ntok.go.kr/kr/Main/Index" target="_blank" title="국립극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221173592982.jpg" alt="국립극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://nationalchorus.or.kr/" target="_blank" title="재단법인 국립합창단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20191221165985028.jpg" alt="재단법인 국립합창단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://archive.arko.or.kr/" target="_blank" title="아르코예술기록원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211112673772.jpg" alt="아르코예술기록원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.sejongpac.or.kr/portal/main/main.do" target="_blank" title="세종문화회관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_2022031815421271992.jpg" alt="세종문화회관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.gcf.or.kr/main/?load_popup=1" target="_blank" title="김포문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_20220110973816325.JPG" alt="김포문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.mmca.go.kr/main.do" target="_blank" title="국립현대미술관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./03문화지식_전통문양_3D프린팅콘텐츠_files/banner_201912211102337173.jpg" alt="국립현대미술관">
+								</figure>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<button type="button" class="section__swiper--prev">이전</button>
+				<button type="button" class="section__swiper--next">다음</button>
+			</div>
+			    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#none" class="pop-close">X</a>
+		</div>
+	</div>
+		<footer class="footer" id="footer">
+			<div class="footer__util">
+				<div class="footer__inner">
+					<ul class="footer__policy">
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/aboutA.do" target="_blank" title="새 창">문화포털이란?</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do#" class="agency__trigger" aria-expanded="false" aria-owns="agencyContents">관련기관 안내</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/culture/publicize.do" target="_blank" title="새 창">문화홍보등록</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/copyrightGuide.do" target="_blank" title="새 창">저작권정책</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/privacyPolicy.do" target="_blank" title="새 창" class="txt_bold" style="color: #e42c01">개인정보처리방침</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/searchPolicy.do" target="_blank" title="새 창">검색결과수집정책</a></li>
+						<!--  <li class="footer__policy--item"><a href="/ticketadmin" target="_blank" title="새 창">참여단체</a></li>  -->
+					</ul>
+					<div class="footer__family">
+						<label for="familySite" class="a11y__sr--only" data-brl-use="NO">관련 사이트 선택</label>
+						<select id="familySite" class="footer__family--select">
+							<option value="">관련 사이트</option>
+							
+							<option value="https://webzine.kcisa.kr/vol026/index.php">웹진 이데아 Vol.26</option>
+							
+							<option value="https://www.culture.go.kr/ic/">실감형전시플랫폼</option>
+							
+							<option value="https://www.kogl.or.kr/">공공누리</option>
+							
+							<option value="https://qi.kcisa.kr/">모바일큐아이</option>
+							
+							<option value="https://www.culture.go.kr/data/main/main.do">문화공공데이터광장</option>
+							
+							<option value="https://www.culture.go.kr/deduction/">문화비소득공제</option>
+							
+							<option value="https://www.bigdata-culture.kr/bigdata/user/main.do">문화빅데이터플랫폼</option>
+							
+						</select>
+						<button type="button" title="선택된 관련 사이트 새창으로 열기" id="goFamilySite" style="display: none;">이동</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer__info">
+				<div class="footer__inner">
+					<div class="footer__left">
+						<ul class="footer__link">
+							<li class="footer__link--item"><a href="https://www.kcisa.kr/" target="_blank" title="KCISA 한국문화정보원 새 창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/footer_link01.png" alt="KCISA 한국문화정보원 새 창 열림"></a></li>
+							<li class="footer__link--item"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="문화체육관광부 새 창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/footer_link02.png" alt="문화체육관광부 새 창 열림"></a></li>
+						</ul>
+						<address class="footer__address">
+							<p class="footer__address--desc">
+								대표전화 <a href="tel:1688-2220">1688-2220</a> / 이메일 <a href="mailto:culture@kcisa.kr">culture@kcisa.kr</a><br>
+								우) 03925 서울시 마포구 월드컵북로 400, 6층·8층<br>
+								COPYRIGHT© 한국문화정보원
+							</p>
+						</address>
+<!-- 					<p class="footer__copylight">COPYRIGHT&copy; 한국문화정보원</p>  -->
+					</div>
+					<div class="footer__right">
+						<div class="footer-sns">
+							<div class="sns">
+								<ul class="sns__list">
+									<li class="sns__item">
+										<a href="https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw" target="_blank" class="sns__link" title="한국문화정보원(유튜브)새창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ico_footer_youtube.png" alt="한국문화정보원(유튜브)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.instagram.com/culture_portal/" target="_blank" class="sns__link" title="한국문화정보원(인스타그램)새창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ico_footer_instagram.png" alt="한국문화정보원(인스타그램)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.facebook.com/cultureportal" target="_blank" class="sns__link" title="한국문화정보원(페이스북)새창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ico_footer_facebook.png" alt="한국문화정보원(페이스북)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://blog.naver.com/kcis_" target="_blank" class="sns__link" title="한국문화정보원(네이버블로그)새창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ico_footer_blog_02.png" alt="한국문화정보원(네이버블로그)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://tv.naver.com/culturepd" target="_blank" class="sns__link" title="한국문화정보원(네이버TV)새창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/ico_footer_navertv.png" alt="한국문화정보원(네이버TV)"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="footer__auth">
+							<li class="footer__auth--item"><a href="https://www.culture.go.kr/info/accessibility.do" target="_blank" title="웹접근성 새 창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/img_footer_auth_wa_2023.png" alt="웹접근성 새 창 열림"></a></li>
+							<li class="footer__auth--item"><a href="https://www.kogl.or.kr/index.do" target="_blank" title="공공누리 새 창 열림"><img src="./03문화지식_전통문양_3D프린팅콘텐츠_files/img_footer_auth_open.png" alt="공공누리 새 창 열림"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<div class="tab_bar">
+		<ul>
+		
+			<li>
+				<a href="https://www.culture.go.kr/sso/login.do" class="icon_login">로그인</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/member/register.do" class="icon_join">회원가입</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://www.culture.go.kr/index.do" class="icon_home">홈</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/culture/publicize.do" class="icon_regedit">문화홍보등록</a>
+			</li>
+ 			<li>
+				<a href="http://culture-chatbot.kcisa.kr/" target="_blank" class="icon_chatbot">챗봇</a>
+			</li>
+		</ul>
+	</div>		
+	<script>
+	/*<![CDATA[*/
+		
+		// pc menu fixed
+		if( $(window).width() > 1200){
+			var headerH = $(".header").outerHeight();
+			$(window).scroll(function(){
+				var st = $(document).scrollTop(),
+					headerTop = $(".header_top").outerHeight();
+				if(st > headerTop){
+					$(".header").addClass("fixed");
+					$("body").css({"paddingTop" : headerH + "px"})
+				} else {
+					$(".header").removeClass("fixed");
+					$("body").css({"paddingTop" : 0})
+				}
+			})
+		} else {
+			// tab bar
+			var tabbarHeight = $(".tab_bar").outerHeight();
+			if($(".tab_bar").is(":visible")){
+				$("body").css({"paddingBottom" : tabbarHeight + "px"})
+			}
+			var scrollTop = 0;
+			
+			$(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if (st > scrollTop) {
+					$(".tab_bar").addClass("up");
+				} else {
+					$(".tab_bar").removeClass("up");
+				}
+				scrollTop = st;
+			});
+		}		
+		
+	/* Footer 관련사이트 */
+	$(document).ready(function(){
+// 		$("#familySite").change(function(){
+// 			var url = $("#familySite option:selected").val();
+// 			window.open(url, target="_new");
+// 		});  
+		$("#goFamilySite").hide();
+		
+	 	$("#familySite").change(function(){
+			
+			var familySite = $("#familySite").val();
+			if(familySite != null || familySite != ""){
+				$("#goFamilySite").show();
+			}else{
+				$("#goFamilySite").hide();
+			}
+		});  
+		
+
+	});
+	
+	 
+	/*]]>*/		
+	</script>		
+	
+		<!-- //footer -->
+	    
+	    <!-- body_scripts -->
+	    
+	    
+	    <!-- //body_scripts -->
+	    
+	    <!-- after_contents -->
+	        
+  <!-- 크게보기 -->
+    <div id="design_pattern_2d" class="modal-container pattern-enlarge" aria-labelledby="viewLargeTitle" aria-modal="true" aria-hidden="true" tabindex="0">
+        
+    </div>
+    <div role="dialog" id="returnMessage" class="modal-container" aria-labelledby="downCompleteTitle" aria-modal="true" aria-hidden="true" tabindex="0">
+        <div class="modal_content">
+    <h3 class="modal_title">신청완료</h3>
+    <div class="layer_cont">
+        <ul class="use_list">
+
+            
+            <li>
+                <!--<span class="num">01</span>-->
+                <p class="txt"><strong> 외 ()건</strong><br>신청이 완료되었습니다. 다운로드가 진행됩니다.</p>
+                <p class="txt">신청하신 문양 조회는 <strong><a href="https://www.culture.go.kr/mypage/pattern.do" target="_blank" class="linkBrown" title="새창열림">마이페이지 &gt; 전통문양신청</a></strong>에서 확인 가능합니다.</p>
+                <!--<p class='txt'>원본이미지가 없을 경우, [콘텐츠 사용신청서]를 작성하신 후,<br /> 담당자 이메일(culture@kcisa.kr)로 신청해주시기 바랍니다.</p>-->
+                <!--<p class="txt">-->
+                    <!--<strong>원본이미지 다운로드</strong>는 로그인 후 이용 하실 수 있습니다.<br/>-->
+                    <!--<strong>(한 페이지내에서 한 번에 최대 20개까지 가능)</strong>-->
+                <!--</p>-->
+            </li>
+        </ul>
+        <div class="btn_center" data-brl-use="NO">
+
+            <!--<a href="" class="btn_close_modal modal_close">확인</a>-->
+        </div>
+        <!--<div class="cont_txt type3 btline">-->
+            <!--<span class="txt_type">전통문양사용 문의처</span>-->
+            <!--02-3153-2843, culture@kcisa.kr-->
+        <!--</div>-->
+    </div>
+    <button type="button" class="btn_close_modal modal_close" onclick="mypage()">닫기</button>
+</div>
+    </div>
+
+	    <!-- //after_contents -->
+	    
+	</div>
+
+</body></html>

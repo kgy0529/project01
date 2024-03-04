@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0;}
+
+#wrap{width: 200px; height: 200px; margin: 0 auto;}
+#wrap ul{
+    width: 200px; height: 200px;
+    border: 1px solid #666;
+    background: #666;
+}
+#wrap ul li{display: inline-block;}
+#wrap ul li a{overflow: hidden;}
+#wrap ul li p{overflow: hidden;}

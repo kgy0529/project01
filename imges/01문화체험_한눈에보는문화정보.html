@@ -1,0 +1,4475 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.culture.go.kr/oneeye/oneEyeList.do -->
+<html lang="ko" class="desktop"><!-- head 시작 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>문화포털-한눈에 보는 문화정보업 | 문화알리미</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="문화포털">
+<meta name="description" content="문화포털">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/global.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/renewal.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/renewal_main.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/main_new.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/contents_new.css">
+<link rel="stylesheet" type="text/css" href="./01문화체험_한눈에보는문화정보_files/culture_new.css">
+
+<!-- 공유하기 -->
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/jquery-1.11.3.min.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/swiper.min.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/content_link_share.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/calendar.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/layout.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/titleUi.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/commonUtil.js.다운로드"></script>
+
+<script src="./01문화체험_한눈에보는문화정보_files/kakao.min.js.다운로드"></script>
+
+<!-- 점자솔루션 -->
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/edotxpress-html.min.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/edotxpress-common.js.다운로드"></script>
+<script type="text/javascript" src="./01문화체험_한눈에보는문화정보_files/edotxpress-config-culture.js.다운로드"></script>
+
+<!--네이버 검색시 사이트 연관채널 지정_Start-->
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+    "@type": "Person",
+    "name": "문화포털",
+    "url": "https://www.culture.go.kr",
+    "sameAs": [
+        "https://blog.naver.com/kcis_",
+        "https://www.facebook.com/cultureportal",
+        "https://tv.naver.com/culturepd",
+        "https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw",
+        "https://www.instagram.com/culture_portal"
+	]
+}
+
+</script>
+<script>
+/*<![CDATA[*/
+$(document).ready(function(){
+	var org_genre_param = [];		//주제별
+	var org_service_param = [];		//분야별
+	var org_service_tab_param = [];	//분야별 Tab 선택
+	var org_age_param = [];			//대상 연령별
+	var org_poly_param = [];		//대상 다양성
+	var org_special_param = [];		//대상 직업
+	var org_cost_param = [];		//비용별	
+	
+	//상위 검색버튼
+	$("#btn_searchTop").click(function(){
+		fn_oneEyeDetailView(1, "D");
+	});
+	
+	//검색결과 Tab 클릭시
+/* 	$(".tab-btn").click(function(){
+		debugger;
+		org_service_param = [];
+		var tabNm = $(this).attr("data-value");
+		org_service_param.push(tabNm);
+		$("#org_service_param").val(org_service_param);
+		fn_oneEyeDetailView(1, "T");
+		
+		$(".tab-btn").each(function(index, element) {
+			if($(this).attr("data-value") == tabNm){
+				$(this).addClass("on");
+			}else{
+				$(this).removeClass("on");
+			}
+		});
+	}); */
+	
+
+	
+	//주제별 전체 선택시
+	$("#filterItem01").change(function(){
+		if($(this).is(":checked") == true){
+			$("#ulSearchList01 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", true);
+			});			
+		}else{
+			$("#ulSearchList01 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+		}
+		
+		fn_DrawText();
+	});
+	
+	// 포커스 달기
+	 (function () {
+	      // 1. filter - main, filter - label , filter-sub 포커스 이동가능하게
+	      const $$filterMain = document.querySelectorAll(".filter-main");
+	      const $$filterLabel = document.querySelectorAll(".filter-label");
+	      const $$filterSub = document.querySelectorAll(".filter-sub");
+			
+	      
+	      /* $$filterMain.forEach((el) => el.setAttribute("tabindex", "0"));
+	       $$filterLabel.forEach((el) => el.setAttribute("tabindex", "0")); 
+	      $$filterSub.forEach((el) => el.setAttribute("tabindex", "0"));  */
+	     
+   })();
+	
+	
+	
+	//주제별 개별 아이템 선택시
+	$("#ulSearchList01 li input[type=checkbox]").change(function(){
+		fn_DrawText();
+    });	
+	
+	//분야별 전체 선택시
+	$("#filterItem02").change(function(){
+		if($(this).is(":checked") == true){
+			$("#ulSearchList02 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", true);
+			});			
+		}else{
+			$("#ulSearchList02 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+		}
+		
+		fn_DrawText();
+	});
+	
+	//분야별 개별 아이템 선택시
+	$("#ulSearchList02 li input[type=checkbox]").change(function(){
+		fn_DrawText();
+    });		
+	
+	//대상별 전체 선택시
+	$("#filterItem03").change(function(){
+		if($(this).is(":checked") == true){
+			$("#ulSearchList03 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", true);
+			});			
+		}else{
+			$("#ulSearchList03 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+		}
+		
+		fn_DrawText();
+	});
+	
+	//대상별 개별 아이템 선택시
+	$("#ulSearchList03 li input[type=checkbox]").change(function(){
+		fn_DrawText();
+    });	
+	
+	//대상별(연령별) 전체 선택시
+	$("#filterItem03-01").change(function(){
+		fn_checkAllorNotTarget("01");
+	});
+	
+	//대상별(다양성) 전체 선택시
+	$("#filterItem03-02").change(function(){
+		fn_checkAllorNotTarget("02");
+	});
+	
+	//대상별(직업) 전체 선택시
+	$("#filterItem03-03").change(function(){
+		fn_checkAllorNotTarget("03");
+	});	
+	
+	//대상별(연령) 개별 선택시
+	$("#divSubList01 input[type=checkbox]").change(function(){
+		fn_checkAllorNotSub("01");
+    });	
+	
+	//대상별(다양성) 개별 선택시
+	$("#divSubList02 input[type=checkbox]").change(function(){
+		fn_checkAllorNotSub("02");
+    });	
+	
+	//대상별(직업) 개별 선택시
+	$("#divSubList03 input[type=checkbox]").change(function(){
+		fn_checkAllorNotSub("03");
+    });	
+	
+	//비용별 전체 선택시
+	$("#filterItem04").change(function(){
+		if($(this).is(":checked") == true){
+			$("#ulSearchList04 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", true);
+			});			
+		}else{
+			$("#ulSearchList04 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+		}
+		
+		fn_DrawText();
+	});
+	
+	//비용별 개별 아이템 선택시
+	$("#ulSearchList04 li input[type=checkbox]").change(function(){
+		fn_DrawText();
+    });
+	
+	//전체해제
+	$("#btn_reset").click(function(){
+		//주제별
+		$("#ulSearchList01 li input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", false);
+		});
+		//분야별
+		$("#ulSearchList02 li input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", false);
+		});
+		//대상별
+		$("#ulSearchList03 li input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", false);
+		});
+		//비용별
+		$("#ulSearchList04 li input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", false);
+		});		
+		$("#filterItem01").prop("checked", false);
+		$("#filterItem02").prop("checked", false);
+		$("#filterItem03").prop("checked", false);
+		$("#filterItem04").prop("checked", false);
+		
+		fn_DrawText();
+	});
+	
+	/* 쉬운검색 열기 버튼 */
+	$("#btn_open").click(function(){
+		if($('#divAreaOption').css('display') === 'none' ) {			
+			$("#divAreaOption").css("display", "");
+			$("#txtBtnOpen").text("쉬운 검색 닫기");
+			
+			//주제별
+			$("#ulSearchList01 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+			//분야별
+			$("#ulSearchList02 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+			//대상별
+			$("#ulSearchList03 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});
+			//비용별
+			$("#ulSearchList04 li input[type=checkbox]").each(function(index, element) {
+				$(this).prop("checked", false);
+			});		
+			$("#filterItem01").prop("checked", false);
+			$("#filterItem02").prop("checked", false);
+			$("#filterItem03").prop("checked", false);
+			$("#filterItem04").prop("checked", false);
+			fn_DrawText();
+			
+		}else{
+			$("#divAreaOption").css("display", "none");
+			$("#txtBtnOpen").text("쉬운 검색 열기");			
+		}
+	});
+
+    
+	
+});
+
+/* 전체 선택 체크 */
+function fn_checkAllorNot(gubun){
+	var allCnt = 0;
+	var chkCnt = 0;
+	$("#ulSearchList"+gubun+" li input[type=checkbox]").each(function(index, element) {
+		if($(this).is(":checked") == true){
+			chkCnt++;
+		}
+		allCnt++;
+	})
+	
+	if(allCnt == chkCnt){
+		$("#filterItem"+gubun).prop("checked", true);
+	}else{
+		$("#filterItem"+gubun).prop("checked", false);
+	}	
+}
+
+/* 대상별 전체 선택 체크 */
+function fn_checkAllorNotSub(gubun){
+	var allCnt = 0;
+	var chkCnt = 0;
+	$("#divSubList"+gubun+" input[type=checkbox]").each(function(index, element) {
+		if($(this).is(":checked") == true){
+			chkCnt++;
+		}
+		allCnt++;
+	})
+	
+	if(allCnt == chkCnt){
+		$("#filterItem03-"+gubun).prop("checked", true);
+	}else{
+		$("#filterItem03-"+gubun).prop("checked", false);
+	}
+	
+	fn_checkAllorNot("03");
+}
+
+/* 대상별 하위단위 전체 선택 체크 */
+function fn_checkAllorNotTarget(gubun){
+	if($("#filterItem03-"+gubun).is(":checked") == true){
+		$("#divSubList"+gubun+" input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", true);
+		});			
+	}else{
+		$("#divSubList"+gubun+" input[type=checkbox]").each(function(index, element) {
+			$(this).prop("checked", false);
+		});
+	}
+	fn_DrawText();
+}
+
+/* 검색 ajax */
+function fn_oneEyeDetailView(cPage, sGubun , txtValue){
+	/* 페이지 */
+	$("#cPage").val(cPage);
+	/* 검색구분 Tab 검색인지 상세검색인지  */
+	$("#sGubun").val(sGubun);	
+	/* 상위검색어 */
+	if(sGubun == "D"){
+		if($("#sWord").val().length == 1){
+			alert("최소 두자리 이상의 검색어를 입력하세요.");
+			return false;
+		}
+		$("#searchKeyword").val($("#sWord").val());
+		org_service_tab_param = [];
+	}else if(sGubun == "S"){
+		if($("#sWord2").val().length == 1){
+			alert("최소 두자리 이상의 검색어를 입력하세요.");
+			return false;
+		}		
+		$("#searchKeyword").val($("#sWord2").val());
+	}else if(sGubun == "T"){
+		if($("#sWord").val().length == 1){
+			alert("최소 두자리 이상의 검색어를 입력하세요.");
+			return false;
+		}		
+		$("#searchKeyword").val($("#sWord").val());
+	}
+	/* 상세검색 주제별 */
+	if(org_service_param.length > 0){
+		$("#org_service_param").val(org_service_param);
+	}else{
+		$("#org_service_param").val("");
+	}
+	/* 상세검색 주제별 탭선택 */
+	if(org_service_tab_param.length > 0){
+		$("#org_service_tab_param").val(org_service_tab_param);
+	}else{
+		$("#org_service_tab_param").val("");
+	}	
+	/* 상세검색 분야별 */
+	if(org_genre_param.length > 0){
+		$("#org_genre_param").val(org_genre_param);
+	}else{
+		$("#org_genre_param").val("");
+	}
+	/* 상세검색 대상 연령별 */
+	if(org_age_param.length > 0){
+		$("#org_age_param").val(org_age_param);
+	}else{
+		$("#org_age_param").val("");
+	}
+	/* 상세검색 대상 다양성 */
+	if(org_poly_param.length > 0){
+		$("#org_poly_param").val(org_poly_param);
+	}else{
+		$("#org_poly_param").val("");
+	}
+	/* 상세검색 대상 직업 */
+	if(org_special_param.length > 0){
+		$("#org_special_param").val(org_special_param);
+	}else{
+		$("#org_special_param").val("");
+	}
+	/* 상세검색 비용 */
+	if(org_cost_param.length > 0){
+		$("#org_cost_param").val(org_cost_param);
+	}else{
+		$("#org_cost_param").val("");
+	}
+	
+	/* 하부검색 조건 */
+	//장르
+	$("#genre").val($("#genreSelect").val());
+	//지역
+	$("#location").val($("#locationSelect").val());
+	//시작일
+	$('#sSdate').val($("#srchFr").val());
+	//종료일
+	$('#sEdate').val($("#srchTo").val());
+	//검색종류
+	$("#searchKeywordType").val($("#searchKeywordGubun").val());
+	
+	var form = $("form[name=oneEyeForm]").serialize() ;
+	
+	$.ajax({
+		url: '/oneEye/oneEyeDetailView.ajax',
+		method: 'post',
+		data : form,
+		dataType : 'html',				
+		success: function (data, status, xhr) {
+			if(sGubun == "D"){
+				$("#search_result_oneEye").empty();
+				$("#search_result_oneEye").replaceWith(data);
+			}else{
+				$("#search_result_oneEyeTab").empty();
+				$("#search_result_oneEyeTab").replaceWith(data);		
+				/*
+				if( txtValue == "봉사/교류" ){
+					$("#search_result_oneEyeTab").addClass("type1");
+				}
+				if( txtValue == "뉴스/지식" ){
+					$("#search_result_oneEyeTab").addClass("type2");				
+				}
+				if( txtValue == "대관/대여" ){
+					$("#search_result_oneEyeTab").addClass("type3");
+				}
+				if( txtValue == "자격/증명" ){
+					$("#search_result_oneEyeTab").addClass("type4");
+				}
+				if( txtValue == "연구/자료" ){
+					$("#search_result_oneEyeTab").addClass("type5");
+				}
+				*/
+			}
+			
+
+		},
+		error: function (data, status, err) {
+
+		},
+		complete: function () {
+			var total = $("#dataCount").val();
+			$("#total").text(addComma(total));
+		}
+	});
+}
+
+/* 선택된 Text 그리기 */
+function fn_DrawText(){
+	org_genre_param = [];		//주제별
+	org_service_param = [];		//분야별
+	org_age_param = [];			//대상 연령별
+	org_poly_param = [];		//대상 다양성
+	org_special_param = [];		//대상 직업
+	org_cost_param = [];		//비용별
+	
+	$("#divCheckItem").empty();
+	//주제별
+	$("#ulSearchList01 li input[type=checkbox]").each(function(index, element) {
+		var sHtml = "";
+		var cText = "";
+		var chkId = "";
+		if($(this).is(":checked") == true){
+			cText = $(this).attr("value");
+			chkId = $(this).attr("id");
+			sHtml = '<div class="item-option"><span class="txt">'+cText+'</span><button class="btn-delete" type="button" onclick="fn_delText(\''+chkId+'\')"><span class="hide-txt">삭제</span></button></div>';
+			org_genre_param.push(cText);
+		}
+		$("#divCheckItem").append(sHtml);
+	});	
+	
+	//분야별
+	$("#ulSearchList02 li input[type=checkbox]").each(function(index, element) {
+		var sHtml = "";
+		var cText = "";
+		var chkId = "";
+		if($(this).is(":checked") == true){
+			cText = $(this).attr("value");
+			chkId = $(this).attr("id");
+			sHtml = '<div class="item-option"><span class="txt">'+cText+'</span><button class="btn-delete" type="button" onclick="fn_delText(\''+chkId+'\')"><span class="hide-txt">삭제</span></button></div>';
+			org_service_param.push(cText);
+		}
+		$("#divCheckItem").append(sHtml);
+	});
+	
+	//대상별
+	$("#ulSearchList03 li input[type=checkbox]").each(function(index, element) {
+		var sHtml = "";
+		var cText = "";
+		var chkId = "";
+		if($(this).is(":checked") == true){
+			cText = $(this).attr("value");
+			chkId = $(this).attr("id");
+			if(cText != "all"){
+				sHtml = '<div class="item-option"><span class="txt">'+cText+'</span><button class="btn-delete" type="button" onclick="fn_delText(\''+chkId+'\')"><span class="hide-txt">삭제</span></button></div>';
+			}
+			
+			if(cText == "어린이" || cText == "청소년" || cText == "성인" || cText == "어르신"){
+				org_age_param.push(cText);
+			}else if(cText == "다문화" || cText == "장애인" || cText == "외국인"){
+				org_poly_param.push(cText);
+			}else{
+				org_special_param.push(cText);
+			}
+		}
+		$("#divCheckItem").append(sHtml);
+	});	
+	
+	//비용별
+	$("#ulSearchList04 li input[type=checkbox]").each(function(index, element) {
+		var sHtml = "";
+		var cText = "";
+		var chkId = "";
+		if($(this).is(":checked") == true){
+			cText = $(this).attr("value");
+			chkId = $(this).attr("id");
+			sHtml = '<div class="item-option"><span class="txt">'+cText+'</span><button class="btn-delete" type="button" onclick="fn_delText(\''+chkId+'\')"><span class="hide-txt">삭제</span></button></div>';
+			org_cost_param.push(cText);
+		}
+		$("#divCheckItem").append(sHtml);
+	});	
+	
+	fn_checkAllorNot("01");
+	fn_checkAllorNot("02");
+	fn_checkAllorNot("03");
+	fn_checkAllorNot("04");
+	
+	//검색
+	//fn_oneEyeDetailView(1, "D");
+}
+
+function fn_delText(chkId){
+	$("#"+chkId).prop("checked", false);
+	fn_DrawText();
+}
+
+/* 검색리스트에서 탭 선택시 하부 검색조건 셋팅 */
+function fn_getTabSvc(cText){
+	$(".tab-btn").each(function(index, element) {
+		
+		$(".hide").remove();
+		if($(this).attr("data-value") == cText){
+			$(this).addClass("on");
+			$(this).attr("title","선택됨");
+			
+		}else{
+			$(this).removeClass("on");
+		}
+		
+		$(this).removeAttr("title");
+	});
+	
+	if(cText == "공연/전시" || cText == "행사/축제" || cText == "교육/체험"){
+		$("#list-search").css("display", "");
+		
+		if(cText == "공연/전시"){
+			$("#genreSelect").css("display", "");
+			$("#periodId").html("공연/전시일");
+		}else if(cText == "행사/축제"){
+			$("#genreSelect").css("display", "none");
+			$("#periodId").html("행사/축제일");
+		}else{
+			$("#genreSelect").css("display", "none");
+			$("#periodId").html("교육/체험일");			
+		}
+	}else{
+		$("#list-search").css("display", "none");
+	}
+	
+	//하부 검색 조건 초기화
+	$("#genreSelect").val("");
+	$("#locationSelect").val("");
+	$("#locationSelect").val("");
+	$("#searchKeywordGubun").val("t");
+	$("#sWord2").val("");
+	
+	org_service_tab_param = [];
+	org_service_tab_param.push(cText);
+	fn_oneEyeDetailView(1, "T" , cText);	
+}
+
+//조회수 증가
+	function dailyCnt(num, conttype){
+		$.ajax({
+			url : "/home/dailyCnt.do",
+			type : "post",
+			dataType : "json",
+			data : {
+				seq : num,
+				type : conttype
+			},
+			success : function(data){
+				console.log(data);
+			},
+			error : function(response, status, err){
+				console.log(err);
+			}
+		})
+	}
+
+    function enterFn(gubun,type,ea){
+        if(window.event.keyCode == 13){
+        	if($("#filterItem03-"+gubun).is(":checked") == true){
+        		$("#divSubList"+gubun+" input[type=checkbox]").each(function(index, element) {
+        			$(this).prop("checked", true);
+        		});			
+        	}else{
+        		$("#divSubList"+gubun+" input[type=checkbox]").each(function(index, element) {
+        			$(this).prop("checked", false);
+        		});
+        	}
+        	
+        	
+        	if (gubun == 1 || gubun == "1") {
+        		if (type == "00") {
+	        		if($("#filterItem01").is(":checked") == true) {
+	    				$("#filterItem01").prop("checked", false);
+	    				for(i=1; i<=ea; i++) {
+			    			$("#filterItem01-0"+i).prop("checked", false);
+	    				}
+	        		} else {
+	    				$("#filterItem01").prop("checked", true);
+	    				for(i=1; i<=ea; i++) {
+			    			$("#filterItem01-0"+i).prop("checked", true);
+	    				}
+	        		}
+        		} else {
+	        		if($("#filterItem01-"+type).is(":checked") == true) {
+		    			$("#filterItem01-"+type).prop("checked", false);
+	        		} else {
+		    			$("#filterItem01-"+type).prop("checked", true);
+	        		}
+        		}
+        	} else if (gubun == 2 || gubun == "2") {
+        		if (type == "00") {
+	        		if($("#filterItem02").is(":checked") == true) {
+	    				$("#filterItem02").prop("checked", false);
+	    				for(i=1; i<=ea; i++) {
+	    					if(i > 9) {
+				    			$("#filterItem02-"+i).prop("checked", false);
+	    					} else {
+				    			$("#filterItem02-0"+i).prop("checked", false);
+	    					}
+	    				}
+	        		} else {
+	    				$("#filterItem02").prop("checked", true);
+	    				for(i=1; i<=ea; i++) {
+	    					if(i > 9) {
+				    			$("#filterItem02-"+i).prop("checked", true);
+	    					} else {
+				    			$("#filterItem02-0"+i).prop("checked", true);
+	    					}
+	    				}
+	        		}
+        		} else {
+	        		if($("#filterItem02-"+type).is(":checked") == true) {
+		    			$("#filterItem02-"+type).prop("checked", false);
+	        		} else {
+		    			$("#filterItem02-"+type).prop("checked", true);
+	        		}
+        		}
+        	} else if (gubun == 3 || gubun == "3") {
+				if (type == "001") {
+	        		if($("#filterItem03").is(":checked") == true) {
+						for (i=1; i<=3; i++) {
+	        				$("#filterItem03-0"+i).prop("checked", false);
+						}
+						for (i=1; i<=10; i++) {
+	
+	    					if(i < 10) {
+				    			$("#filterSub0"+i).prop("checked", false);
+	    					} else {
+				    			$("#filterSub"+i).prop("checked", false);
+	    					}
+						}
+	        		} else {
+						for (i=1; i<=3; i++) {
+	        				$("#filterItem03-0"+i).prop("checked", true);
+						}
+						for (i=1; i<=10; i++) {
+	
+	    					if(i < 10) {
+				    			$("#filterSub0"+i).prop("checked", true);
+	    					} else {
+				    			$("#filterSub"+i).prop("checked", true);
+	    					}
+						}
+	        		}
+	        		
+				}
+        		
+        		if (type == "0001") {
+	        		if($("#filterItem03-01").is(":checked") == true) {
+	    				$("#filterItem03-01").prop("checked", false);
+	    				for(i=1; i<=ea; i++) {
+			    			$("#filterSub0"+i).prop("checked", false);
+	    				}
+	        		} else {
+	    				$("#filterItem03-01").prop("checked", true);
+	    				for(i=1; i<=ea; i++) {
+			    			$("#filterSub0"+i).prop("checked", true);
+	    				}
+	        		}
+        		} else if (type == "0002") {
+	        		if($("#filterItem03-02").is(":checked") == true) {
+	    				$("#filterItem03-02").prop("checked", false);
+	    				for(i=5; i<=ea; i++) {
+			    			$("#filterSub0"+i).prop("checked", false);
+	    				}
+	        		} else {
+	    				$("#filterItem03-02").prop("checked", true);
+	    				for(i=5; i<=ea; i++) {
+			    			$("#filterSub0"+i).prop("checked", true);
+	    				}
+	        		}
+        		} else if (type == "0003") {
+	        		if($("#filterItem03-03").is(":checked") == true) {
+	    				$("#filterItem03-03").prop("checked", false);
+	    				for(i=8; i<=ea; i++) {
+	    					if(i < 10) {
+				    			$("#filterSub0"+i).prop("checked", false);
+	    					} else {
+				    			$("#filterSub"+i).prop("checked", false);
+	    					}
+	    				}
+	        		} else {
+	    				$("#filterItem03-03").prop("checked", true);
+	    				for(i=8; i<=ea; i++) {
+	    					if(i < 10) {
+				    			$("#filterSub0"+i).prop("checked", true);
+	    					} else {
+				    			$("#filterSub"+i).prop("checked", true);
+	    					}
+	    				}
+	        		}
+        		}
+        		if($("#filterSub"+type).is(":checked") == true) {
+	    			$("#filterSub"+type).prop("checked", false);
+        		} else {
+	    			$("#filterSub"+type).prop("checked", true);
+        		}
+        		if (type == "01" || type == "02" || type == "03" || type == "04") {
+        			fn_checkAllorNotSub("01");
+        		} else if (type == "05" || type == "06" || type == "07") {
+        			fn_checkAllorNotSub("02");
+        		} else if (type == "08" || type == "09" || type == "10") {
+        			fn_checkAllorNotSub("03");
+        		}
+        	} else if (gubun == 4 || gubun == "4") {
+        		if (type == "00") {
+	        		if($("#filterItem04").is(":checked") == true) {
+	    				$("#filterItem04").prop("checked", false);
+	    				for(i=1; i<=ea; i++) {
+	    					if(i > 9) {
+				    			$("#filterItem04-"+i).prop("checked", false);
+	    					} else {
+				    			$("#filterItem04-0"+i).prop("checked", false);
+	    					}
+	    				}
+	        		} else {
+	    				$("#filterItem04").prop("checked", true);
+	    				for(i=1; i<=ea; i++) {
+	    					if(i > 9) {
+				    			$("#filterItem04-"+i).prop("checked", true);
+	    					} else {
+				    			$("#filterItem04-0"+i).prop("checked", true);
+	    					} 
+	    				}
+	        		}
+        		} else {
+	        		if($("#filterItem04-"+type).is(":checked") == true) {
+		    			$("#filterItem04-"+type).prop("checked", false);
+	        		} else {
+		    			$("#filterItem04-"+type).prop("checked", true);
+	        		}
+        		}
+        	}
+        	
+        
+    		fn_DrawText();
+        };
+    };
+/* 하부탭 상세검색 */
+function fn_searchSub(){
+	fn_oneEyeDetailView(1, "S");
+}
+/*]]>*/        
+</script>
+<!--네이버 검색시 사이트 연관채널 지정_End-->
+
+</head>
+<!-- head 끝 -->
+<body style="padding-top: 0px;">
+	<div class="wrap">
+		<!-- header -->
+		
+      
+      <div class="skip-nav">
+         <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#content">본문 바로가기</a>
+         <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#footer">푸터 바로가기</a>
+      </div>
+      
+      <header class="header">
+         <div class="pc_header">
+            <!-- pc header -->
+            <div class="header_top" style="">
+               <div class="hearder_top_box">
+                  <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+                  <div class="hearder_search">
+                     <div class="search">
+                        <form id="searchFormHeader" name="searchForm" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                           <input type="text" placeholder="검색어를 입력하세요." id="searchContents" name="searchTerm" value="" onkeypress="javascript:if(event.keyCode==13){requestSearch();return false;}" maxlength="100" title="문화포털 검색 입력">
+                           <button class="btn_search" title="검색" onclick="requestSearch();return false;">검색</button>
+                           <input type="hidden" id="categoryType" name="categoryType" value="total">
+                           <input type="hidden" id="integratedPage" name="cPage" value="1">
+                           <input type="hidden" name="limit" value="4">
+                           <input type="hidden" name="viewCount" value="4">
+                           <input type="hidden" name="cultureOrderBy" value="regdate">
+                        </form>
+                     </div>
+                     <div class="keyword">
+                        
+                     </div>
+                     <!-- keyword 없을때 노출 -->
+                     <p class="txt_desc" style="display:none"><a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">우리 한글날에 어울리는 <strong>문화 콘텐츠</strong>를 찾아보세요!</a></p>
+                     <!-- //keyword 없을때 노출 -->
+                     
+                     <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="pc_log">로그와트</a>  -->
+                     <!-- 로고아트 클릭시 이동하는 url --> 
+                     <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="pc_log" tabindex="-1">로고아트</a>
+                  </div>
+                  <div class="header_menu">
+                     <ul class="login_menu">
+                     
+                        <li><a href="https://www.culture.go.kr/sso/login.do">로그인</a></li>
+                        <li><a href="https://www.culture.go.kr/member/register.do">회원가입</a></li>
+                     
+                     
+                        <li><a href="https://www.culture.go.kr/info/aboutA.do">이용안내</a></li>
+                     </ul>
+                     <div class="scale">
+                        <span>화면크기</span>
+                        <div>
+                           <button class="plus" title="키우기" id="btn_plus" onclick="fn_screenPlus();">키우기</button>
+                           <span id="bodySize">100%</span>
+                           <button class="minus" id="btn_minus" onclick="fn_screenMinus();">줄이기</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- PC 메인 메뉴 -->
+            <div class="shadow_box">
+             <div class="mBg" style="display: none;">
+        
+    </div>
+              <div class="header_tab">
+      <nav class="nav">
+        <ul>
+          <li class="active">
+            <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+            <ul class="depth01 active" style="display: none;">
+              <li>
+                <a href="https://www.culture.go.kr/home/index.do">
+                  집콕+집밖 문화생활
+
+                  <span class="point">특화서비스</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/oneeye/oneEyeList.do"> 한눈에 보는 문화정보 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/perform/relayList.do"> 문화릴레이티켓 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/calendar/view.do"> 문화캘린더 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                  문화공간,단체
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+            <ul class="depth01" style="display: none;">
+              <li>
+                <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                  문화TV
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/culture/themeList.do"> 공감마당 </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/info/sns.do"> 문화SNS 지도 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/magazine/webzine.do"> 웹진 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+            <ul class="depth01" style="display: none;">
+              <li>
+                <a href="https://www.culture.go.kr/archive/archiveMain.do"> 문화자료관 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                  전통문양
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do"> 예술지식백과 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/knowledge/realisticContentList.do"> 실감형 콘텐츠 </a>
+              </li>
+<!-- 2023.12.14 웹접근성 심사 대비
+              <li>
+                <a href="/culturedata/dataAnalyze.do">
+                  문화정보분석
+
+                  <span class="point">특화서비스</span>
+                </a>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/dataAnalyze.do"
+                      >문화정보 데이터분석</a
+                    >
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="/culturedata/culturemap.do"
+                      >예술,관광 지도매핑 서비스</a
+                    >
+                  </li>
+                </ul>
+              </li>
+ -->
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+            <ul class="depth01" style="display: none;">
+              <li>
+                <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do"> 문화드림 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/recruitList.do"> 채용·자원봉사 모집 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do"> 문화지원사업 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/newsList.do"> 정책뉴스 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/event/eventRunningList.do"> 문화이벤트 </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/industry/apiGuideA.do"> 문화포털API </a>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/news/noticeList.do"> 공지사항 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+          <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do" style="font-size:0;" tabindex="-1">마이페이지</a>
+            <ul class="depth01" style="display: none;">
+              <li>
+                <a href="https://www.culture.go.kr/info/aboutA.do"> 이용안내 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/mypage/mypage.do"> 마이페이지 </a>
+
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                  </li>
+                </ul>
+                <ul class="depth02">
+                  <li>
+                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.culture.go.kr/english.do"> English </a>
+              </li>
+
+              <li>
+                 <a href="https://www.culture.go.kr/cultureplan/cardList.do" class="chk011"> 문화융성카드 </a>
+              </li>
+
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="gnb_btnGroup">
+        <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./01문화체험_한눈에보는문화정보_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+        <!-- <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+        <a href="http://culture-chatbot.kcisa.kr/" title="새창 열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./01문화체험_한눈에보는문화정보_files/btn_chatbot.png" alt="챗봇"></a>
+        <!--  <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇"></a>  -->
+     </div>
+</nav>
+    </div>
+               <div class="header_tab" style="display:none;">
+                  <nav class="nav">
+                     <ul>
+                     
+                        
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturetv/mainList.do">문화공감</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/archive/archiveMain.do">문화지식</a>
+                           
+                        </li>
+                     
+                        <li>
+                           <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">문화알리미</a>
+                           
+                        </li>
+                     
+                        
+                     
+                     </ul>
+                     <a href="https://www.culture.go.kr/culture/publicize.do" class="banner_link"><img src="./01문화체험_한눈에보는문화정보_files/img_culture_guide.png" alt="문화 홍보 등록"></a>
+                     <!--  <a href="/info/cultureMonth202308.do" class="banner_link2"><img src="/assets/images/cultureMonth202308/btn_culturemonth.png" alt="2023 문화의 달"></a>  -->
+ 					  
+                     <a href="http://culture-chatbot.kcisa.kr/" title="새창열림" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;"><img src="./01문화체험_한눈에보는문화정보_files/btn_chatbot.png" alt="챗봇"></a>
+ 					 
+                     <!-- 
+                     <a href="http://kcisa.kro.kr/iChat" target="_blank" class="btn_chatbot" onclick="openPopup(this.href, 500, 650); return false;">
+                     <img src="/assets/images/common_new/btn_chatbot.png" alt="챗봇">
+                     </a> 
+                      --> 
+                     
+                  </nav>
+               </div>
+            </div>
+            <!-- PC 서브 메뉴 -->
+            <div class="drop_menu_box" style="display:none">
+               <div class="drop_menu">
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/home/index.do">
+                           집콕+집밖 문화생활
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                           한눈에 보는 문화정보
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/perform/relayList.do">
+                           문화릴레이티켓
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/calendar/view.do">
+                           문화캘린더
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                           문화공간·단체
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                           문화TV
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culture/themeList.do">
+                           공감마당
+                           
+                           
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/info/sns.do">
+                           문화SNS 지도
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/magazine/webzine.do">
+                           웹진
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                           문화자료관
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                           전통문양
+                           
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                           예술지식백과
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                           실감형 콘텐츠
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                           문화정보분석
+                           
+                           
+                           
+                              <span class="point">특화서비스</span>
+                           
+                           
+                        </a>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                           문화드림
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/recruitList.do">
+                           채용·자원봉사 모집
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                           문화지원사업
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/newsList.do">
+                           정책뉴스
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                           문화이벤트
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                           문화포털API
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.culture.go.kr/news/noticeList.do">
+                           공지사항
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  
+                  
+                  <!-- my page -->
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <ul class="depth01 active">
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/info/aboutA.do">
+                           이용안내
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/mypage/mypage.do">
+                           마이페이지
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                           </li>
+                        </ul>
+                        <ul class="depth02">
+                           <li>
+                              <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/english.do">
+                           English
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                           문화융성카드
+                           
+                           
+                           
+                           
+                        </a>
+                        
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </div>
+            </div>
+         </div>
+         <!-- mo header -->
+         <div class="mo_header">
+            <h1><a href="https://www.culture.go.kr/index.do">문화포털</a></h1>
+            <button class="btn_menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            <div class="menu_box" data-brl-use="NO">
+            
+               <!-- 로그인 전 -->
+               
+               <a href="https://www.culture.go.kr/sso/login.do" class="btn_login">로그인</a>
+               <a href="https://www.culture.go.kr/member/register.do" class="btn_member">회원가입</a>
+               
+               <!-- // 로그인 전 -->
+               
+               <!-- 로그인 후 -->
+               
+               <!-- // 로그인 후 -->
+               
+               <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#" class="btn_close" data-brl-use="NO">닫기</a>
+            </div>
+            <div class="header_search img_type">
+               <div class="input_box">
+               <form id="searchFormHeader_mo" name="searchForm_mo" method="get" action="https://www.culture.go.kr/integratedSearch/searchList.do" onsubmit="return false;">
+                  <input type="text" placeholder="검색어를 입력하세요." id="searchContents_m" name="searchTerm" value="" title="문화포털 검색 입력" onkeypress="javascript:if(event.keyCode==13){requestSearch_mo();return false;}">
+                  <button class="btn_search" onclick="requestSearch_mo();return false;">검색</button>
+                  <input type="hidden" id="categoryTypeMo" name="categoryType" value="total">
+                  <input type="hidden" id="integratedPageMo" name="cPage" value="1">
+                  <input type="hidden" name="limit" value="3">
+               </form>
+               </div>
+               <div class="keyword_box">
+                  
+<!--                   <span class="keyword" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}" th:id="${item.KEYWORD}" th:onclick="|javascript:fn_searchKeyWord_mo(this.getAttribute('id'))|">문화행사</span> -->
+                  <!-- <a href="#" th:each="item, index : ${trendList}" th:if="${index.index <= 3}" th:text="${item.KEYWORD}"
+                           th:href="|javascript:fn_searchKeyWord_mo('${item.KEYWORD}');|" th:attr="title=${item.KEYWORD} + '으로 검색하기'">문화행사</a> -->
+               </div>
+               
+               <!--  <a href="https://www.culture.go.kr/event/newYear2023/main.do" target="_blank" class="m_log">로그와트</a>   -->
+               <!-- <a href="https://www.culture.go.kr/event/archiveEvent.do" target="_blank" class="m_log">로고아트</a> -->
+<!--               <a href="https://www.culture.go.kr/home/index.do" target="_blank" class="m_log">로고아트</a>-->
+               
+            </div>
+            <!-- mo menu -->
+            <div class="mo_menu">
+               <div class="left">
+                  <ul class="depth01">
+                  
+                     
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">문화체험</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/home/index.do">
+                                 집콕+집밖 문화생활
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/oneeye/oneEyeList.do">
+                                 한눈에 보는 문화정보
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/perform/relayList.do">
+                                 문화릴레이티켓
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/calendar/view.do">
+                                 문화캘린더
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/space/facility.do?sido=%EC%84%9C%EC%9A%B8&amp;gugun=%EC%A2%85%EB%A1%9C%EA%B5%AC&amp;facilityCode=&amp;searchKeyword=">
+                                 문화공간·단체
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">문화공감</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturetv/mainList.do">
+                                 문화TV
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/videoList.do">문화영상</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/unescoList.do">유네스코 등재유산</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/culture100List.do">한국문화100</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/job30List.do">문화인터뷰</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturetv/publicMovList.do">기관별영상</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/themeList.do">
+                                 공감마당
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culture/themeList.do">공감리포트</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/magazine/cardnewsList.do">카드뉴스</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/board/list.do">문화마루</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/sns.do">
+                                 문화SNS 지도
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/magazine/webzine.do">
+                                 웹진
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">문화지식</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/archive/archiveMain.do">
+                                 문화자료관
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/tradition/traditionalPatternMain.do">
+                                 전통문양
+                                 
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalDesignPatternList.do">디자인문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalShapeList.do">형태별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseList.do">용도별문양</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUsePatternList.do">활용디자인</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalUseDesignList.do">전통문양활용</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPattern.do">문양의 이해</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/encyclopediaList.do">
+                                 예술지식백과
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/knowledge/realisticContentList.do">
+                                 실감형 콘텐츠
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">
+                                 문화정보분석
+                                 
+                                 
+                                 
+                                    <span class="point">특화서비스</span>
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">문화알리미</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culturedream/cultureDreamList.do">
+                                 문화드림
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/recruitList.do">
+                                 채용·자원봉사 모집
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cultureSupport.do">
+                                 문화지원사업
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/newsList.do">
+                                 정책뉴스
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/event/eventRunningList.do">
+                                 문화이벤트
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/industry/apiGuideA.do">
+                                 문화포털API
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/news/noticeList.do">
+                                 공지사항
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                     <li>
+                        <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#">기타</a>
+                        <ul class="depth02">
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/info/aboutA.do">
+                                 이용안내
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/aboutA.do">사이트소개</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/faq.do">자주찾는질문</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/info/srinquiry/list.do">서비스문의</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/mypage/mypage.do">
+                                 마이페이지
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/information.do">개인정보수정</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/document.do">나의게시물</a>
+                                 </li>
+                                 
+                              
+                                 
+                                 <li>
+                                    <a href="https://www.culture.go.kr/mypage/event.do">이벤트</a>
+                                 </li>
+                                 
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/english.do">
+                                 English
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/cultureplan/cardList.do">
+                                 문화융성카드
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                           <li>
+                              
+                              <a href="https://www.culture.go.kr/culture/publicize.do">
+                                 문화홍보등록
+                                 
+                                 
+                                 
+                                 
+                              </a>
+                              <ul class="depth03">
+                              
+                              </ul>
+                              
+                           </li>
+                        
+                        </ul>
+                     </li>
+                  
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <script>
+         /*<![CDATA[*/
+      
+            
+         /*
+         function chk(){
+            if(cc == 1){
+               $(".header .drop_menu").css({ display:"flex" })
+            }else{
+               $(".header .drop_menu").css({ display:"none" })
+            }
+         }
+         
+         $(function(){
+            $('.header nav ul li a').mouseover(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header').mouseout(function(){
+               setTimeout(chk, 400);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+   
+            
+            $('.header nav ul li a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+            $('.header .drop_menu a').focus(function(){
+               setTimeout(chk, 100);
+               cc = 1;
+               $(".header .drop_menu").css({ display:"flex" })
+            });
+         
+            $('.header .drop_menu a').blur(function(){
+               setTimeout(chk, 100);
+               cc = 0;
+               $(".header .drop_menu").css({ display:"none" })
+            });
+         });
+   
+         $(".header nav ul li:first-child a").focus(function(){
+            $(".header .drop_menu").css({ display : "flex" })
+         })
+         
+         $(".bnr_slide ul li a").focus(function(){
+            $(".header .drop_menu").css({ display : "none" })
+         })
+         */
+
+         // 네비 메뉴
+         $(".nav>ul>li").on("mouseenter keydown",function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".header nav>ul>li>.depth01").show();
+            $(".mBg").show();
+            
+            /*
+            $(".drop_menu").css({"display": "flex"});
+            $(".drop_menu .depth01").eq(thisIdx).addClass("active").siblings().removeClass("active");
+            */
+         })
+
+          $(".header nav").on('mouseleave',function(){
+       	 	 $(".header nav>ul>li>.depth01").hide();
+       	 	$(".mBg").hide();
+          });
+         
+         
+         $(".banner_link").on("focusin",function(){
+        	 $(".header nav>ul>li>.depth01").hide();
+        	 $(".mBg").hide();
+         });
+         
+         $(".banner_link").on("keydown",function(e){
+        	if(e.keyCode === 9 && event.shiftKey){
+        		e.preventDefault();
+        		$(".header nav>ul>li>.depth01").show();
+        		$(".mBg").hide();
+        		$(".chk011").focus();
+        		console.log("123");
+        	} 
+         });
+         /*
+         $(".drop_menu_box").mouseleave(function(){
+            $(".drop_menu").hide();
+            $(".nav ul li").removeClass("active");
+         })
+         */
+
+         $(".drop_menu .depth01").mouseenter(function(){
+            var thisIdx = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".nav ul li").eq(thisIdx).addClass("active").siblings().removeClass("active");
+         })
+
+         // pc menu fixed
+         if( $(window).width() > 1200 ){
+            var headerH = $(".header").outerHeight();
+            $(window).scroll(function(){
+               var st = $(document).scrollTop(),
+                  headerTop = $(".header_top").outerHeight();
+               if(st > headerTop){
+                  $(".header").addClass("fixed");
+                  $("body").css({"paddingTop" : headerH + "px"})
+               } else {
+                  $(".header").removeClass("fixed");
+                  $("body").css({"paddingTop" : 0})
+               }
+            })
+         }
+
+         // mo menu
+         $(".btn_menu").click(function(){
+            $(".mo_header").addClass("active");
+            $("body").css({"overflow":"hidden"})
+         })
+
+         $(".btn_close").click(function(){
+            $(".mo_header").removeClass("active");
+            $(".mo_menu .depth01 > li").removeClass("active");
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $("body").css({"overflow":"visible"})
+            return false;
+         })
+         $(".mo_menu .depth01 > li > a").click(function(){
+            $(".mo_menu .depth01 > li > .depth02").hide();
+            $(this).siblings(".depth02").show();
+            $(this).parent().addClass("active").siblings().removeClass("active")
+            return false;
+         })
+      
+         
+
+      var nowZoom = 100;
+
+      function fn_screenPlus(){
+         nowZoom = nowZoom + 5;
+         if(nowZoom >= 200) nowZoom = 200;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+      }
+
+      function fn_screenMinus(){
+         nowZoom = nowZoom - 5;
+         if(nowZoom <= 70) nowZoom = 70;
+         fn_zooms();
+         $("#bodySize").text(nowZoom+"%");
+         
+         
+      }
+
+      function fn_zooms(){
+         document.body.style.zoom = nowZoom + '%';
+
+         if(nowZoom == 70){
+            alert("더 이상 축소할수 없습니다.");
+         }
+
+         if(nowZoom == 500){
+            alert("더 이상 확대할수 없습니다.");
+         }
+      }
+
+      function fn_searchKeyWord(keyWord){
+         $("#searchFormHeader #searchContents").val(keyWord);
+         requestSearch();
+      }
+
+      function fn_searchKeyWord_mo(keyWord){
+         $("#searchFormHeader_mo #searchContents_m").val(keyWord);
+         requestSearch_mo();
+      }
+      
+      $(function() {
+			$('.skip-nav a').on('click', function(event) {
+				// prevent default link behavior
+				event.preventDefault();
+				
+				// get the target element id
+				var targetId = $(this).attr('href').substring(1);
+				
+				// focus the target element
+				if(document.querySelector("#contents")){
+					console.log("3");
+					$("#contents").removeAttr("tabindex");
+					$("#contents").focus();
+				}else if(document.querySelector("#content")){
+					console.log("42")
+					$("#content").removeAttr("tabindex");
+					$('#' + targetId).focus();
+				}
+				
+				// scroll to the top of the page
+				window.scrollTo(0, 0);
+			});
+		});
+         /*]]>*/
+         
+         $(document).ready(function () {
+        $(document).on("keydown",".vjs-play-control",function(e){
+          if(e.keyCode === 9){
+            $(".vjs-volume-level").attr("tabindex","0");
+             $(".vjs-volume-bar.vjs-slider-bar").attr("tabindex","-1");
+          }
+        });
+        
+        
+        //20231213 웹 접근성 추가
+        document.querySelector('.agency__trigger').addEventListener("click",function(){
+	        
+	        document.querySelector('#agencyContents').setAttribute("tabindex","0");
+	        setTimeout(function(){
+	          document.querySelector('#agencyContents').focus();
+	        },100)
+	      });
+	
+	      document.querySelector('#agencyContents .pop-close').addEventListener("click",function(){
+	    	  console.log("!@3");
+	        this.closest("#agencyContents").style.display = "none"
+	      })
+	      
+	      $("#agencyContents .pop-close").on("click",function(e){
+	    	  e.preventDefault();
+	    	  
+	    	  document.querySelector('.agency__trigger').focus();
+	    	  
+	      })
+      });
+         
+       
+ 	
+         
+      // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상
+         (function () {
+           $(document).ready(function () {
+             const headerBtns = $(".header .header_menu .scale > div button");
+
+             function adjustBanner() {
+               const bnrSlides = $(".bnr_slide .swiper-slide");
+               const bnrSlideContainer = $(".bnr_slide .swiper-container");
+               const bnrWidth = bnrSlideContainer.width();
+               const bnrSwiperWrapper = $(".bnr_slide .swiper-wrapper");
+
+               bnrSlideContainer.each(function () {
+                 var existingSwiper = this.swiper;
+                 if (existingSwiper) {
+                   var activeIndex = existingSwiper.activeIndex;
+                   let wid = -(bnrWidth * activeIndex);
+                   bnrSlides.css({ "width": "100%" });
+                   bnrSwiperWrapper.css({ transform: `translate3d(${wid}px,0px,0px)` });
+                   existingSwiper.on('slideChange', function () {
+                     console.log("슬라이드가 변경되었습니다. 현재 활성화된 슬라이드 인덱스:", this.activeIndex);
+                     let newWid = -(bnrWidth * this.activeIndex);
+                     bnrSwiperWrapper.css({ transform: `translate3d(${newWid}px,0px,0px)` });
+                   });
+                 }
+               });
+             }
+             headerBtns.on("click", adjustBanner);
+
+             // resize 이벤트 250ms 내에는 한 번만 adjustBanner 함수 실행
+             function debounce(func, wait) {
+               let timeout;
+               return function() {
+                   const context = this;
+                   const args = arguments;
+                   clearTimeout(timeout);
+                   timeout = setTimeout(function() {
+                       func.apply(context, args);
+                   }, wait);
+               };
+             }
+
+             $(window).resize(debounce(adjustBanner, 250)); 
+
+             // 메인배너 paging 짤리는 현상
+           });
+         })();
+         // 20230912 메인 화면 +,- 버튼 클릭 시 메인슬라이드 이미지 잘림현상 및 프린트 시 메인화면 잘리는 현상 eee
+         
+         // 20231220 웹접근성 skip 메뉴 추가
+         $(function () {
+	console.log("123")
+		
+		 setTimeout(function(){
+	    $('.skip-nav a:first-of-type').on('click', function(event) {
+	      // prevent default link behavior
+	      event.preventDefault();
+	      
+	      // get the target element id
+	      var targetId = $(this).attr('href').substring(1);
+	      
+	      // focus the target element
+	      if(document.querySelector("#contents")){
+	        console.log("344");
+	        $("#contents").remove("tabindex");
+	        $("#contents").focus();
+	      }else if(document.querySelector("#content")){
+	        console.log("42")
+	        $("#content").remove("tabindex");
+	        $('#' + targetId).focus();
+	      }
+	      
+	      // scroll to the top of the page
+	      window.scrollTo(0, 0);
+	    });
+
+},100)
+});
+
+
+      </script>
+      <script src="./01문화체험_한눈에보는문화정보_files/search.js.다운로드"></script>
+
+   
+		<!-- // header -->
+		<div id="content" role="main" tabindex="0" data-brl-use="PH">
+	<form id="oneEyeForm" name="oneEyeForm">
+		<input type="hidden" id="cPage" name="cPage">
+		<input type="hidden" id="sGubun" name="sGubun">
+		<input type="hidden" id="searchKeyword" name="searchKeyword">
+		<input type="hidden" id="org_service_param" name="org_service_param">
+		<input type="hidden" id="org_service_tab_param" name="org_service_tab_param">
+		<input type="hidden" id="org_genre_param" name="org_genre_param">
+		<input type="hidden" id="org_age_param" name="org_age_param">
+		<input type="hidden" id="org_poly_param" name="org_poly_param">
+		<input type="hidden" id="org_special_param" name="org_special_param">
+		<input type="hidden" id="org_cost_param" name="org_cost_param">
+		<input type="hidden" id="genre" name="genre">
+		<input type="hidden" id="location" name="location">
+		<input type="hidden" id="sSdate" name="sSdate">
+		<input type="hidden" id="sEdate" name="sEdate">
+		<input type="hidden" id="searchKeywordType" name="searchKeywordType">
+	</form>
+        <div class="content-inner contents">
+        <div class="location" data-brl-use="NO">
+	
+	
+		<a href="https://www.culture.go.kr/index.do">홈</a>
+		
+			
+				
+				&gt; <a href="https://www.culture.go.kr/home/index.do">문화체험</a>
+				
+					            	
+			
+		
+			
+		
+		
+			
+		
+			
+				<strong>한눈에 보는 문화정보</strong>
+			
+		
+		
+			<div class="contents__util" data-brl-use="NO">
+		<div class="contents__share">
+			<button type="button" class="contents__share--trigger" aria-owns="contentShare" aria-expanded="false">SNS 공유</button>
+			<ul id="contentShare" class="sns-list">
+				<li class="sns-list__item"><a href="javascript:shareFacebook();" title="페이스북 공유 새창" class="sns-list__item--facebook">페이스북</a></li>
+				<li class="sns-list__item"><a href="javascript:shareTwitter();" title="트위터 공유 새창" class="sns-list__item--twitter">트위터</a></li>
+				<!-- 요청 사항으로 삭제 처리 2022/12/22-->
+				<!-- <li class="sns-list__item"><a href="javascript:shareGoogle();" title="구글 공유 새창" class="sns-list__item--google">구글</a></li> -->
+				<li class="sns-list__item"><a href="javascript:shareKakaoTalk();" name="kakao-link-btn" id="kakao-link-btn" title="카카오톡 공유 새창" class="sns-list__item--kakaotalk">카카오톡</a></li>
+				<!-- 서비스종료 주석처리 -->
+				<!-- <li class="sns-list__item"><a href="javascript:shareKakaoStoryA();" id="kakaostory-share" name="kakaostory-share" title="카카오스토리 공유 새창" class="sns-list__item--kakaostory">카카오스토리</a></li> -->
+				<li class="sns-list__item"><a href="javascript:shareClipboardData();" title="주소복사" class="sns-list__item--copy">주소 복사</a></li>
+			</ul>
+		</div>
+		<button type="button" onclick="openBrlViewer(document.title)" class="contents__util--brail">점자새창</button>
+    	<button type="button" onclick="exportBrl(&#39;brl&#39;, document.title)" class="contents__util--brailprint">점자다운로드</button>
+		<button type="button" class="contents__util--print" title="인쇄">프린트</button>
+		<script>
+			onload = function(){
+				$(".contents__util--print").on("click", function(){
+					window.print();
+					return false;
+				})
+			}
+		</script>
+
+          <div style="float: left;padding: 7px;">
+            <!-- <span th:text="${viewTitle}" style="font-size: 20px;padding: 21px;font-weight: bold;" id="charactersChange" >제목</span> -->
+            <script type="text/javascript">
+                // 특수문자 처리를 위한 스크립트
+                var charactersChange = $('#charactersChange').text();
+                if(charactersChange != null){
+                    charactersChange =  charactersChange.replace(/&lt;/gi,"<");
+                    charactersChange =  charactersChange.replace(/&gt;/gi,">");
+                    charactersChange =  charactersChange.replace(/&#39;/gi,"'");
+                }
+                $('#charactersChange').text(charactersChange);
+            </script>
+            <script type="text/javascript">
+                // 20.12.23 와이즈트래킹 추가
+                try {_TRK_MVT2 = $('#charactersChange').text();}catch(_e){console.log(_e);}
+
+                // 20.12.23 공식 홈페이지 바로가기 와이즈트래킹 추가 // html : performView , educationView , festivalView
+                function Call_trk_flashEnvView() {
+                    eval('try{_trk_flashEnvView(\'_TRK_MVT2=\'+$(\'#charactersChange\').text(),\'_TRK_G13=1\');console.log($(\'#charactersChange\').text())}catch(_e){console.log(_e)}');
+                    //console.log('call : ' , document.getElementById('charactersChange').textContent);
+                }
+            </script>
+        </div>
+    </div>
+		
+	
+	</div>
+          <section class="section-main">
+            <div class="section-inner">
+              <div class="title-area">
+                <h1 class="title-h1" data-brl-use="PT">
+                  한눈에 보는 문화정보<span class="txt">공연/전시/축제 등 현장의 다채로운 문화정보를 찾아보세요</span>
+                </h1>
+                <a href="https://www.culture.go.kr/culture/cultureinfoForm.do" title="공연/전시 정보등록">
+	          		<img src="./01문화체험_한눈에보는문화정보_files/culture_add.png" alt="공연/전시 정보 등록" style="margin-top: 22px;">
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="section-search">
+            <div class="section-inner">
+              <div class="wrap-search open">
+              
+                <div class="area-search" data-brl-use="NO">
+                  <div class="area-input">
+                    <input type="text" placeholder="검색어를 입력해 주세요." id="sWord" name="sWord" onkeypress="javascript:if(event.keyCode==13){fn_oneEyeDetailView(&#39;1&#39;,&#39;D&#39;);return false;}" title="검색어 입력">
+                    <button class="btn-search" type="button" id="btn_searchTop">
+                      <span class="hide-txt">검색</span>
+                    </button>
+                  </div>
+                  <div class="area-button">
+                    <button class="btn-open" type="button" id="btn_open" role="button" aria-pressed="false" data-brl-use="NO">
+                      <span class="txt" id="txtBtnOpen" title="쉬운 검색 열기">쉬운 검색 열기</span>
+                      <i class="ico-arrow" aria-hidden="true"></i>
+                    </button>
+                    
+                    <script>
+                    (function(){
+                    	 let count = 0;
+                         $(".area-button .btn-open").on("click",function(){    	  
+                          count++;
+                          console.log(count)
+                       	  if(count%2 == 1)  $(this).attr("aria-pressed","true")
+                       	  else $(this).attr("aria-pressed","false")
+                       	  
+                       	  
+                         })
+                    })();
+                   
+                    </script>
+                    <!-- <a class="btn-confirm" href="#none">
+                      <span class="txt">예약확인 </span>
+                    </a> -->
+                  </div>
+                </div>
+                  <div class="area-option" id="divAreaOption" style="display:none">
+                  <fieldset>
+                    <legend>주제별 필터</legend>
+                    <div class="search-category" data-value="01">
+                      <div class="search-head" onkeyup="enterFn(&#39;1&#39;,&#39;00&#39;,7)">
+                        <input id="filterItem01" type="checkbox">
+                        <label class="filter-main" for="filterItem01">
+                          <span class="txt" title="주제별">주제별</span>
+                        </label>
+                      </div>
+                      <ul class="search-list" id="ulSearchList01">
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;01&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-01" type="checkbox" value="문화예술">
+                            <label class="filter-label" for="filterItem01-01">
+                              <div class="circle-item ico-category01" area-hidden="true"></div>
+                              <span class="txt" title="문화예술">문화예술</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;02&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-02" type="checkbox" value="문화유산">
+                            <label class="filter-label" for="filterItem01-02">
+                              <div class="circle-item ico-category02" area-hidden="true"></div>
+                              <span class="txt" title="문화유산">문화유산</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;03&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-03" type="checkbox" value="문화산업">
+                            <label class="filter-label" for="filterItem01-03">
+                              <div class="circle-item ico-category03" area-hidden="true"></div>
+                              <span class="txt" title="문화산업">문화산업</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;04&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-04" type="checkbox" value="문화생활">
+                            <label class="filter-label" for="filterItem01-04">
+                              <div class="circle-item ico-category04" area-hidden="true"></div>
+                              <span class="txt" title="문화생활">문화생활</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;05&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-05" type="checkbox" value="관광">
+                            <label class="filter-label" for="filterItem01-05">
+                              <div class="circle-item ico-category05" area-hidden="true"></div>
+                              <span class="txt" title="관광">관광</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;06&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-06" type="checkbox" value="체육">
+                            <label class="filter-label" for="filterItem01-06">
+                              <div class="circle-item ico-category06" area-hidden="true"></div>
+                              <span class="txt" title="체육">체육</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;1&#39;,&#39;07&#39;)">
+                          <div class="item">
+                            <input id="filterItem01-07" type="checkbox" value="도서">
+                            <label class="filter-label" for="filterItem01-07">
+                              <div class="circle-item ico-category07" area-hidden="true"></div>
+                              <span class="txt" title="도서">도서</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="search-category" data-value="02">
+                      <div class="search-head" onkeyup="enterFn(&#39;2&#39;,&#39;00&#39;,11)">
+                        <input id="filterItem02" type="checkbox">
+                        <label class="filter-main" for="filterItem02">
+                          <span class="txt" title="분야별">분야별</span>
+                        </label>
+                      </div>
+                      <ul class="search-list" id="ulSearchList02">
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;01&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-01" type="checkbox" value="공연/전시">
+                            <label class="filter-label" for="filterItem02-01">
+                              <div class="circle-item ico-category08" area-hidden="true"></div>
+                              <span class="txt" title="공연/전시">공연/전시</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;02&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-02" type="checkbox" value="행사/축제">
+                            <label class="filter-label" for="filterItem02-02">
+                              <div class="circle-item ico-category09" area-hidden="true"></div>
+                              <span class="txt" title="행사/축제">행사/축제</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;03&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-03" type="checkbox" value="교육/체험">
+                            <label class="filter-label" for="filterItem02-03">
+                              <div class="circle-item ico-category10" area-hidden="true"></div>
+                              <span class="txt" title="교육">교육/체험</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;04&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-04" type="checkbox" value="관광">
+                            <label class="filter-label" for="filterItem02-04">
+                              <div class="circle-item ico-category11" area-hidden="true"></div>
+                              <span class="txt" title="관광">관광</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;05&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-05" type="checkbox" value="체육">
+                            <label class="filter-label" for="filterItem02-05">
+                              <div class="circle-item ico-category06" area-hidden="true"></div>
+                              <span class="txt" title="체육">체육</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;06&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-06" type="checkbox" value="도서">
+                            <label class="filter-label" for="filterItem02-06">
+                              <div class="circle-item ico-category07" area-hidden="true"></div>
+                              <span class="txt" title="도서">도서</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;07&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-07" type="checkbox" value="봉사/교류">
+                            <label class="filter-label" for="filterItem02-07">
+                              <div class="circle-item ico-category12" area-hidden="true"></div>
+                              <span class="txt" title="봉사/교류">봉사/교류</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;08&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-08" type="checkbox" value="뉴스/지식">
+                            <label class="filter-label" for="filterItem02-08">
+                              <div class="circle-item ico-category13" area-hidden="true"></div>
+                              <span class="txt" title="뉴스/지식">뉴스/지식</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;10&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-10" type="checkbox" value="대관/대여">
+                            <label class="filter-label" for="filterItem02-10">
+                              <div class="circle-item ico-category15" area-hidden="true"></div>
+                              <span class="txt" title="대관/대여">대관/대여</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;09&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-09" type="checkbox" value="자격/증명">
+                            <label class="filter-label" for="filterItem02-09">
+                              <div class="circle-item ico-category14" area-hidden="true"></div>
+                              <span class="txt" title="자격/증명">자격/증명</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;2&#39;,&#39;11&#39;)">
+                          <div class="item">
+                            <input id="filterItem02-11" type="checkbox" value="연구/자료">
+                            <label class="filter-label" for="filterItem02-11">
+                              <div class="circle-item ico-category16" area-hidden="true"></div>
+                              <span class="txt" title="연구/자료">연구/자료</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="search-category" data-value="03">
+                      <div class="search-head" onkeyup="enterFn(&#39;3&#39;,&#39;001&#39;)">
+                        <input id="filterItem03" type="checkbox">
+                        <label class="filter-main" for="filterItem03">
+                          <span class="txt" title="대상별">대상별</span>
+                        </label>
+                      </div>
+                      <ul class="search-list" id="ulSearchList03">
+                        <li class="list">
+                          <div class="item" onkeyup="enterFn(&#39;3&#39;,&#39;0001&#39;,4)">
+                            <input id="filterItem03-01" type="checkbox" value="all">
+                            <label class="filter-label" for="filterItem03-01">
+                              <div class="circle-item ico-category17" area-hidden="true"></div>
+                              <span class="txt" title="연령별">연령별</span>
+                            </label>
+                          </div>
+                          <div class="sub-list" id="divSubList01">
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;01&#39;)">
+                              <input id="filterSub01" type="checkbox" value="어린이">
+                              <label class="filter-sub" for="filterSub01">
+                                <span class="txt" title="어린이">어린이</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;02&#39;)">
+                              <input id="filterSub02" type="checkbox" value="청소년">
+                              <label class="filter-sub" for="filterSub02">
+                                <span class="txt" title="청소년">청소년</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;03&#39;)">
+                              <input id="filterSub03" type="checkbox" value="성인">
+                              <label class="filter-sub" for="filterSub03">
+                                <span class="txt" title="성인">성인</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;04&#39;)">
+                              <input id="filterSub04" type="checkbox" value="어르신">
+                              <label class="filter-sub" for="filterSub04">
+                                <span class="txt" title="어르신">어르신</span>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="item" onkeyup="enterFn(&#39;3&#39;,&#39;0002&#39;,7)">
+                            <input id="filterItem03-02" type="checkbox" value="all">
+                            <label class="filter-label" for="filterItem03-02">
+                              <div class="circle-item ico-category18" area-hidden="true"></div>
+                              <span class="txt" title="다양성">다양성</span>
+                            </label>
+                          </div>
+                          <div class="sub-list" id="divSubList02">
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;05&#39;)">
+                              <input id="filterSub05" type="checkbox" value="다문화">
+                              <label class="filter-sub" for="filterSub05">
+                                <span class="txt" title="다문화">다문화</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;06&#39;)">
+                              <input id="filterSub06" type="checkbox" value="장애인">
+                              <label class="filter-sub" for="filterSub06">
+                                <span class="txt" title="장애인">장애인</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;07&#39;)">
+                              <input id="filterSub07" type="checkbox" value="외국인">
+                              <label class="filter-sub" for="filterSub07">
+                                <span class="txt" title="외국인">외국인</span>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="item" onkeyup="enterFn(&#39;3&#39;,&#39;0003&#39;,10)">
+                            <input id="filterItem03-03" type="checkbox" value="all">
+                            <label class="filter-label" for="filterItem03-03">
+                              <div class="circle-item ico-category17" area-hidden="true"></div>
+                              <span class="txt" title="직업">직업</span>
+                            </label>
+                          </div>
+                          <div class="sub-list" id="divSubList03">
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;08&#39;)">
+                              <input id="filterSub08" type="checkbox" value="예술인">
+                              <label class="filter-sub" for="filterSub08">
+                                <span class="txt" title="예술인">예술인</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;09&#39;)">
+                              <input id="filterSub09" type="checkbox" value="교사">
+                              <label class="filter-sub" for="filterSub09">
+                                <span class="txt" title="교사">교사</span>
+                              </label>
+                            </div>
+                            <div class="sub-item" onkeyup="enterFn(&#39;3&#39;,&#39;10&#39;)">
+                              <input id="filterSub10" type="checkbox" value="운동선수">
+                              <label class="filter-sub" for="filterSub10">
+                                <span class="txt" title="운동선수">운동선수</span>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+					<div class="search-category" data-value="04">
+                      <div class="search-head" onkeyup="enterFn(&#39;4&#39;,&#39;00&#39;,3)">
+                        <input id="filterItem04" type="checkbox">
+                        <label class="filter-main" for="filterItem04">
+                          <span class="txt" title="비용별">비용별</span>
+                        </label>
+                      </div>
+                      <ul class="search-list" id="ulSearchList04">
+                        <li class="list" onkeyup="enterFn(&#39;4&#39;,&#39;01&#39;)">
+                          <div class="item">
+                            <input id="filterItem04-01" type="checkbox" value="무료">
+                            <label class="filter-label" for="filterItem04-01">
+                              <div class="circle-item ico-category19" area-hidden="true"></div>
+                              <span class="txt" title="무료">무료</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;4&#39;,&#39;02&#39;)">
+                          <div class="item">
+                            <input id="filterItem04-02" type="checkbox" value="유료">
+                            <label class="filter-label" for="filterItem04-02">
+                              <div class="circle-item ico-category20" area-hidden="유료"></div>
+                              <span class="txt" title="유료">유료</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="list" onkeyup="enterFn(&#39;4&#39;,&#39;03&#39;)">
+                          <div class="item">
+                            <input id="filterItem04-03" type="checkbox" value="할인">
+                            <label class="filter-label" for="filterItem04-03">
+                              <div class="circle-item ico-category21" area-hidden="할인"></div>
+                              <span class="txt" title="할인">할인</span>
+                            </label>
+                          </div>
+                      </li></ul>
+                    </div>                    
+                    <div class="search-option">
+                      <button class="btn-reset" type="button" id="btn_reset">
+                        <i class="ico" aria-hidden="true"></i>
+                        <span class="txt" title="전체해제">전체해제</span>
+                      </button>
+                      <div class="wrap-item" id="divCheckItem">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="search-result" id="search_result_oneEye">
+            <div class="section-inner">
+              <div class="tab-result" role="tabllist" aria-label="검색결과" data-brl-use="NO">
+                <button class="tab-btn on" type="button" role="tab" data-value="" onclick="fn_getTabSvc(&#39;&#39;)">
+               <span class="hide" title="선택됨">선택됨</span>
+                  <span class="txt" title="전체">전체 </span>
+                  <em class="num" id="sum_t">2,817건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="공연/전시" onclick="fn_getTabSvc(&#39;공연/전시&#39;)">
+                  <span class="txt" title="공연/전시">공연/전시</span>
+                  <em class="num" id="sum_1">1,126건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="행사/축제" onclick="fn_getTabSvc(&#39;행사/축제&#39;)">
+                  <span class="txt" title="행사/축제">행사/축제</span>
+                  <em class="num" id="sum_2">49건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="교육/체험" onclick="fn_getTabSvc(&#39;교육/체험&#39;)">
+                  <span class="txt" title="교육/체험">교육/체험</span>
+                  <em class="num" id="sum_3">830건</em>
+                </button>
+<!--                <button class="tab-btn" type="button" role="tab" data-value="관광" onclick="fn_getTabSvc('관광')">-->
+<!--                  <span class="txt">관광</span>-->
+<!--                  <em class="num" id="sum_4" th:text="|${#numbers.formatInteger(countMap.SUM_4, 0, 'COMMA')}건|">1791건</em>-->
+<!--                </button>-->
+                <button class="tab-btn" type="button" role="tab" data-value="체육" onclick="fn_getTabSvc(&#39;체육&#39;)">
+                  <span class="txt" title="체육">체육</span>
+                  <em class="num" id="sum_5">251건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="도서" onclick="fn_getTabSvc(&#39;도서&#39;)">
+                  <span class="txt" title="도서">도서</span>
+                  <em class="num" id="sum_6">235건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="봉사/교류" onclick="fn_getTabSvc(&#39;봉사/교류&#39;)">
+                  <span class="txt" title="봉사/교류">봉사/교류</span>
+                  <em class="num" id="sum_7">11건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="뉴스/지식" onclick="fn_getTabSvc(&#39;뉴스/지식&#39;)">
+                  <span class="txt" title="뉴스/지식">뉴스/지식</span>
+                  <em class="num" id="sum_8">191건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="대관/대여" onclick="fn_getTabSvc(&#39;대관/대여&#39;)">
+                  <span class="txt" title="대관/대여">대관/대여</span>
+                  <em class="num" id="sum_9">24건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="자격/증명" onclick="fn_getTabSvc(&#39;자격/증명&#39;)">
+                  <span class="txt" title="자격/증명">자격/증명</span>
+                  <em class="num" id="sum_10">24건</em>
+                </button>
+                <button class="tab-btn" type="button" role="tab" data-value="연구/자료" onclick="fn_getTabSvc(&#39;연구/자료&#39;)">
+                  <span class="txt" title="연구/자료">연구/자료</span>
+                  <em class="num" id="sum_11">76건</em>
+                </button>
+              </div>
+              <div class="area-util" data-brl-use="NO">
+                <div class="align-box">
+                  <div class="txt-total">총 <strong id="total">2,817</strong>건</div>
+                </div>
+				<div class="list-search" id="list-search" style="display:none">
+                  <div class="form-box">
+                    <select id="genreSelect" name="genreSelect" title="장르 선택">
+ 						<option value="">장르전체</option>
+	                    <option value="1">연극</option>
+	                    <option value="2">음악/콘서트</option>
+	                    <option value="4">국악</option>
+	                    <option value="5">무용/발레</option>
+	                    <option value="6">전시</option>
+	                    <option value="7">기타</option>
+	                    <option value="8">뮤지컬/오페라</option>
+	                    <option value="9">아동/가족</option>
+                    </select>
+                  </div>
+                  <div class="form-box">
+                    <select id="locationSelect" name="locationSelect" title="지역 선택">
+                      <option value="">지역 전체</option>
+                      <option value="02">서울</option>
+                      <option value="051">부산</option>
+                      <option value="053">대구</option>
+                      <option value="032">인천</option>
+                      <option value="062">광주</option>
+                      <option value="042">대전</option>
+                      <option value="052">울산</option>
+                      <option value="044">세종</option>
+                      <option value="031">경기</option>
+                      <option value="033">강원</option>
+                      <option value="043">충북</option>
+                      <option value="041">충남</option>
+                      <option value="063">전북</option>
+                      <option value="061">전남</option>
+                      <option value="054">경북</option>
+                      <option value="055">경남</option>
+                      <option value="064">제주</option>
+                    </select>
+                  </div>
+                  <div class="form-box">
+					<div class="custom-calendar">
+	<a href="https://www.culture.go.kr/oneeye/oneEyeList.do#period" class="custom-calendar__trigger" aria-haspopup="true" aria-expanded="false" title="기간선택" id="periodId">기간</a>
+	<div class="custom-calendar__menu">
+		<ul class="custom-calendar__unit">
+			<li class="custom-calendar__item">
+				<a href="javascript:dateSearch(&#39;0&#39;);" class="custom-calendar__option">전체</a>
+			</li>
+			<li class="custom-calendar__item">
+				<a href="javascript:dateSearch(&#39;1&#39;);" class="custom-calendar__option">1일</a>
+			</li>
+			<li class="custom-calendar__item">
+				<a href="javascript:dateSearch(&#39;2&#39;);" class="custom-calendar__option">1주일</a>
+			</li>
+			<li class="custom-calendar__item">
+				<a href="javascript:dateSearch(&#39;3&#39;);" class="custom-calendar__option">1개월</a>
+			</li>
+			<li class="custom-calendar__item">
+				<a href="javascript:dateSearch(&#39;4&#39;);" class="custom-calendar__option">1년</a>
+			</li>
+		</ul>
+		<p class="custom-calendar__title">기간선택</p>
+		<div class="custom-calendar__direct custom-calendar__direct--start">
+			<label for="srchFr" class="a11y__sr--only" data-brl-use="NO">기간 선택(시작일)</label>
+			<input type="text" id="srchFr" title="시작일(예시:20200101)" placeholder="시작일(예시 :20200101)" onkeyup="auto_date_format(event, this)" onkeypress="auto_date_format(event, this)" maxlength="10" style="font-size: 13px;">
+			<button type="button" onclick="openCalendar(document.getElementById(&#39;srchFr&#39;));">달력</button>
+		</div>
+		<div class="custom-calendar__direct custom-calendar__direct--end">
+			<label for="srchTo" class="a11y__sr--only" data-brl-use="NO">기간 선택(종료일)</label>
+			<input type="text" id="srchTo" title="종료일(예시:20200101)" placeholder="종료일(예시 :20200101)" onkeyup="auto_date_format(event, this)" onkeypress="auto_date_format(event, this)" maxlength="10" style="font-size: 13px;">
+			<button type="button" onclick="openCalendar(document.getElementById(&#39;srchTo&#39;));">달력</button>
+		</div>
+		<button type="button" class="custom-calendar__button" onclick="javascript:dateSearch(&#39;5&#39;);">기간적용</button>
+	</div>
+
+
+       <script type="text/javascript">
+            function auto_date_format( e, oThis ){
+                var numCheck = /[^0-9:\-]/g ;
+                var key_code = ( e.which ) ? e.which : e.keyCode;
+                var num_arr = [
+                    97, 98, 99, 100, 101, 102, 103, 104, 105, 96,
+                    48, 49, 50, 51, 52, 53, 54, 55, 56, 57
+                ]
+
+
+                if (numCheck.test(oThis.value)){
+                    $(oThis).val($(oThis).val().replace(/[^0-9:\-]/g,""));
+                }else {
+                    if( num_arr.indexOf( Number( key_code ) ) != -1 ){
+                        var len = oThis.value.length;
+                        if( len == 4 ) oThis.value += "-";
+                        if( len == 7 ) oThis.value += "-";
+                    }
+                }
+            }
+
+            var getURLPara = function (name) {
+                var url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+
+                var returnVal = '';
+
+                if(results != null){
+                    returnVal = decodeURI(results[2]);
+                }
+
+                return returnVal;
+            }
+
+            // 이미 검색한 날짜 처리
+            var sSdate = getURLPara('sSdate');
+            var sEdate = getURLPara('sEdate');
+
+            if(sSdate.length != 0){
+                $('#srchFr').val(sSdate);
+                $('#sSdate').val(sSdate);
+            }
+
+            if(sEdate.length != 0){
+                $('#srchTo').val(sEdate);
+                $('#sEdate').val(sEdate);
+            }
+
+            function dateSearch(dateType) {
+                var date = new Date();
+                var res = date.toISOString().slice(0,10);
+
+                $(".custom-calendar").find(".custom-calendar__trigger").attr("aria-expanded", false);
+                $(".custom-calendar").find(".custom-calendar__menu").hide();
+
+                if (dateType == '0') {
+                    $('#periodId').text('전체');
+                    $('#sEdate').val('');
+                    $('#sSdate').val('');
+                    $('#srchFr').val('');
+                    $('#srchTo').val('');
+                }else if (dateType == '1') {
+                    $('#periodId').text('1일');
+                    $('#sEdate').val(res);
+                    $('#sSdate').val(res);
+                    $('#srchFr').val(res);
+                    $('#srchTo').val(res);
+                }else if (dateType == '2') {
+                    $('#periodId').text('1주일');
+                    date.setDate(date.getDate() + 7);
+                    var aWeek = date.toISOString().slice(0, 10);
+                    $('#sEdate').val(aWeek);
+//                     $('#sEdate').val(res);
+                    $('#sSdate').val(res);
+//                     $('#sSdate').val(aWeek);
+                    $('#srchTo').val(aWeek);
+//                     $('#srchTo').val(res);
+                    $('#srchFr').val(res);
+//                     $('#srchFr').val(aWeek);
+                }else if (dateType == '3') {
+                    $('#periodId').text('1개월');
+                    date.setDate(date.getDate() + 30);
+                    var aMonth = date.toISOString().slice(0, 10);
+//                     $('#sEdate').val(res);
+//                     $('#sSdate').val(aMonth);
+//                     $('#srchTo').val(res);
+//                     $('#srchFr').val(aMonth);
+                    $('#sEdate').val(aMonth);
+                    $('#sSdate').val(res);
+                    $('#srchTo').val(aMonth);
+                    $('#srchFr').val(res);
+                }else if (dateType == '4') {
+                    $('#periodId').text('1년');
+                    date.setDate(date.getDate() + 365);
+                    var aYear = date.toISOString().slice(0, 10);
+                    $('#sEdate').val(aYear);
+                    $('#sSdate').val(res);
+                    $('#srchTo').val(aYear);
+                    $('#srchFr').val(res);
+//                     $('#sEdate').val(res);
+//                     $('#sSdate').val(aYear);
+//                     $('#srchTo').val(res);
+//                     $('#srchFr').val(aYear);
+                }else if (dateType == '5') {
+                    $('#periodId').text('사용자설정');
+                    $('#sSdate').val($('#srchFr').val());
+                    $('#sEdate').val($('#srchTo').val());
+                }
+            }
+        </script>
+</div>
+                  </div>
+                  <div class="form-box">
+                    <select id="searchKeywordGubun" name="searchKeywordGubun" title="제목 선택">
+						<option value="t">제목</option>
+	                    <option value="c">상세설명</option>
+	                    <option value="tc">제목+상세설명</option>
+	                    <option value="v">주최기관</option>
+                    </select>
+                  </div>
+                  <div class="search-input" data-brl-use="NO">
+                    <input type="text" placeholder="검색어를 입력하세요." id="sWord2" name="sWord2" title="검색어 입력" onkeypress="javascript:if(event.keyCode==13){fn_searchSub();return false;}">
+                    <button class="btn-search" type="button" id="btn_detail_search" onclick="fn_searchSub()">
+                      <span class="hide-txt">검색</span>
+                    </button>
+                  </div>
+                </div>                
+              </div>
+              <div id="search_result_oneEyeTab">
+              <ul class="area-thumb-list thumb_type01">
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+						<a href="https://www.nlcy.go.kr/NLCY/contents/C40401000000.do?schM=view&amp;page=1&amp;viewCount=10&amp;id=1119475&amp;schBdcode=&amp;schGroupCode=" target="_blank" title="새창" onclick="dailyCnt(&quot;254561&quot;, 2)">
+						
+						    <img alt="국립어린이청소년도서관 | 도서관에서 즐겨요 K컬처 특별 체험 프로그램 | 일시 매달 마지막 수요일 10:30~11:50 | 장소 국립어린이청소년도서관 | 대상 전 국민 누구나 | 프로그램 - 증강현실 뮤지컬 체험, 혼합현실 환상동화 체험, 체험형 동화구연, 기획전시 관람, 미꿈소 첨단기술 체험 | 체험이 끝나면 이어서 야외 음악회(12:00~13:00, 해봄마당)에 참석하실 수 있습니다" src="./01문화체험_한눈에보는문화정보_files/show_2023083110461764812.jpg">
+						    
+						
+												
+								
+						</a>
+						<a href="https://www.nlcy.go.kr/NLCY/contents/C40401000000.do?schM=view&amp;page=1&amp;viewCount=10&amp;id=1119475&amp;schBdcode=&amp;schGroupCode=" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;254561&quot;, 2)">
+		                	<span class="txt">홈페이지 바로가기</span>
+						</a>						
+					
+					
+                    
+					
+																									
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">교육/체험</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">무료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">서울</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+					
+                      <a class="tit size01 ellipsis type02">「도서관에서 즐겨요! K-컬처!」 특별 체험 프로그램</a>
+                                        
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.09.01 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">02-3413-4827</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="https://www.arte.or.kr/information/notice/Notice_BoardView.do?board_id=BRD_ID0060682" target="_blank" title="새창" onclick="dailyCnt(&quot;258155&quot;, 1)">
+							
+							    <img alt="문화·예술·인문학 분야의 저자를 초청해 문화예술이 개인의 삶과 사회에 미치는 영향에 대해 이야기를 나누는 교육진흥원의 사회공헌 프로그램 | 아르떼 북토크 | 2023년 06월 28일 - 2023년 12월 27일 | 서울특별시 마포구 상암산로 76 arte 라이브러리" src="./01문화체험_한눈에보는문화정보_files/show_2023101214402319002.jpg">
+							    
+							
+										
+							</a>
+							<a href="https://www.arte.or.kr/information/notice/Notice_BoardView.do?board_id=BRD_ID0060682" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;258155&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">행사/축제</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">무료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">서울</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=258155&amp;uci=G706%2B1697121623483" class="tit size01 ellipsis type02">아르떼 북토크</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.10.25 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">02-6209-1371</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="https://tickets.interpark.com/goods/23016541" target="_blank" title="새창" onclick="dailyCnt(&quot;264265&quot;, 1)">
+							
+							    <img alt="12월 수요상설: 춤, 사람 그리고 이야기 | 2023년 12월 6일, 13일, 20일, 27일 매주 수요일 시간 오후 7시30분 | 성균소극장" src="./01문화체험_한눈에보는문화정보_files/rdf_2023120121183481293.gif">
+							    
+							
+										
+							</a>
+							<a href="https://tickets.interpark.com/goods/23016541" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;264265&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">무용/발레</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">서울</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=264265&amp;uci=G7061701551831312" class="tit size01 ellipsis type02">[서울 대학로] 12월 수요상설: 춤, 사람 그리고 이야기</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.06 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">인터파크 1544-1555</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+						<a href="https://www.i-eum.or.kr/board/read?boardManagementNo=1&amp;boardNo=3466&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;level=2&amp;menuNo=2" target="_blank" title="새창" onclick="dailyCnt(&quot;262179&quot;, 2)">
+						
+						    <img alt="창작자 과정 | 되기, 기억하기, 함께 움직이기 | 2023년 12월 22일 - 12월 27일 금, 토, 화, 수 오후 2시부터 6시까지 | 서울무용센터 1층 스튜디오블랙, 대학로 이음센터 5층 이음홀 | 최소 7명 부터 14명까지" src="./01문화체험_한눈에보는문화정보_files/show_2023111514303532179.png">
+						    
+						
+												
+								
+						</a>
+						<a href="https://www.i-eum.or.kr/board/read?boardManagementNo=1&amp;boardNo=3466&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;level=2&amp;menuNo=2" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;262179&quot;, 2)">
+		                	<span class="txt">홈페이지 바로가기</span>
+						</a>						
+					
+					
+                    
+					
+																									
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">교육/체험</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">무료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">서울</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+					
+                      <a class="tit size01 ellipsis type02">창작자 과정 '되기, 기억하기, 함께 움직이기'</a>
+                                        
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.22 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">02-3274-9223</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="https://tickets.interpark.com/goods/23018348" target="_blank" title="새창" onclick="dailyCnt(&quot;265737&quot;, 1)">
+							
+							    <img alt="비아트레앙상블: 이 겨울, 라흐마니노프를 듣는다 | 2023년 12월 27일 수요일 오후 7시 30분 | 복합문화공간 플랜에이 B홀" src="./01문화체험_한눈에보는문화정보_files/rdf_2023122021182420364.gif">
+							    
+							
+										
+							</a>
+							<a href="https://tickets.interpark.com/goods/23018348" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;265737&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">대전</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265737&amp;uci=G7061703193427112" class="tit size01 ellipsis type02">[대전] 비아트레앙상블: 이 겨울, 라흐마니노프를 듣는다</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">나무예술기획 042-867-8220</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="https://tickets.interpark.com/goods/23018255" target="_blank" title="새창" onclick="dailyCnt(&quot;265668&quot;, 1)">
+							
+							    <img alt="실내악페스티발 시리즈, 칼라치 콰르텟 | 2023년 12월 27일 수 오후 7시 30분 | 세라믹팔레스홀" src="./01문화체험_한눈에보는문화정보_files/rdf_2023121921182004835.gif">
+							    
+							
+										
+							</a>
+							<a href="https://tickets.interpark.com/goods/23018255" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;265668&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">서울</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265668&amp;uci=G7061703107030490" class="tit size01 ellipsis type02">실내악페스티발 시리즈, 칼라치 콰르텟</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">세라믹팔레스홀 02-3411-4668</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+						
+							
+							<a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265644&amp;uci=G7061703107027230" onclick="dailyCnt(&quot;265644&quot;, 1)">
+							
+							    <img alt="단오장단과 함께하는 피아노의 향연, 일곱 번째 이야기 | 2023년 12월 27일 수요일 오후 7시 30분 | 강릉아트센터 사임당홀" src="./01문화체험_한눈에보는문화정보_files/rdf_2023121921182443146.jpg">
+							    
+							
+														
+							</a>	
+							
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">기타</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">강원</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265644&amp;uci=G7061703107027230" class="tit size01 ellipsis type02">단오장단과 함께하는 피아노의 향연, 일곱 번째 이야기</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">강음회 010-5362-4530</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+						
+							
+							<a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265312&amp;uci=G706%2B1702820089281" onclick="dailyCnt(&quot;265312&quot;, 1)">
+							
+							    <img alt="고재현트롬본독주회 | 2023.12.27 (수) 19:30 | 광주 유스퀘어 금호아트홀" src="./01문화체험_한눈에보는문화정보_files/show_2023121713344931975.jpg">
+							    
+							
+														
+							</a>	
+							
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">무료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">광주</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265312&amp;uci=G706%2B1702820089281" class="tit size01 ellipsis type02">고재현 트롬본 독주회</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">010-4680-1555</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+						
+							
+							<a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265139&amp;uci=G7061702502231801" onclick="dailyCnt(&quot;265139&quot;, 1)">
+							
+							    <img alt="최정수 타이니 오케스터, Rebirth of the Cool | 2023년 12월 27일(수) 오후 8시 | 고양아람누리 새라새극장" src="./01문화체험_한눈에보는문화정보_files/rdf_2023121221184470285.gif">
+							    
+							
+														
+							</a>	
+							
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">경기</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=265139&amp;uci=G7061702502231801" class="tit size01 ellipsis type02">[경기] 최정수 타이니 오케스터, Rebirth of the Cool</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">0507-1370-6160</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="https://tickets.interpark.com/goods/23017920" target="_blank" title="새창" onclick="dailyCnt(&quot;264998&quot;, 1)">
+							
+							    <img alt="찾아가는 희망음악회: 음악이 있는 풍경 | 2023년 12월 27일 수요일 오후 7시 30분 | 군포문화예술회관 수리홀" src="./01문화체험_한눈에보는문화정보_files/rdf_2023121121181916499.gif">
+							    
+							
+										
+							</a>
+							<a href="https://tickets.interpark.com/goods/23017920" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;264998&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">경기</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=264998&amp;uci=G7061702415825959" class="tit size01 ellipsis type02">[군포] 찾아가는 희망음악회: 음악이 있는 풍경</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">군포문화예술회관 031-390-3500~1</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="http://ticket.yes24.com/Perf/48040" target="_blank" title="새창" onclick="dailyCnt(&quot;264671&quot;, 1)">
+							
+							    <img alt="구운몽: Code 9 | 2023년 12월 27일(수) 오후 7시 30분 | 대전예술의전당 앙상블홀" src="./01문화체험_한눈에보는문화정보_files/rdf_2023120621474860820.gif">
+							    
+							
+										
+							</a>
+							<a href="http://ticket.yes24.com/Perf/48040" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;264671&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">음악/콘서트</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">대전</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=264671&amp;uci=G7061701983831776" class="tit size01 ellipsis type02">[대전] 구운몽: Code 9</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">대전예술의전당 042-270-8333</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+              
+                <li class="list">
+                  <div class="box-thumb">
+                    <div class="thumb-img">
+                    
+                    
+                    
+					
+	                    
+							<a href="http://ticket.yes24.com/Perf/47963" target="_blank" title="새창" onclick="dailyCnt(&quot;264280&quot;, 1)">
+							
+							    <img alt="뮤지컬군과 오페라양의 사랑이야기 | 2023년 12월 27일(수) 오후 7시 30분 | 경기아트센터 소극장" src="./01문화체험_한눈에보는문화정보_files/rdf_2023120121183547975.gif">
+							    
+							
+										
+							</a>
+							<a href="http://ticket.yes24.com/Perf/47963" target="_blank" title="새창" class="btn-link" onclick="dailyCnt(&quot;264280&quot;, 1)">
+			                	<span class="txt">예매 바로가기</span>
+							</a>						
+						
+						
+																		
+					
+                    
+						
+                    </div>
+                    <ul class="thumb-tag size01">
+                      <li class="tag">
+                        <span class="txt">기타</span>
+                      </li>
+                      <li class="tag reverse">
+                        <span class="txt">유료</span>
+                      </li>
+                      <li class="tag">
+                        <span class="txt">경기</span>
+                      </li>                      
+                    </ul>
+                    <div class="thumb-txt">
+                    
+                      <a href="https://www.culture.go.kr/oneeye/oneEyeView.do?seq=264280&amp;uci=G7061701551833200" class="tit size01 ellipsis type02">[수원] 뮤지컬군과 오페라양의 사랑이야기</a>
+                    
+					                    
+                      <dl class="txt-list">
+                        <dt class="term">제공</dt>
+                        <dd class="desc">오프라인</dd>
+                      </dl>
+                      <dl class="txt-list">
+                        <dt class="term">기간</dt>
+                        <dd class="desc">2023.12.27 ~ 2023.12.27
+                      </dd></dl>
+                      <dl class="txt-list">
+                        <dt class="term">문의처</dt>
+                        <dd class="desc">경기아트센터 031-230-3262~9</dd> 
+                      </dl>                      
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+				<!-- pagination -->
+				<div role="navigation" class="pagination-conatiner" aria-label="pagination" data-brl-use="NO">
+		<input id="dataCount" type="hidden" value="2817">
+		<input id="page_gubun" type="hidden" value="">
+		<div class="pagination">
+			<a href="javascript:;" class="pagination__first page_btn" data-value="1">
+				<img src="./01문화체험_한눈에보는문화정보_files/btn_pagination_first.png" alt="처음">
+			</a>
+			<a href="javascript:;" class="pagination__prev page_btn" data-value="1">
+				<img src="./01문화체험_한눈에보는문화정보_files/btn_pagination_prev.png" alt="이전">
+			</a>
+
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="1" aria-current="true">1</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="2">2</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="3">3</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="4">4</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="5">5</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="6">6</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="7">7</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="8">8</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="9">9</a>
+			
+				<a href="javascript:;" class="pagination__num page_btn" data-value="10">10</a>
+			
+
+			<a href="javascript:;" class="pagination__next page_btn" data-value="11">
+				<img src="./01문화체험_한눈에보는문화정보_files/btn_pagination_next.png" alt="다음">
+			</a>
+			<a href="javascript:;" class="pagination__last page_btn" data-value="235">
+				<img src="./01문화체험_한눈에보는문화정보_files/btn_pagination_last.png" alt="마지막">
+			</a>
+		</div>
+	</div>
+				<script type="text/javascript">
+					//페이지 변경 클릭 이벤트 등록
+					$(".page_btn").click(function (){
+						var page = $(this).attr('data-value');
+						fn_oneEyeDetailView(page, "T", $(".search-result .tab-btn.on .txt").text() );
+					});
+				</script>
+				<!-- // pagination -->
+			</div>              
+            </div>
+          </section>
+        </div>
+      </div>
+		<!-- after_contents -->
+		
+		<!-- //after_contents -->
+		<!-- footer -->
+		
+	<div id="agencyContents" class="agency__container" style="display:none">
+		<div class="section">
+			<div class="section__header">
+				<p class="section__header--title">관련기관 안내</p>
+			</div>
+			<div class="section__swiper-group">
+				<div class="section__swiper section__swiper--agency-logo swiper-container">
+					<ul class="swiper-wrapper">
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.museum.go.kr/site/main/home" target="_blank" title="국립중앙박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211152581383.jpg" alt="국립중앙박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.korean-national-ballet.kr/ko" target="_blank" title="국립발레단(KOREAN NATIONAL BALLET)새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211145113463.jpg" alt="국립발레단(KOREAN NATIONAL BALLET)">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nationalopera.org/" target="_blank" title="국립오페라단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211143896134.jpg" alt="국립오페라단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kncdc.kr/ko/main" target="_blank" title="국립현대무용단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211141943691.jpg" alt="국립현대무용단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nsac.or.kr/Home/Main.aspx" target="_blank" title="남산예술센터 x삼일로창고극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211134514528.jpg" alt="남산예술센터 x삼일로창고극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.snart.or.kr/" target="_blank" title="성남아트센터새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211123757510.jpg" alt="성남아트센터">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ansanart.com/index.do" target="_blank" title="안산문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211122070650.jpg" alt="안산문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.jeongdong.or.kr/portal/main/main.do" target="_blank" title="정동극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221112600876.jpg" alt="정동극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://theater.arko.or.kr/Pages/Main.aspx" target="_blank" title="한국문화예술위원회 새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211114700500.jpg" alt="한국문화예술위원회 ">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.ntck.or.kr/" target="_blank" title="국립극단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211151173359.jpg" alt="국립극단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.spac.or.kr/" target="_blank" title="서울예술단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211132877005.jpg" alt="서울예술단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.karts.ac.kr/index_karts.jsp" target="_blank" title="한국예술종합학교새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221110328670.jpg" alt="한국예술종합학교">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ltikorea.or.kr/" target="_blank" title="한국문학번역원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221194530136.jpg" alt="한국문학번역원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.copyright.or.kr/main.do" target="_blank" title="한국저작권위원회새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221192806466.jpg" alt="한국저작권위원회">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.kocca.kr/cop/main.do" target="_blank" title="한국콘텐츠진흥원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_2019122119803960.jpg" alt="한국콘텐츠진흥원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.nfm.go.kr/home/index.do" target="_blank" title="국립민속박물관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221183699687.jpg" alt="국립민속박물관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.gugak.go.kr/site/main/index001" target="_blank" title="국립국악원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221181558053.jpg" alt="국립국악원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.sac.or.kr/SacHome/sachome/main" target="_blank" title="예술의전당새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221175339251.jpg" alt="예술의전당">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.ntok.go.kr/kr/Main/Index" target="_blank" title="국립극장새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221173592982.jpg" alt="국립극장">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://nationalchorus.or.kr/" target="_blank" title="재단법인 국립합창단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20191221165985028.jpg" alt="재단법인 국립합창단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://archive.arko.or.kr/" target="_blank" title="아르코예술기록원새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211112673772.jpg" alt="아르코예술기록원">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.sejongpac.or.kr/portal/main/main.do" target="_blank" title="세종문화회관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_2022031815421271992.jpg" alt="세종문화회관">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="https://www.gcf.or.kr/main/?load_popup=1" target="_blank" title="김포문화재단새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_20220110973816325.JPG" alt="김포문화재단">
+								</figure>
+							</a>
+						</li>
+						
+						<li class="swiper-slide">
+							<a class="banner" href="http://www.mmca.go.kr/main.do" target="_blank" title="국립현대미술관새창이동">
+								<figure class="banner__figure banner__figure--logo">
+									<img class="banner__img" src="./01문화체험_한눈에보는문화정보_files/banner_201912211102337173.jpg" alt="국립현대미술관">
+								</figure>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<button type="button" class="section__swiper--prev">이전</button>
+				<button type="button" class="section__swiper--next">다음</button>
+			</div>
+			    <a href="https://www.culture.go.kr/oneeye/oneEyeList.do#none" class="pop-close">X</a>
+		</div>
+	</div>
+		<footer class="footer" id="footer">
+			<div class="footer__util">
+				<div class="footer__inner">
+					<ul class="footer__policy">
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/aboutA.do" target="_blank" title="새 창">문화포털이란?</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/oneeye/oneEyeList.do#" class="agency__trigger" aria-expanded="false" aria-owns="agencyContents">관련기관 안내</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/culture/publicize.do" target="_blank" title="새 창">문화홍보등록</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/copyrightGuide.do" target="_blank" title="새 창">저작권정책</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/privacyPolicy.do" target="_blank" title="새 창" class="txt_bold" style="color: #e42c01">개인정보처리방침</a></li>
+						<li class="footer__policy--item"><a href="https://www.culture.go.kr/info/searchPolicy.do" target="_blank" title="새 창">검색결과수집정책</a></li>
+						<!--  <li class="footer__policy--item"><a href="/ticketadmin" target="_blank" title="새 창">참여단체</a></li>  -->
+					</ul>
+					<div class="footer__family">
+						<label for="familySite" class="a11y__sr--only" data-brl-use="NO">관련 사이트 선택</label>
+						<select id="familySite" class="footer__family--select">
+							<option value="">관련 사이트</option>
+							
+							<option value="https://webzine.kcisa.kr/vol026/index.php">웹진 이데아 Vol.26</option>
+							
+							<option value="https://www.culture.go.kr/ic/">실감형전시플랫폼</option>
+							
+							<option value="https://www.kogl.or.kr/">공공누리</option>
+							
+							<option value="https://qi.kcisa.kr/">모바일큐아이</option>
+							
+							<option value="https://www.culture.go.kr/data/main/main.do">문화공공데이터광장</option>
+							
+							<option value="https://www.culture.go.kr/deduction/">문화비소득공제</option>
+							
+							<option value="https://www.bigdata-culture.kr/bigdata/user/main.do">문화빅데이터플랫폼</option>
+							
+						</select>
+						<button type="button" title="선택된 관련 사이트 새창으로 열기" id="goFamilySite" style="display: none;">이동</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer__info">
+				<div class="footer__inner">
+					<div class="footer__left">
+						<ul class="footer__link">
+							<li class="footer__link--item"><a href="https://www.kcisa.kr/" target="_blank" title="KCISA 한국문화정보원 새 창 열림"><img src="./01문화체험_한눈에보는문화정보_files/footer_link01.png" alt="KCISA 한국문화정보원 새 창 열림"></a></li>
+							<li class="footer__link--item"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="문화체육관광부 새 창 열림"><img src="./01문화체험_한눈에보는문화정보_files/footer_link02.png" alt="문화체육관광부 새 창 열림"></a></li>
+						</ul>
+						<address class="footer__address">
+							<p class="footer__address--desc">
+								대표전화 <a href="tel:1688-2220">1688-2220</a> / 이메일 <a href="mailto:culture@kcisa.kr">culture@kcisa.kr</a><br>
+								우) 03925 서울시 마포구 월드컵북로 400, 6층·8층<br>
+								COPYRIGHT© 한국문화정보원
+							</p>
+						</address>
+<!-- 					<p class="footer__copylight">COPYRIGHT&copy; 한국문화정보원</p>  -->
+					</div>
+					<div class="footer__right">
+						<div class="footer-sns">
+							<div class="sns">
+								<ul class="sns__list">
+									<li class="sns__item">
+										<a href="https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw" target="_blank" class="sns__link" title="한국문화정보원(유튜브)새창 열림"><img src="./01문화체험_한눈에보는문화정보_files/ico_footer_youtube.png" alt="한국문화정보원(유튜브)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.instagram.com/culture_portal/" target="_blank" class="sns__link" title="한국문화정보원(인스타그램)새창 열림"><img src="./01문화체험_한눈에보는문화정보_files/ico_footer_instagram.png" alt="한국문화정보원(인스타그램)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://www.facebook.com/cultureportal" target="_blank" class="sns__link" title="한국문화정보원(페이스북)새창 열림"><img src="./01문화체험_한눈에보는문화정보_files/ico_footer_facebook.png" alt="한국문화정보원(페이스북)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://blog.naver.com/kcis_" target="_blank" class="sns__link" title="한국문화정보원(네이버블로그)새창 열림"><img src="./01문화체험_한눈에보는문화정보_files/ico_footer_blog_02.png" alt="한국문화정보원(네이버블로그)"></a>
+									</li>
+									<li class="sns__item">
+										<a href="https://tv.naver.com/culturepd" target="_blank" class="sns__link" title="한국문화정보원(네이버TV)새창 열림"><img src="./01문화체험_한눈에보는문화정보_files/ico_footer_navertv.png" alt="한국문화정보원(네이버TV)"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="footer__auth">
+							<li class="footer__auth--item"><a href="https://www.culture.go.kr/info/accessibility.do" target="_blank" title="웹접근성 새 창 열림"><img src="./01문화체험_한눈에보는문화정보_files/img_footer_auth_wa_2023.png" alt="웹접근성 새 창 열림"></a></li>
+							<li class="footer__auth--item"><a href="https://www.kogl.or.kr/index.do" target="_blank" title="공공누리 새 창 열림"><img src="./01문화체험_한눈에보는문화정보_files/img_footer_auth_open.png" alt="공공누리 새 창 열림"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<div class="tab_bar">
+		<ul>
+		
+			<li>
+				<a href="https://www.culture.go.kr/sso/login.do" class="icon_login">로그인</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/member/register.do" class="icon_join">회원가입</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://www.culture.go.kr/index.do" class="icon_home">홈</a>
+			</li>
+			<li>
+				<a href="https://www.culture.go.kr/culture/publicize.do" class="icon_regedit">문화홍보등록</a>
+			</li>
+ 			<li>
+				<a href="http://culture-chatbot.kcisa.kr/" target="_blank" class="icon_chatbot">챗봇</a>
+			</li>
+		</ul>
+	</div>		
+	<script>
+	/*<![CDATA[*/
+		
+		// pc menu fixed
+		if( $(window).width() > 1200){
+			var headerH = $(".header").outerHeight();
+			$(window).scroll(function(){
+				var st = $(document).scrollTop(),
+					headerTop = $(".header_top").outerHeight();
+				if(st > headerTop){
+					$(".header").addClass("fixed");
+					$("body").css({"paddingTop" : headerH + "px"})
+				} else {
+					$(".header").removeClass("fixed");
+					$("body").css({"paddingTop" : 0})
+				}
+			})
+		} else {
+			// tab bar
+			var tabbarHeight = $(".tab_bar").outerHeight();
+			if($(".tab_bar").is(":visible")){
+				$("body").css({"paddingBottom" : tabbarHeight + "px"})
+			}
+			var scrollTop = 0;
+			
+			$(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if (st > scrollTop) {
+					$(".tab_bar").addClass("up");
+				} else {
+					$(".tab_bar").removeClass("up");
+				}
+				scrollTop = st;
+			});
+		}		
+		
+	/* Footer 관련사이트 */
+	$(document).ready(function(){
+// 		$("#familySite").change(function(){
+// 			var url = $("#familySite option:selected").val();
+// 			window.open(url, target="_new");
+// 		});  
+		$("#goFamilySite").hide();
+		
+	 	$("#familySite").change(function(){
+			
+			var familySite = $("#familySite").val();
+			if(familySite != null || familySite != ""){
+				$("#goFamilySite").show();
+			}else{
+				$("#goFamilySite").hide();
+			}
+		});  
+		
+
+	});
+	
+	 
+	/*]]>*/		
+	</script>		
+	
+		<!-- //footer -->
+	</div>
+
+
+</body></html>
